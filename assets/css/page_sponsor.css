@@ -1,0 +1,128 @@
+#sponsor h1 {
+  text-transform: none;
+  color: #5e4e9b;
+  font-size: 2em;
+  line-height: 1.2; }
+  @media screen and (min-width: 769px), print {
+    #sponsor h1 {
+      font-size: 3em;
+      line-height: 1.5; } }
+
+#sponsor h2 {
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8em;
+  line-height: 1.2; }
+  @media screen and (min-width: 769px), print {
+    #sponsor h2 {
+      font-size: 2em;
+      line-height: 1.5; } }
+  @media screen and (min-width: 1024px) {
+    #sponsor h2 {
+      font-size: 2.5em; } }
+
+#sponsor h3 {
+  font-size: 1.5em; }
+  @media screen and (min-width: 769px), print {
+    #sponsor h3 {
+      font-size: 1.8em; } }
+
+#sponsor p {
+  margin: 1em 0; }
+
+#sponsor .column {
+  margin: 0 2em; }
+
+#sponsor .is-centered p {
+  margin: 0 0 1em 0; }
+
+.background-light {
+  background-color: #9c91c5; }
+  .background-light a {
+    color: #000;
+    font-weight: 600; }
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start; }
+  .options-container .level-block {
+    margin: 20px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    flex-shrink: 1;
+    width: 320px; }
+    @media screen and (orientation: portrait) and (max-width: 360px) {
+      .options-container .level-block {
+        width: 300px; } }
+    .options-container .level-block > div:not(.triangle) {
+      padding: 20px; }
+    .options-container .level-block h3 {
+      font-size: 1.8em; }
+    .options-container .level-block p, .options-container .level-block li {
+      margin: 0 !important;
+      font-size: .8em; }
+    .options-container .level-block ul {
+      list-style: disc outside;
+      margin-left: 10px; }
+  .options-container .level-block__intro {
+    background-color: #000;
+    color: #fff;
+    text-align: center; }
+  .options-container .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 160px 0 160px;
+    border-top-color: #000;
+    border-right-color: #5e4e9b;
+    border-bottom-color: #5e4e9b;
+    border-left-color: #5e4e9b;
+    margin: 0 auto;
+    padding: 0; }
+    @media screen and (orientation: portrait) and (max-width: 360px) {
+      .options-container .triangle {
+        border-width: 40px 150px 0 150px; } }
+    .options-container .triangle.triangle_description_2 {
+      border-right-color: #c8c1e1;
+      border-bottom-color: #c8c1e1;
+      border-left-color: #c8c1e1; }
+    .options-container .triangle.triangle_description_3 {
+      border-right-color: rgba(0, 0, 0, 0.4);
+      border-bottom-color: rgba(0, 0, 0, 0.4);
+      border-left-color: rgba(0, 0, 0, 0.4); }
+    .options-container .triangle.triangle_description_4 {
+      border-right-color: rgba(0, 0, 0, 0.3);
+      border-bottom-color: rgba(0, 0, 0, 0.3);
+      border-left-color: rgba(0, 0, 0, 0.3); }
+    .options-container .triangle.triangle_description_5 {
+      border-right-color: rgba(0, 0, 0, 0.2);
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      border-left-color: rgba(0, 0, 0, 0.2); }
+    .options-container .triangle.triangle_description_6 {
+      border-right-color: rgba(0, 0, 0, 0.1);
+      border-bottom-color: rgba(0, 0, 0, 0.1);
+      border-left-color: rgba(0, 0, 0, 0.1); }
+    .options-container .triangle.triangle_description_7 {
+      border-right-color: #fff;
+      border-bottom-color: #fff;
+      border-left-color: #fff; }
+  .options-container .level-block__description_1 {
+    background-color: #5e4e9b;
+    color: #fff; }
+  .options-container .level-block__description_2 {
+    background-color: #c8c1e1; }
+  .options-container .level-block__description_3 {
+    background-color: rgba(0, 0, 0, 0.4); }
+  .options-container .level-block__description_4 {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .options-container .level-block__description_5 {
+    background-color: rgba(0, 0, 0, 0.2); }
+  .options-container .level-block__description_6 {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .options-container .level-block__description_7 {
+    background-color: #fff; }

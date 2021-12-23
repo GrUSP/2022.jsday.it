@@ -1,0 +1,156 @@
+.venue__header {
+  width: 100vw;
+  padding: 8em 0;
+  background-image: url("/assets/img/venue/venue.jpg"); }
+  @media screen and (min-width: 769px), print {
+    .venue__header {
+      background-image: url("/assets/img/venue/tablet_venue.jpg"); } }
+  @media screen and (min-width: 1024px) {
+    .venue__header {
+      background-image: url("/assets/img/venue/desktop_venue.jpg"); } }
+  @media screen and (min-width: 1216px) {
+    .venue__header {
+      background-image: url("/assets/img/venue/widescreen_venue.jpg"); } }
+  @media screen and (min-width: 1408px) {
+    .venue__header {
+      background-image: url("/assets/img/venue/venue.jpg"); } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .venue__header {
+      background-image: url("/assets/img/venue/tablet_vertical_venue.jpg"); } }
+  @media screen and (orientation: portrait) and (max-width: 600px) {
+    .venue__header {
+      background-image: url("/assets/img/venue/mobile_medium_venue.jpg"); } }
+  @media screen and (orientation: portrait) and (max-width: 360px) {
+    .venue__header {
+      background-image: url("/assets/img/venue/mobile_small_venue.jpg"); } }
+  .venue__header h2 {
+    color: #fff;
+    font-style: normal;
+    font-size: 3em; }
+  .venue__header.is-online-conference {
+    background-image: url("/assets/img/venue/venue-online.jpg"); }
+    @media screen and (min-width: 769px), print {
+      .venue__header.is-online-conference {
+        background-image: url("/assets/img/venue/tablet_venue-online.jpg"); } }
+    @media screen and (min-width: 1024px) {
+      .venue__header.is-online-conference {
+        background-image: url("/assets/img/venue/desktop_venue-online.jpg"); } }
+    @media screen and (min-width: 1216px) {
+      .venue__header.is-online-conference {
+        background-image: url("/assets/img/venue/widescreen_venue-online.jpg"); } }
+    @media screen and (min-width: 1408px) {
+      .venue__header.is-online-conference {
+        background-image: url("/assets/img/venue/venue-online.jpg"); } }
+    @media screen and (orientation: portrait) and (min-width: 768px) {
+      .venue__header.is-online-conference {
+        background-image: url("/assets/img/venue/tablet_vertical_venue-online.jpg"); } }
+    @media screen and (orientation: portrait) and (max-width: 600px) {
+      .venue__header.is-online-conference {
+        background-image: url("/assets/img/venue/mobile_medium_venue-online.jpg"); } }
+    @media screen and (orientation: portrait) and (max-width: 360px) {
+      .venue__header.is-online-conference {
+        background-image: url("/assets/img/venue/mobile_small_venue-online.jpg"); } }
+
+.title-container {
+  display: flex;
+  align-items: center; }
+  .title-container svg {
+    background-color: #5e4e9b;
+    fill: #fff;
+    margin-right: 1em; }
+  .title-container h1 {
+    font-size: 2em;
+    line-height: 1.2; }
+    @media screen and (min-width: 769px), print {
+      .title-container h1 {
+        font-size: 3em;
+        line-height: 1.5; } }
+
+.venue-container__more {
+  background-color: #9c91c5;
+  padding: 2em 0; }
+  .venue-container__more h2 {
+    font-size: 2.4em;
+    font-style: normal;
+    text-align: center;
+    color: #fff; }
+  .venue-container__more h3 {
+    color: #000;
+    font-style: normal;
+    text-transform: none;
+    font-weight: 600;
+    text-align: left;
+    font-size: 1.8em;
+    line-height: 1.2; }
+    @media screen and (min-width: 769px), print {
+      .venue-container__more h3 {
+        font-size: 2em;
+        line-height: 1.5; } }
+
+.container__map {
+  background-color: #fff;
+  color: #5e4e9b;
+  text-align: center;
+  padding: 2em; }
+  .container__map h2 {
+    font-size: 2.4em; }
+  .container__map .inner {
+    margin: 0 auto; }
+    .container__map .inner .footer__p_padded, .container__map .inner .footer__a_padded {
+      padding: 1em 0; }
+    .container__map .inner a {
+      font-weight: 600;
+      font-size: 2em;
+      color: #fff; }
+    .container__map .inner h3 {
+      margin: 1em auto; }
+    .container__map .inner .iframe-container {
+      max-width: 800px;
+      margin: 0 auto 2em; }
+      .container__map .inner .iframe-container .iframe-holder {
+        overflow: hidden;
+        height: 0;
+        padding: 56.25% 0 0 0;
+        position: relative; }
+        .container__map .inner .iframe-container .iframe-holder iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+
+.container__hotels {
+  background-color: #000;
+  color: #fff;
+  padding: 2em 0; }
+  .container__hotels .row-info {
+    display: flex;
+    flex-direction: row; }
+    .container__hotels .row-info svg {
+      width: 4em;
+      height: 4em; }
+      .container__hotels .row-info svg path {
+        fill: #fff; }
+  .container__hotels .column {
+    margin-top: 2em; }
+  .container__hotels h3 {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-top: .25em; }
+  .container__hotels h4 {
+    color: #9c91c5;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: none; }
+  .container__hotels a {
+    color: #fff; }
+
+.image-credits {
+  position: relative;
+  margin: -2em auto 0;
+  text-align: center;
+  font-size: .8em;
+  color: #fff; }
+  .image-credits a {
+    color: #fff; }

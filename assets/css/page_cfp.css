@@ -1,0 +1,38 @@
+.title-container {
+  display: flex;
+  align-items: center; }
+  .title-container svg {
+    background-color: #5e4e9b;
+    fill: #fff;
+    margin-right: 1em; }
+  .title-container h1 {
+    font-size: 2em;
+    line-height: 1.2; }
+    @media screen and (min-width: 769px), print {
+      .title-container h1 {
+        font-size: 3em;
+        line-height: 1.5; } }
+
+.container__more {
+  padding: 2em 0;
+  background-color: #9c91c5; }
+  .container__more h3 {
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8em;
+    line-height: 1.2; }
+    @media screen and (min-width: 769px), print {
+      .container__more h3 {
+        font-size: 2em;
+        line-height: 1.5; } }
+
+.container__contact {
+  padding: 2em 0; }
+  .container__contact h3 {
+    text-align: center; }
+  .container__contact .is-centered {
+    padding: 2em 0; }
+
+.button.is-primary:hover, .button.is-primary:active, .button.is-primary:focus {
+  border-color: #5e4e9b !important; }

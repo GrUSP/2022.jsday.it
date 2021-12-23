@@ -1,0 +1,128 @@
+.workshop-component-holder {
+  padding-top: 5em; }
+
+#workshop h1 {
+  color: #5e4e9b; }
+
+#workshop h2 {
+  text-align: center;
+  font-style: normal;
+  color: #5e4e9b; }
+
+.workshop__container {
+  padding: 1em 0 2em;
+  margin: 0; }
+  .workshop__container .inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
+    .workshop__container .inner .workshop__info {
+      text-align: left; }
+  .workshop__container:last-of-type .inner {
+    border-bottom: none; }
+  .workshop__container h5 {
+    text-transform: none;
+    font-weight: 600;
+    color: #5e4e9b; }
+  .workshop__container p {
+    color: #000; }
+  .workshop__container .columns {
+    margin-top: 1em;
+    margin-bottom: 0;
+    flex-wrap: wrap; }
+    .workshop__container .columns.no-margin-top {
+      margin-top: 0; }
+    .workshop__container .columns.workshop__info {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      min-width: 240px; }
+    .workshop__container .columns .workshop__info {
+      max-width: 80%;
+      margin: 0 auto; }
+      @media screen and (min-width: 769px), print {
+        .workshop__container .columns .workshop__info {
+          min-width: 600px; } }
+  .workshop__container .card-image {
+    width: 190px;
+    height: 190px;
+    overflow: hidden; }
+  .workshop__container .workshop-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    max-width: 80%;
+    margin: 0 auto; }
+    @media screen and (min-width: 769px), print {
+      .workshop__container .workshop-buttons {
+        min-width: 450px; } }
+    .workshop__container .workshop-buttons .workshop-buttons__button-container {
+      min-width: 190px;
+      height: 190px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #5e4e9b;
+      border: 1px solid #5e4e9b; }
+      .workshop__container .workshop-buttons .workshop-buttons__button-container:hover, .workshop__container .workshop-buttons .workshop-buttons__button-container:focus, .workshop__container .workshop-buttons .workshop-buttons__button-container:active {
+        background-color: #fff; }
+        .workshop__container .workshop-buttons .workshop-buttons__button-container:hover svg path, .workshop__container .workshop-buttons .workshop-buttons__button-container:hover svg polygon, .workshop__container .workshop-buttons .workshop-buttons__button-container:focus svg path, .workshop__container .workshop-buttons .workshop-buttons__button-container:focus svg polygon, .workshop__container .workshop-buttons .workshop-buttons__button-container:active svg path, .workshop__container .workshop-buttons .workshop-buttons__button-container:active svg polygon {
+          fill: #5e4e9b; }
+      .workshop__container .workshop-buttons .workshop-buttons__button-container a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: .8em;
+        font-weight: 600; }
+      .workshop__container .workshop-buttons .workshop-buttons__button-container:hover > a, .workshop__container .workshop-buttons .workshop-buttons__button-container:focus > a, .workshop__container .workshop-buttons .workshop-buttons__button-container:active > a {
+        color: #5e4e9b;
+        text-decoration: none; }
+  .workshop__container .workshop-buttons__button {
+    width: 120px;
+    height: 120px; }
+    .workshop__container .workshop-buttons__button svg path, .workshop__container .workshop-buttons__button svg polygon {
+      fill: #fff; }
+  .workshop__container .row-info {
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .7em; }
+    @media screen and (min-width: 769px), print {
+      .workshop__container .row-info {
+        font-size: .9em; } }
+    .workshop__container .row-info .info__date {
+      padding: 0 10px 0 10px; }
+    .workshop__container .row-info .info-icon {
+      margin-top: 6px; }
+    .workshop__container .row-info .info-icon.padded {
+      padding: 0 0 0 10px; }
+      @media screen and (min-width: 769px), print {
+        .workshop__container .row-info .info-icon.padded {
+          padding: 0 0 0 10px; } }
+      .workshop__container .row-info .info-icon.padded svg {
+        height: 30px;
+        width: auto; }
+  .workshop__container .row__more {
+    padding-top: 2em;
+    flex-wrap: wrap; }
+  .workshop__container .button.is-primary {
+    background-color: #5e4e9b;
+    font-weight: 700;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 10px auto; }
+    @media screen and (min-width: 769px), print {
+      .workshop__container .button.is-primary {
+        padding-left: 2em;
+        padding-right: 2em;
+        margin-right: 1em; } }
+    .workshop__container .button.is-primary:hover, .workshop__container .button.is-primary:active, .workshop__container .button.is-primary:focus {
+      color: #5e4e9b;
+      border-color: #5e4e9b;
+      background-color: #fff; }

@@ -1,0 +1,192 @@
+#workshop h1 {
+  text-align: left; }
+
+#page-workshop h1 {
+  font-size: 3em;
+  line-height: 1.5em;
+  text-align: left; }
+
+#page-workshop .button:hover, #page-workshop .button:active, #page-workshop .button:focus {
+  border-color: #5e4e9b; }
+
+#page-workshop span.teacher-org::before {
+  content: ' @ '; }
+
+.workshop-single__header {
+  background: url("/assets/img/workshop/worskhop_header.jpg") no-repeat top center;
+  width: 100vw;
+  padding: 8em 0; }
+  @media screen and (min-width: 769px), print {
+    .workshop-single__header {
+      background-image: url("/assets/img/workshop/tablet_worskhop_header.jpg"); } }
+  @media screen and (min-width: 1024px) {
+    .workshop-single__header {
+      background-image: url("/assets/img/workshop/desktop_worskhop_header.jpg"); } }
+  @media screen and (min-width: 1216px) {
+    .workshop-single__header {
+      background-image: url("/assets/img/workshop/widescreen_worskhop_header.jpg"); } }
+  @media screen and (min-width: 1408px) {
+    .workshop-single__header {
+      background-image: url("/assets/img/workshop/worskhop_header.jpg"); } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .workshop-single__header {
+      background-image: url("/assets/img/workshop/tablet_vertical_worskhop_header.jpg"); } }
+  @media screen and (orientation: portrait) and (max-width: 600px) {
+    .workshop-single__header {
+      background-image: url("/assets/img/workshop/mobile_medium_worskhop_header.jpg"); } }
+  @media screen and (orientation: portrait) and (max-width: 360px) {
+    .workshop-single__header {
+      background-image: url("/assets/img/workshop/mobile_small_worskhop_header.jpg"); } }
+  .workshop-single__header.is-online-conference {
+    background-image: url("/assets/img/workshop/worskhop_header-online.jpg"); }
+    @media screen and (min-width: 769px), print {
+      .workshop-single__header.is-online-conference {
+        background-image: url("/assets/img/workshop/tablet_worskhop_header-online.jpg"); } }
+    @media screen and (min-width: 1024px) {
+      .workshop-single__header.is-online-conference {
+        background-image: url("/assets/img/workshop/desktop_worskhop_header-online.jpg"); } }
+    @media screen and (min-width: 1216px) {
+      .workshop-single__header.is-online-conference {
+        background-image: url("/assets/img/workshop/widescreen_worskhop_header-online.jpg"); } }
+    @media screen and (min-width: 1408px) {
+      .workshop-single__header.is-online-conference {
+        background-image: url("/assets/img/workshop/worskhop_header-online.jpg"); } }
+    @media screen and (orientation: portrait) and (min-width: 768px) {
+      .workshop-single__header.is-online-conference {
+        background-image: url("/assets/img/workshop/tablet_vertical_worskhop_header-online.jpg"); } }
+    @media screen and (orientation: portrait) and (max-width: 600px) {
+      .workshop-single__header.is-online-conference {
+        background-image: url("/assets/img/workshop/mobile_medium_worskhop_header-online.jpg"); } }
+    @media screen and (orientation: portrait) and (max-width: 360px) {
+      .workshop-single__header.is-online-conference {
+        background-image: url("/assets/img/workshop/mobile_small_worskhop_header-online.jpg"); } }
+  .workshop-single__header .image-credits {
+    position: relative;
+    margin: -2em auto 0;
+    text-align: center;
+    font-size: .8em;
+    color: #fff; }
+    .workshop-single__header .image-credits a {
+      color: #fff; }
+  .workshop-single__header h2 {
+    color: #fff;
+    margin: 1em 0;
+    font-style: normal;
+    font-size: 3em; }
+  .workshop-single__header .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .workshop-single__header .inner .button.is-primary {
+      background-color: #fff !important;
+      color: #5e4e9b;
+      border-color: #fff !important; }
+      .workshop-single__header .inner .button.is-primary:hover, .workshop-single__header .inner .button.is-primary:active, .workshop-single__header .inner .button.is-primary:focus {
+        background-color: #5e4e9b !important;
+        color: #fff !important;
+        border-color: #5e4e9b !important; }
+
+.workshop-single__container h1, .workshop-single__container h2 {
+  color: #5e4e9b; }
+
+.workshop-single__container .workshop-single__intro .row-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-transform: uppercase;
+  color: #000;
+  justify-content: space-around;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 1em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
+  .workshop-single__container .workshop-single__intro .row-info .column {
+    display: flex;
+    align-items: center; }
+    .workshop-single__container .workshop-single__intro .row-info .column .info__language, .workshop-single__container .workshop-single__intro .row-info .column .info__teacher {
+      padding: 0 10px 0 10px; }
+
+.workshop-single__container .workshop-single__intro iframe {
+  max-width: 100%;
+  margin-top: 1em; }
+
+.workshop-single__container .workshop-single__intro .button.is-primary {
+  border-color: #5e4e9b !important; }
+  .workshop-single__container .workshop-single__intro .button.is-primary:hover, .workshop-single__container .workshop-single__intro .button.is-primary:active, .workshop-single__container .workshop-single__intro .button.is-primary:focus {
+    border-color: #5e4e9b !important; }
+
+.workshop-single__container .workshop-single__teacher {
+  background-color: rgba(0, 0, 0, 0.1); }
+  .workshop-single__container .workshop-single__teacher h2 {
+    text-align: center;
+    font-style: normal;
+    font-size: 3em; }
+  .workshop-single__container .workshop-single__teacher .inner {
+    padding: 2em 0; }
+
+.workshop-single__container .workshop-single__moreinfo h3 {
+  color: #5e4e9b;
+  margin: 1em 0; }
+
+.workshop-single__container .workshop-single__moreinfo ul {
+  list-style: disc inside; }
+
+.workshop-single__container .workshop-single__cta {
+  background-color: #5e4e9b; }
+  .workshop-single__container .workshop-single__cta .inner {
+    margin: 0 auto;
+    padding: 2em 0;
+    text-align: center; }
+    .workshop-single__container .workshop-single__cta .inner h3 {
+      color: #fff;
+      margin-bottom: 1em; }
+    .workshop-single__container .workshop-single__cta .inner .button.is-primary {
+      background-color: #fff !important;
+      color: #5e4e9b;
+      border-color: #fff; }
+      .workshop-single__container .workshop-single__cta .inner .button.is-primary:hover, .workshop-single__container .workshop-single__cta .inner .button.is-primary:active, .workshop-single__container .workshop-single__cta .inner .button.is-primary:focus {
+        background-color: #5e4e9b !important;
+        color: #fff !important;
+        border-color: #fff !important; }
+
+.workshop-single__container .workshop-single__summary {
+  background-color: #000;
+  color: #fff; }
+  .workshop-single__container .workshop-single__summary .inner {
+    margin: 0 auto; }
+  .workshop-single__container .workshop-single__summary .summary-blocks {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .workshop-single__container .workshop-single__summary .summary-blocks .block {
+      padding: 2em;
+      max-width: 90%; }
+      @media screen and (min-width: 1024px) {
+        .workshop-single__container .workshop-single__summary .summary-blocks .block {
+          min-width: 40%;
+          max-width: 40%; } }
+      .workshop-single__container .workshop-single__summary .summary-blocks .block .row-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: .8em; }
+        @media screen and (min-width: 769px), print {
+          .workshop-single__container .workshop-single__summary .summary-blocks .block .row-info {
+            font-size: 1em; } }
+        .workshop-single__container .workshop-single__summary .summary-blocks .block .row-info .info-icon {
+          margin-left: -.8em; }
+        .workshop-single__container .workshop-single__summary .summary-blocks .block .row-info svg {
+          fill: #fff;
+          width: 3em;
+          height: 3em; }
+        .workshop-single__container .workshop-single__summary .summary-blocks .block .row-info .info__location {
+          font-size: 2em;
+          text-transform: uppercase; }
+      .workshop-single__container .workshop-single__summary .summary-blocks .block strong {
+        color: #9c91c5; }
+      .workshop-single__container .workshop-single__summary .summary-blocks .block a {
+        color: #fff; }
+  .workshop-single__container .workshop-single__summary .is-centered {
+    padding: 2em 0; }

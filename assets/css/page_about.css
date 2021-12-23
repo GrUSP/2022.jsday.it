@@ -1,0 +1,84 @@
+.title-container {
+  display: flex;
+  align-items: center; }
+  .title-container svg {
+    background-color: #5e4e9b;
+    fill: #fff;
+    margin-right: 1em; }
+  .title-container h1 {
+    font-size: 2em;
+    line-height: 1.2; }
+    @media screen and (min-width: 769px), print {
+      .title-container h1 {
+        font-size: 3em;
+        line-height: 1.5; } }
+
+.container__more {
+  background-color: #9c91c5; }
+  .container__more h2 {
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8em;
+    line-height: 1.2; }
+    @media screen and (min-width: 769px), print {
+      .container__more h2 {
+        font-size: 2em;
+        line-height: 1.5; } }
+
+.container__past-editions {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 4em 0; }
+  .container__past-editions .inner {
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.4); }
+    .container__past-editions .inner .footer__p_padded, .container__past-editions .inner .footer__a_padded {
+      padding: 1em 0; }
+    .container__past-editions .inner a {
+      font-weight: 300;
+      font-size: 1.5em;
+      color: #c8c1e1; }
+    .container__past-editions .inner a.past-edition {
+      display: inline-block;
+      margin-right: 8px; }
+      .container__past-editions .inner a.past-edition:after {
+        content: "|";
+        display: inline;
+        padding-left: 8px; }
+    .container__past-editions .inner a.past-edition:last-of-type:after {
+      content: ""; }
+    .container__past-editions .inner .row__social p {
+      font-weight: 600; }
+    .container__past-editions .inner h3 {
+      margin: 1em auto; }
+    .container__past-editions .inner .iframe-container {
+      max-width: 800px;
+      margin: 0 auto; }
+      .container__past-editions .inner .iframe-container .iframe-holder {
+        overflow: hidden;
+        height: 0;
+        padding: 56.25% 0 0 0;
+        position: relative; }
+        .container__past-editions .inner .iframe-container .iframe-holder iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+
+.container__team {
+  padding: 2em 0; }
+  .container__team h3 {
+    text-align: center;
+    color: #5e4e9b; }
+  .container__team .card {
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto; }
+    .container__team .card .title {
+      font-weight: 600;
+      margin: 1em auto 0; }
+    .container__team .card .subtitle {
+      margin: 0 auto; }
