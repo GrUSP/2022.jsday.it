@@ -1,0 +1,15 @@
+section(id="cfp").section_nopadding
+  .cfp__container
+    .columns.inner
+      .column
+        h1(role="heading" aria-level="2").title.is-1 !{site.data.defaults.conference.cfp_open_title}
+        .row-info
+
+          - var cfp_deadline = ""
+          if(site.data.defaults.conference.is_online_only === true)
+            - cfp_deadline = date(site.data.defaults.conference.cfp_deadline, config.date_format_hero_online)
+          else
+            - cfp_deadline = date(site.data.defaults.conference.cfp_deadline, config.date_format_hero)
+
+          span !{site.data.defaults.conference.cfp_open_label} #{cfp_deadline}
+          a(href=url_for("welcome/cfp.html") aria-label=site.data.defaults.conference.cfp_register_aria_label).button.is-medium.is-rounded.is-primary !{site.data.defaults.conference.cfp_readmore_label}

@@ -1,0 +1,26 @@
+extends includes/layout.pug
+
+block content
+  include components/hero/hero.pug
+  if(site.data.defaults.conference.update_visible)
+    include components/update/update.pug
+  if(site.data.defaults.conference.cfp_open)
+    include components/cfp/cfp.pug
+  if(site.data.defaults.conference.geninfo_visible)
+    include components/generalinfo/generalinfo.pug
+  if(site.data.defaults.conference.speakers_visible)
+    include components/speakers/speakers.pug
+  if(site.data.defaults.conference.topics_visible)
+    include components/topics/topics.pug
+  if(site.data.defaults.conference.workshop_visible)
+    include components/workshop/workshop.pug
+  //- newsletter form: always visible
+  include components/newsletter/newsletter.pug
+  if(site.data.defaults.conference.media_visible)
+    include components/media/media.pug
+  if(site.data.defaults.conference.location_visible)
+    include components/location/location.pug
+  if(site.data.defaults.conference.sponsors_visible)
+  include components/sponsors/sponsors.pug
+  if site.data.defaults.conference.community_partners
+    include components/community_partners/community_partners.pug

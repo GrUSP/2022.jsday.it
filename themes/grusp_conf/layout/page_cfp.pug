@@ -1,0 +1,48 @@
+extends includes/layout.pug
+
+block content
+  - contact_url = "mailto:" + site.data.defaults.conference.contact_email
+  section(id="cfp")
+    include includes/_breadcrumbs.pug
+
+    .container
+      .inner
+        .title-container
+          include ../source/assets/ico/ico-cfp.svg
+          h1(role="heading" aria-level="1").is-title-is-1 !{site.data.page_cfp.intro.main_title}
+
+        - var cfp_deadline = ""
+        if(site.data.defaults.conference.is_online_only === true)
+          - cfp_deadline = date(site.data.defaults.conference.cfp_deadline, config.date_format_hero_online)
+        else
+          - cfp_deadline = date(site.data.defaults.conference.cfp_deadline, config.date_format_hero)
+
+        p
+          strong !{site.data.page_cfp.intro.date_intro} #{cfp_deadline}
+        p !{site.data.page_cfp.intro.content_1}
+        if(site.data.page_cfp.intro.content_2)
+          p !{site.data.page_cfp.intro.content_2}
+    .container__more
+      .inner
+        h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_cfp.more_info.title}
+        p !{site.data.page_cfp.more_info.description_1}
+        if(site.data.page_cfp.more_info.description_2)
+          p !{site.data.page_cfp.more_info.description_2}
+    .container.container__contact
+      .inner
+        h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_cfp.contact.title}
+        p !{site.data.page_cfp.contact.email_intro}
+          a(href=contact_url) !{site.data.defaults.conference.contact_email}
+        if(site.data.page_cfp.contact.help_url)
+          p !{site.data.page_cfp.contact.help_intro}
+            a(href=site.data.page_cfp.contact.help_url) !{href=site.data.page_cfp.contact.help_url}
+        if(site.data.defaults.conference.cfp_open)
+          .is-centered
+            a(href=site.data.page_cfp.cfp_register_url aria-label=site.data.defaults.conference.cfp_register_aria_label).button.is-medium.is-rounded.is-primary !{site.data.defaults.conference.cfp_register_label}
+
+    //- imported components
+    include components/newsletter/newsletter
+    if(site.data.defaults.conference.sponsors_visible)
+      include components/sponsors/sponsors
+    if site.data.defaults.conference.community_partners
+      include components/community_partners/community_partners

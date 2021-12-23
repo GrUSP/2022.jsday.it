@@ -1,0 +1,34 @@
+section(id="media").section_nopadding
+  .media__container
+    .columns.is-mobile
+      if(site.data.defaults.conference.media_pic_1)
+        - pic_1_filename = `/img/media/${site.data.defaults.conference.media_pic_1}`
+        .column
+          .pic-holder
+            img(src=pic_1_filename alt="")
+      if(site.data.defaults.conference.media_pic_2)
+        - pic_2_filename = `/img/media/${site.data.defaults.conference.media_pic_2}`
+        .column
+          .pic-holder
+            img(src=pic_2_filename alt="")
+      if(site.data.defaults.conference.media_pic_3)
+        - pic_3_filename = `/img/media/${site.data.defaults.conference.media_pic_3}`
+        .column
+          .pic-holder
+            img(src=pic_3_filename alt="")
+      if(site.data.defaults.conference.media_pic_4)
+        - pic_4_filename = `/img/media/${site.data.defaults.conference.media_pic_4}`
+        .column
+          .pic-holder
+            img(src=pic_4_filename alt="")
+    if(site.data.defaults.conference.media_video_playlist)
+      - playlist_full_url= ""
+      if(site.data.defaults.conference.media_video_is_youtube)
+        - playlist_full_url = site.data.defaults.conference.youtube_base_url + site.data.defaults.conference.youtube_playlist_id
+      else
+        - playlist_full_url = site.data.defaults.conference.vimeo_base_url + site.data.defaults.conference.vimeo_showcase_id + site.data.defaults.conference.vimeo_url_suffix
+      .inner
+        h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_about.past_edition.video_caption}
+        .iframe-container
+          .iframe-holder
+            iframe(type="text/html" src=playlist_full_url frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="800px" height="450px")

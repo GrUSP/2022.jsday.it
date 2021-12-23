@@ -1,0 +1,38 @@
+header:
+  title_pre: "...and a lovely "
+intro:
+  main_title: "Where"
+  content_1: "The event is happening online, on a virtual venue that will allow all participants to interact live, through messages and also video-calls. <br /> The tickets are sold on Eventbrite, and you'll receive the link to access the virtual venue a couple of days before the event."
+  content_2: ""
+city_info:
+  title: "How it works"
+  subtitle_1: "Participate live"
+  description_1: "You can participate live and interact with speakers and attendees. The event is happening on Hopin, a very easy-to-use web platform on which we already have held all our 2020 events."
+  subtitle_2: "Access the recorded videos"
+  description_2: "If you have a ticket, right after the event you'll have access to all of the recorded contents."
+map:
+  title: "Location"
+  map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.4793358997117!2d10.969744115556647!3d45.43999607910055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781e1e30a8be6af%3A0x8091b108e1d130c6!2sHotel%20San%20Marco%20Fitness%20Pool%20%26%20SPA!5e0!3m2!1sen!2sit!4v1587388989438!5m2!1sen!2sit"
+  video_caption: "Watch the video of the latest edition"
+hotels:
+  title: "Hotel agreements"
+  intro: "We have conventions with hotels in the area, ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+  agreements:
+    hotel_1:
+      name: "Hotel Leopardi"
+      address: "Via Giacomo Leopardi, 16, 37138 Verona VR"
+      website: "http://leopardi.vr.it"
+      maps_url: "https://www.google.com/maps/place/Hotel+Leopardi/@45.4399957,10.963178,15z/data=!4m21!1m12!2m11!1shotel!3m5!1shotel!2s45.44,+10.9717!4m2!1d10.9716968!2d45.4399886!5m3!5m2!4m1!1i2!3m7!1s0x4781e1fb205821fd:0xa49414ecb16b1b73!5m2!4m1!1i2!8m2!3d45.4433788!4d10.9689555"
+      phone: "+390458101444"
+      phone_label: "045 8101444"
+      email: "leopardi@leopardi.vr.it"
+    hotel_2:
+      name: "Vapama"
+      address: "Via Napoleone I 13, 37138 Verona VR"
+      maps_url: "https://www.google.com/maps/place/Hotel+Leopardi/@45.4399957,10.963178,15z/data=!4m21!1m12!2m11!1shotel!3m5!1shotel!2s45.44,+10.9717!4m2!1d10.9716968!2d45.4399886!5m3!5m2!4m1!1i2!3m7!1s0x4781e1fb205821fd:0xa49414ecb16b1b73!5m2!4m1!1i2!8m2!3d45.4433788!4d10.9689555"
+      phone: "+393461833480"
+      phone_label: "346 1833480"
+address_aria_label: "hotel address"
+email_aria_label: "hotel email"
+phone_aria_label: "hotel phone"
+website_aria_label: "hotel phone"

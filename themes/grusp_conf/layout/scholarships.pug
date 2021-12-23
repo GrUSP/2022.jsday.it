@@ -1,0 +1,70 @@
+extends includes/layout.pug
+
+block content
+  - contact_url = "mailto:" + site.data.defaults.conference.contact_email
+  section(id="scholarships")
+    include includes/_breadcrumbs.pug
+
+    .container
+      .inner
+        .title-container
+          include ../source/assets/ico/ico-scholarship.svg
+          h1(role="heading" aria-level="1").title-is-1 !{site.data.page_scholarships.intro.main_title}
+        p
+          strong !{site.data.page_scholarships.intro.content_1}
+        p.text_bigger !{site.data.page_scholarships.intro.content_2}
+        p !{site.data.page_scholarships.intro.content_3}
+    .container.container__short-version
+      .inner
+        if site.data.page_scholarships.short_version.title
+          h2(role="heading" aria-level="2").title.is-2 !{site.data.page_scholarships.short_version.title}
+        p !{site.data.page_scholarships.short_version.content_1}
+        if(site.data.page_scholarships.short_version.content_2)
+          p
+            strong !{site.data.page_scholarships.short_version.content_2}
+        if(site.data.page_scholarships.short_version.content_3)
+          p !{site.data.page_scholarships.short_version.content_3}
+        if(site.data.page_scholarships.short_version.content_4)
+          p !{site.data.page_scholarships.short_version.content_4}
+        if(site.data.page_scholarships.short_version.content_5)
+          p !{site.data.page_scholarships.short_version.content_5}
+        if(site.data.page_scholarships.short_version.content_6)
+          p !{site.data.page_scholarships.short_version.content_6}
+    .container.container__long-version
+      .inner
+        if site.data.page_scholarships.long_version.title
+          h2(role="heading" aria-level="2").title.is-2 !{site.data.page_scholarships.long_version.title}
+        h3(role="heading" aria-level="3") !{site.data.page_scholarships.long_version.content_1}
+        p !{site.data.page_scholarships.long_version.content_2_beginning}
+          a(href=site.data.page_scholarships.long_version.content_2_link_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=content_2_link_label) !{site.data.page_scholarships.long_version.content_2_link_label}
+          | !{site.data.page_scholarships.long_version.content_2_ending}
+        h3(role="heading" aria-level="3") !{site.data.page_scholarships.long_version.content_3}
+        p !{site.data.page_scholarships.long_version.content_4}
+        h3(role="heading" aria-level="3") !{site.data.page_scholarships.long_version.content_5}
+        p !{site.data.page_scholarships.long_version.content_6}
+          a(href=contact_url role="button" rel="external" aria-label="contact email") !{site.data.defaults.conference.contact_email}
+
+    .container.container_diversity-sponsors
+      .inner
+        h4(role="heading" aria-level="4").title.is-4  !{site.data.page_scholarships.diversity_sponsors_title}
+        each sponsor in site.data.page_scholarships.diversity_sponsors
+          .column
+            - filename = "/img/logos/"+sponsor.logo_filename
+            a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+              img(src=filename alt=sponsor.name)
+          script(type="application/ld+json").
+            {
+              "sponsor":
+              {
+                "type": "Organization",
+                "name": "#{sponsor.name}",
+                "url": "#{sponsor.site_url}"
+              }
+            }
+
+    //- imported components
+    include components/newsletter/newsletter
+    if(site.data.defaults.conference.sponsors_visible)
+      include components/sponsors/sponsors
+    if site.data.defaults.conference.community_partners
+      include components/community_partners/community_partners

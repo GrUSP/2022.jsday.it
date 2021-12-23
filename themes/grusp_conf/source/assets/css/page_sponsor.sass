@@ -1,0 +1,125 @@
+@import "defaults"
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/sass/utilities/mixins"
+@import "_mixins"
+
+#sponsor
+  h1
+    text-transform: none 
+    color: $main-color
+    font-size: 2em
+    line-height: 1.2
+    +tablet
+      font-size: 3em
+      line-height: 1.5
+  h2
+    font-style: normal
+    text-align: center
+    color: $main-text-color_inverted
+    font-size: 1.8em
+    line-height: 1.2
+    +tablet
+      font-size: 2em
+      line-height: 1.5
+    +desktop
+      font-size: 2.5em
+  h3
+    font-size: 1.5em
+    +tablet
+      font-size: 1.8em
+  p
+    margin: 1em 0
+  .column
+    margin: 0 2em
+  .is-centered p
+    margin: 0 0 1em 0
+
+.background-light
+  background-color: $main-color_hue-medium
+  a
+    color: $main-text-color
+    font-weight: 600
+
+.options-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+  align-items: flex-start
+  .level-block
+    margin: 20px
+    border: 1px solid $main-text-color
+    display: flex
+    flex-direction: column
+    justify-items: flex-start
+    flex-shrink: 1
+    width: 320px
+    +small-phone
+      width: 300px
+    & > div:not(.triangle)
+      padding: 20px
+    h3
+      font-size: 1.8em
+    p, li
+      margin: 0 !important
+      font-size: .8em
+    ul
+      list-style: disc outside
+      margin-left: 10px
+  .level-block__intro
+    background-color: $main-text-color
+    color: $main-text-color_inverted
+    text-align: center
+  .triangle
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 40px 160px 0 160px
+    border-top-color: $main-text-color
+    border-right-color: $main-color
+    border-bottom-color: $main-color
+    border-left-color: $main-color
+    margin: 0 auto
+    padding: 0
+    +small-phone
+      border-width: 40px 150px 0 150px
+    &.triangle_description_2
+      border-right-color: $main-color_hue-light
+      border-bottom-color: $main-color_hue-light
+      border-left-color: $main-color_hue-light
+    &.triangle_description_3
+      border-right-color: $main-text-color_hue-medium
+      border-bottom-color: $main-text-color_hue-medium
+      border-left-color: $main-text-color_hue-medium
+    &.triangle_description_4
+      border-right-color: $main-text-color_hue-medium_low
+      border-bottom-color: $main-text-color_hue-medium_low
+      border-left-color: $main-text-color_hue-medium_low
+    &.triangle_description_5
+      border-right-color: $main-text-color_hue-light
+      border-bottom-color: $main-text-color_hue-light
+      border-left-color: $main-text-color_hue-light
+    &.triangle_description_6
+      border-right-color: $main-text-color_hue-lighter
+      border-bottom-color: $main-text-color_hue-lighter
+      border-left-color: $main-text-color_hue-lighter
+    &.triangle_description_7
+      border-right-color: $main-text-color_inverted
+      border-bottom-color: $main-text-color_inverted
+      border-left-color: $main-text-color_inverted
+  .level-block__description_1
+    background-color: $main-color
+    color: $main-text-color_inverted
+  .level-block__description_2
+    background-color: $main-color_hue-light
+  .level-block__description_3
+    background-color: $main-text-color_hue-medium
+  .level-block__description_4
+    background-color: $main-text-color_hue-medium_low
+  .level-block__description_5
+    background-color: $main-text-color_hue-light
+  .level-block__description_6
+    background-color: $main-text-color_hue-lighter
+  .level-block__description_7
+    background-color: $main-text-color_inverted
+  

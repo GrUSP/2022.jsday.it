@@ -1,0 +1,291 @@
+extends includes/layout.pug
+
+
+block content
+  - contact_url = "mailto:" + site.data.defaults.conference.contact_email
+  section(id="schedule")
+
+    //- se in `/source/_data/talks_speakers.yml` il parametro `generate_schedule_page` vale `false`, la pagina viene generata vuota e nel menu non viene inclusa la voce corrispondente
+    if(site.data.talks_speakers.generate_schedule_page === false)
+      .container
+        .inner
+          .title-container.title-container_schedule
+            h1(class=title_classes role="heading" aria-level="1").title-is-1 !{site.data.talks_speakers.schedule_under_construction_title}
+          p !{site.data.talks_speakers.schedule_under_construction_description}
+
+    else
+      include includes/_breadcrumbs.pug
+
+      //- we count the number of tracks in order to know if the table must have more than one column
+      - var no_tracks = Object.keys(site.data.talks_speakers.tracks).length
+
+      .container
+        .inner
+          //- we count the days - useful for the page layout
+          - var no_days = Object.keys(site.data.talks_speakers.days).length
+
+          //- if there is only one day, the title must be aligned to the left
+          - title_classes = ""
+          if(no_days > 1)
+            - title_classes += "is-centered"
+          else
+            - title_classes += "has-text-left"
+
+          .title-container.title-container_schedule
+            h1(class=title_classes role="heading" aria-level="1").title-is-1 !{page.title}
+
+          //- links to every day in page if there is more than 1 day
+          if(no_days > 1)
+            .container.date-menu
+              .inner
+                each day in site.data.talks_speakers.days
+                  - anchor = `#${day.title}`
+                  a(role="button" href=anchor).button.is-rounded.is-primary.is-medium !{day.title}
+
+          each day in site.data.talks_speakers.days
+            - the_id = day.title
+            .timeline
+              .info-bar
+                .row-info
+                  .info-icon.padded
+                    include ../source/assets/ico/ico-calendar.svg
+
+                    - var start_date = ""
+                    if(site.data.defaults.conference.is_online_only === true)
+                      - start_date = date(day.date, config.date_format_hero_online)
+                    else
+                      - start_date = date(day.date, config.date_format_hero)
+
+                  .info__date(id=the_id)
+                    time(datetime=day_date) !{start_date}
+
+              table.table.is-fullwidth.is-hoverable
+                tbody
+                  //- we transform the talks into an array (needed for sorting)
+                  - const items = []
+                  each talk, key in day.talks
+                    - items.push(talk)
+                  //- order the array by start times
+                  - items.sort((a, b) => (a.start_datetime > b.start_datetime) ? 1 : -1)
+
+                  //- per ogni start_datetime una riga nella tabella
+                  - const datetimes = items.map(item => item.start_datetime).filter((value, index, self) => self.indexOf(value) === index).sort((a, b) => (a > b) ? 1 : -1)
+
+                  //- loop 1: datetimes
+                  - var row_items = []
+                  each datetime in datetimes
+                    - row_items[datetime] = []
+                    //- loop 2: "talks" in each datetime series
+                    each item in items
+                      if(item.start_datetime == datetime)
+                        - row_items[datetime].push(item)
+                    //- end loop 2
+
+                  - var cell_colspan = 1
+                  - var cell_rowspan = 1
+                  - var cell_style = ""
+                  - var cell_classes = ""
+                  - var previous_duration = 0
+                  - var current_duration = 0
+
+                  //- &calculate_rowspan
+                  //- [AS] qui si creano i presupposti per dare colspan > 1 agli item che durano più del normale (x es. workshop)
+                  //- vorremmo dare un'occhiata alla riga successiva per capire quale sia la durata massima dei talk
+                  each datetime, index in datetimes
+                    - cell_rowspan = 1
+                    //- se esiste (non è undefined) una prossima riga...
+                    if(datetimes[index+1] !== undefined)
+                      - for (let i = 0; i < no_tracks; i++)
+                        //- se esiste la colonna `i` nella prossima riga...
+                        if(row_items[datetimes[index+1]][i] !== undefined)
+                          //- se la *riga corrente* esiste ed esiste la corrispondente colonna...
+                          if(row_items[datetimes[index]] !== undefined)
+                            if(row_items[datetimes[index]][i] !== undefined)
+                              //- ...allora aggiungiamo all'oggetto l'attributo rowspan...
+                              - row_items[datetimes[index]][i].rowspan = cell_rowspan
+                          if(row_items[datetimes[index+1]][i].item_type == 'talk' || row_items[datetimes[index+1]][i].item_type == 'workshop' || row_items[datetimes[index+1]][i].item_type == 'other')
+                            //- ...ma aumentiamo effettivamente il *valore* di cell_rowspan solo passando alla riga successiva
+                            - cell_rowspan++
+
+                  //- loop datetimes
+                  each datetime, index in Object.keys(row_items)
+
+                    tr
+                      if(row_items[datetime][0].item_type == 'talk' || row_items[datetime][0].item_type == 'workshop' || row_items[datetime][0].item_type == 'other')
+
+                        - for (let i = 0; i < no_tracks; i++)
+                          //- qui si verifica l'effettiva durata dell'item. se non è maggiore della durata dell'item corrispondente nella riga precedente, non verrà creata una cella vuota sotto di lui, in modo che possa sfruttare il proprio rowspan
+                          if(row_items[datetime][i] !== undefined)
+                            - var start = new Date(row_items[datetime][i].start_datetime)
+                            - var end = new Date(row_items[datetime][i].end_datetime)
+                            - current_duration = end - start
+
+                          //- qui si creano celle vuote solo dove servono effettivamente
+                          if(row_items[datetime][i] === undefined && current_duration <= previous_duration)
+                            - row_items[datetime][i] = {'track': {'id': i}, 'item_type': 'empty'}
+
+                      - ordered_row_items = row_items[datetime].sort((a, b) => (a.track.id > b.track.id) ? 1 : -1)
+
+                      //- loop in single row
+                      each row_item in ordered_row_items
+                        - cell_colspan = 1
+                        - cell_style = ""
+                        - cell_classes = ""
+
+                        if row_item.item_type === 'empty'
+                          td(colspan=cell_colspan style=cell_style).empty-item
+                            span &nbsp;
+                          - continue
+
+                        if(row_item.item_type == "service" || row_item.item_type == "keynote")
+                          - cell_colspan = no_tracks
+                        else
+                          - cell_style = `width: calc(100% / ${no_tracks})`
+                          - cell_classes += " has-background"
+                          //- recuperiamo l'attributo `rowspan` (attenzione: non viene peso dal file YML ed esiste *solo* per gli item cui è stato aggiunto in *calculate_rowspan)
+                          - cell_rowspan=row_item.rowspan
+
+                        if(row_item.item_type == 'service')
+                          td(colspan=cell_colspan style=cell_style class=cell_classes)
+
+                            time(datetime=row_item.start_datetime) !{time(row_item.start_datetime, config.time_format_schedule)} - !{time(row_item.end_datetime, config.time_format_schedule)}
+                            br
+
+                            strong !{row_item.talk_title}
+
+                            if(row_item.service_icon)
+                              if(row_item.service_icon == "coffee")
+                                include ../source/assets/ico/ico-coffee.svg
+                              if(row_item.service_icon == "cutlery")
+                                include ../source/assets/ico/ico-cutlery.svg
+                              if(row_item.service_icon == "glass")
+                                include ../source/assets/ico/ico-glass.svg
+
+                            br
+
+                            if(row_item.host_name)
+                              span !{row_item.host_name}
+                            
+                            if(row_item.speakers)
+                              each speaker in row_item.speakers
+                                span !{speaker.speaker_name}
+
+                        else if(row_item.item_type == 'keynote')
+                          td(colspan=cell_colspan style=cell_style class=cell_classes)
+
+                            time(datetime=row_item.start_datetime) !{time(row_item.start_datetime, config.time_format_schedule)} - !{time(row_item.end_datetime, config.time_format_schedule)}
+
+                            br
+
+                            strong Keynote
+                              if(row_item.talk_title)
+                                | :&nbsp!{row_item.talk_title}
+
+                            br
+
+                            if(row_item.host_name)
+                              span !{row_item.host_name}
+
+                            if(row_item.speakers)
+                              each speaker in row_item.speakers
+                                span !{speaker.speaker_name}
+                                if(speaker.speaker_role)
+                                  span !{speaker.speaker_role}
+
+                            if(row_item.talk_description)
+                              br
+                              | !{row_item.talk_description}
+
+                        if(row_item.item_type == 'talk' || row_item.item_type == 'workshop' || row_item.item_type == 'other')
+                          - current_item_track = row_item['track']
+
+                          if(row_item.track.title == current_item_track.title)
+                            td(colspan=cell_colspan style=cell_style class=cell_classes rowspan=cell_rowspan)
+
+                              if(row_item.item_type == 'talk')
+                                time(datetime=row_item.start_datetime) !{time(row_item.start_datetime, config.time_format_schedule)} - !{time(row_item.end_datetime, config.time_format_schedule)}
+
+                                br
+
+                                if (no_tracks > 1)
+                                  span.track-title !{row_item.track.title}
+
+                                  br
+
+                                //- prendere la key (es. "talk_5") dalla lista originale, usarla per popolare l'ancora del link a talks_speakers
+                                - the_key = ""
+                                each talk, key in day.talks
+                                  if(talk.item_type == "talk" && talk.start_datetime == datetime && talk.start_datetime == row_item.start_datetime && talk.track.id == row_item.track.id)
+                                    - the_key = key
+
+                                - talk_url = url_for("talks_speakers") + "#" + the_key
+                                span(id=the_key).talk-anchor-pre
+                                strong.talk-anchor
+                                  a(href=talk_url) !{row_item.talk_title}
+
+                                br
+
+                                if(row_item.host_name)
+                                  span !{row_item.host_name}
+
+                                if(row_item.speakers)
+                                  each speaker in row_item.speakers
+                                    span !{speaker.speaker_name}
+
+                              else if(row_item.item_type == 'workshop')
+                                time(datetime=row_item.start_datetime) !{time(row_item.start_datetime, config.time_format_schedule)} - !{time(row_item.end_datetime, config.time_format_schedule)}
+
+                                br
+
+                                span.track-title !{row_item.track.title}
+
+                                br
+
+                                strong Workshop
+                                if(row_item.talk_title)
+                                  | :&nbsp;!{row_item.talk_title}
+
+                                br
+
+                                if(row_item.host_name)
+                                  span !{row_item.host_name}
+
+                                if(row_item.speakers)
+                                  each speaker in row_item.speakers
+                                    span !{speaker.speaker_name}
+                                    if(speaker.speaker_role)
+                                      span !{speaker.speaker_role}
+
+                                if(row_item.talk_description)
+                                  br
+                                  | !{row_item.talk_description}
+
+                              else if(row_item.item_type == 'other')
+                                time(datetime=row_item.start_datetime) !{time(row_item.start_datetime, config.time_format_schedule)} - !{time(row_item.end_datetime, config.time_format_schedule)}
+
+                                br
+
+                                span.track-title !{row_item.track.title}
+
+                                br
+
+                                if(row_item.talk_title)
+                                  strong !{row_item.talk_title}
+
+                                if(row_item.talk_description)
+                                  br
+                                  | !{row_item.talk_description}
+
+                        //- prima di passare alla prossima riga si switcha la duration per usarla alla prossima iterazione
+                        - previous_duration = current_duration
+                        - current_duration = 0
+                      //- end loop in single row
+                    //- </tr>
+                  //- end loop datetimes
+
+    //- imported components
+    include components/newsletter/newsletter
+    if(site.data.defaults.conference.sponsors_visible)
+      include components/sponsors/sponsors
+    if site.data.defaults.conference.community_partners
+      include components/community_partners/community_partners

@@ -1,0 +1,9 @@
+section(id="updates").section_nopadding
+  .update__container
+    .inner
+      if(site.data.defaults.conference.update_is_warning)
+        include ../../../source/assets/ico/ico-warning.svg
+      h2(role="heading" aria-level="2").is-title.is-2 !{site.data.defaults.conference.update_title}
+      p !{site.data.defaults.conference.update_description}
+      p
+        a(role="button" href=site.data.defaults.conference.update_link_url aria-label=site.data.defaults.conference.update_link_label target="_blank" rel="external noopener noreferrer").button.is-medium.is-rounded.is-primary !{site.data.defaults.conference.update_link_label}

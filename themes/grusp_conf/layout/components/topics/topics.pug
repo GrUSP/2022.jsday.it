@@ -1,0 +1,10 @@
+section(id="topics").section_nopadding
+  .topics_container
+    .inner
+      h2(role="heading" aria-level="2").is-title.is-2 !{site.data.defaults.conference.topics_title}
+      p !{site.data.defaults.conference.topics_description}
+      .topics
+        each topic in site.data.defaults.conference.topics
+          .topic !{topic}
+      p
+        em !{site.data.defaults.conference.topics_payoff}

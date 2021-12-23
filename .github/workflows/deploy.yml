@@ -1,0 +1,42 @@
+name: Deploy Conference Web site
+
+on: 
+  push:
+    branches: 
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v2
+      with:
+        path: main
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - name: Install hexo dependencies
+      run: |
+        cd main
+        npm install
+    - name: Generate website
+      run: |
+        cd main
+        npm run generate
+    - name: Checkout gh-pages
+      uses: actions/checkout@v2
+      with:
+        path: gh-pages-pre
+        ref: gh-pages
+        fetch-depth: 0
+    - name: Publish to gh-pages
+      run: |
+        mv main/public gh-pages
+        cp -r gh-pages-pre/.git gh-pages/
+        cd gh-pages
+        git config --local user.email "bot@grusp.org"
+        git config --local user.name "Bot"
+        git add .
+        git commit -m "Auto Deploy at `date +"%Y-%m-%d %H:%M"`"
+        git push origin gh-pages

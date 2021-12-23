@@ -1,0 +1,30 @@
+ 
+.cfp__container
+  background-color: $main-color
+  color: $main-text-color_inverted
+  h1
+    color: $main-text-color_inverted
+    font-size: 2em
+    +tablet
+      font-size: 3em
+  .inner
+    margin: 0 auto
+    align-items: center
+    text-align: center
+    padding: 1em 0
+    .row-info
+      display: inline-flex
+      flex-wrap: wrap
+      align-items: center
+    span
+      margin-right: 0
+      +tablet
+        margin-right: 1em
+    .button.is-primary
+      background-color: $main-text-color_inverted !important
+      color: $main-color
+      margin: 1em auto
+      &:hover, &:active, &:focus
+        background-color: $main-text-color !important
+        color: $main-text-color_inverted !important
+        border-color: $main-text-color_inverted !important

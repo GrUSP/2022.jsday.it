@@ -1,0 +1,14 @@
+block content
+  .container_breadcrumbs
+    .inner
+      nav(role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="breadcrumbs menu").breadcrumb.has-arrow-separator
+        ul
+          li
+            a(href=url_for(site.url) role="button" aria-label="home page") home
+          if(page.parent)
+            - intermediate_url = `${url_for(site.url)}${page.parent}`
+            li
+              a(href=url_for(intermediate_url)) !{page.parent}
+          li.is-active
+            a(role="button" aria-label=page.title) !{page.title}
+

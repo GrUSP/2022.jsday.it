@@ -1,0 +1,54 @@
+extends includes/layout.pug
+
+block content
+  - contact_url = "mailto:" + site.data.defaults.conference.contact_email
+  section(id="about")
+    include includes/_breadcrumbs.pug
+
+    .container
+      .inner
+        .title-container
+          include ../source/assets/ico/ico-about.svg
+          h1(role="heading" aria-level="1").is-title-is-1 !{site.data.page_about.intro.main_title}
+        p !{site.data.page_about.intro.content_1}
+        p !{site.data.page_about.intro.content_2}
+    if(site.data.page_about.more)
+      .container.container__more
+        .inner
+          h2(role="heading" aria-level="2").is-title.is-2 !{site.data.page_about.more.title}
+          if(site.data.page_about.more.content_1)
+            p !{site.data.page_about.more.content_1}
+          if(site.data.page_about.more.content_2)
+            p !{site.data.page_about.more.content_2}
+    if(site.data.page_about.past_edition)
+      .container.container__past-editions
+        .inner
+          h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_about.past_edition.video_caption}
+          .iframe-container
+            .iframe-holder
+              iframe(type="text/html" src=site.data.page_about.past_edition.video_url frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="800px" height="450px")
+          h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_about.past_edition.title}
+          each item in site.data.defaults.conference.past_editions
+            - url = "https://" + item + "." + site.data.defaults.conference.base_url
+            a(href=url target="_blank" rel="noopener noreferrer").past-edition !{item}
+    .container.container__team
+      .inner
+        h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_about.team.title}
+        p !{site.data.page_about.team.intro}
+      .columns.is-centered.inner
+        each tm in site.data.page_about.team.members
+          - filename = `/img/team/${tm.pic_filename}`
+          .column
+            .card
+              .card-image
+                img(src=filename role="figure" aria-label=tm.name)
+              .card-content
+                p.title !{tm.name}
+                p.subtitle
+                  em !{tm.role}
+    //- imported components
+    include components/newsletter/newsletter
+    if(site.data.defaults.conference.sponsors_visible)
+      include components/sponsors/sponsors
+    if site.data.defaults.conference.community_partners
+      include components/community_partners/community_partners

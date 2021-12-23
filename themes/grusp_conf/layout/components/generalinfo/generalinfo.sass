@@ -1,0 +1,81 @@
+.geninfo__container
+  padding: 3em 0
+  margin: 0
+  .inner
+    margin: 0 auto
+    max-width: 1200px
+  h2
+    color: $main-color
+    font-style: normal
+
+.geninfo-info
+  display: flex
+  flex-direction: column
+  align-content: space-between
+  min-width: 240px
+  .row-info
+    flex-grow: 1
+  .row__social
+    font-size: .9em
+    font-weight: 700
+    padding: 1em 0
+    p
+      margin-bottom: 8px
+
+.social-icon
+  width: 40px
+  height: 40px
+  display: inline-flex
+  background-color: $main-color
+  border-radius: 20px
+  margin: 0 8px
+  border: 1px solid $main-color
+  svg 
+    path, rect, ellipse, circle
+      fill: $main-text-color_inverted
+  &:hover, &:active, &:focus
+    background-color: $main-text-color_inverted
+    svg 
+      path, rect, ellipse, circle
+        fill: $main-color
+
+.geninfo-buttons
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-content: center
+  max-width: 80%
+  margin: 0 auto
+  +tablet
+    min-width: 450px
+
+.geninfo-buttons__button-container
+  min-width: 190px
+  height: 190px
+  margin: 10px
+  display: flex
+  flex-direction: column
+  align-items: center
+  align-content: center
+  justify-content: center
+  text-align: center
+  background-color: $main-color
+  border: 1px solid $main-color
+  &:hover, &:focus, &:active
+    background-color: $main-text-color_inverted
+    svg path, svg path, svg path
+      fill: $main-color
+  a
+    color: $main-text-color_inverted
+    text-transform: uppercase
+    font-size: .8em
+    font-weight: 600
+  &:hover > a, &:focus > a, &:active > a
+    color: $main-color
+    text-decoration: none
+
+.geninfo-buttons__button
+  width: 120px
+  height: 120px
+  svg path
+    fill: $main-text-color_inverted

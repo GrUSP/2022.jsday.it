@@ -1,0 +1,25 @@
+@import "defaults"
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/sass/utilities/mixins"
+@import "bulma/sass/components/breadcrumb"
+
+.container_breadcrumbs
+	padding: 0
+	background-color: $main-text-color
+	.inner
+		margin: 0 auto
+
+.breadcrumb
+	color: $main-text-color_inverted
+	padding: 1em 0 0.5em 1em
+	a
+		color: $main-text-color_inverted
+		font-weight: 600
+		&:hover, &:active, &:focus
+			color: $main-text-color_inverted
+	li.is-active a
+		color: $main-text-color_inverted
+		font-weight: 200
+  ul
+    text-transform: lowercase

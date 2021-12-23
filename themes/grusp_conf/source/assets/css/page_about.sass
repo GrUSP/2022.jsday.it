@@ -1,0 +1,88 @@
+@import "defaults"
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/sass/utilities/mixins"
+
+.title-container
+  display: flex
+  align-items: center
+  svg
+    background-color: $main-color
+    fill: $main-text-color_inverted
+    margin-right: 1em
+  h1
+    font-size: 2em
+    line-height: 1.2
+    +tablet
+      font-size: 3em
+      line-height: 1.5
+
+.container__more
+  background-color: $main-color_hue-medium
+  h2
+    font-style: normal
+    text-align: center
+    color: $main-text-color_inverted
+    font-size: 1.8em
+    line-height: 1.2
+    +tablet
+      font-size: 2em
+      line-height: 1.5
+
+.container__past-editions
+  background-color: $main-text-color
+  color: $main-text-color_inverted
+  text-align: center
+  padding: 4em 0
+  .inner
+    margin: 0 auto
+    border-top: 1px solid $main-text-color_hue-medium
+    *
+    .footer__p_padded, .footer__a_padded
+      padding: 1em 0
+    a
+      font-weight: 300
+      font-size: 1.5em
+      color: $main-color_hue-light
+    a.past-edition
+      display: inline-block
+      margin-right: 8px
+      &:after
+        content: "|"
+        display: inline
+        padding-left: 8px
+    a.past-edition:last-of-type:after
+        content: ""
+    .row__social p
+      font-weight: 600
+    h3
+      margin: 1em auto
+    .iframe-container
+      max-width: 800px
+      margin: 0 auto
+      .iframe-holder
+        overflow: hidden
+        height: 0
+        padding: 56.25% 0 0 0
+        position: relative
+        iframe
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+
+.container__team
+  padding: 2em 0
+  h3
+    text-align: center
+    color: $main-color
+  .card
+    max-width: 200px
+    text-align: center
+    margin: 0 auto
+    .title
+      font-weight: 600
+      margin: 1em auto 0
+    .subtitle
+      margin: 0 auto

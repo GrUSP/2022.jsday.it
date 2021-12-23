@@ -1,0 +1,175 @@
+@import "defaults"
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/sass/utilities/mixins"
+@import "_mixins"
+
+#workshop
+  h1
+    text-align: left
+#page-workshop
+  h1
+    font-size: 3em
+    line-height: 1.5em
+    text-align: left
+  .button:hover, .button:active, .button:focus
+    border-color: $main-color
+  span.teacher-org::before
+    content: ' @ '
+
+.workshop-single__header
+  background: url("/assets/img/workshop/worskhop_header.jpg") no-repeat top center
+  width: 100vw
+  padding: 8em 0
+  +tablet
+    background-image: url("/assets/img/workshop/tablet_worskhop_header.jpg")
+  +desktop
+    background-image: url("/assets/img/workshop/desktop_worskhop_header.jpg")
+  +widescreen
+    background-image: url("/assets/img/workshop/widescreen_worskhop_header.jpg")
+  +fullhd
+    background-image: url("/assets/img/workshop/worskhop_header.jpg")
+  +tablet-vertical
+    background-image: url("/assets/img/workshop/tablet_vertical_worskhop_header.jpg")
+  +medium-phone
+    background-image: url("/assets/img/workshop/mobile_medium_worskhop_header.jpg")
+  +small-phone
+    background-image: url("/assets/img/workshop/mobile_small_worskhop_header.jpg")
+  &.is-online-conference
+    background-image: url("/assets/img/workshop/worskhop_header-online.jpg")
+    +tablet
+      background-image: url("/assets/img/workshop/tablet_worskhop_header-online.jpg")
+    +desktop
+      background-image: url("/assets/img/workshop/desktop_worskhop_header-online.jpg")
+    +widescreen
+      background-image: url("/assets/img/workshop/widescreen_worskhop_header-online.jpg")
+    +fullhd
+      background-image: url("/assets/img/workshop/worskhop_header-online.jpg")
+    +tablet-vertical
+      background-image: url("/assets/img/workshop/tablet_vertical_worskhop_header-online.jpg")
+    +medium-phone
+      background-image: url("/assets/img/workshop/mobile_medium_worskhop_header-online.jpg")
+    +small-phone
+      background-image: url("/assets/img/workshop/mobile_small_worskhop_header-online.jpg")
+  .image-credits
+    position: relative
+    margin: -2em auto 0
+    text-align: center
+    font-size: .8em
+    color: $main-text-color_inverted
+    a
+      color: $main-text-color_inverted
+  h2
+    color: $main-text-color_inverted
+    margin: 1em 0
+    font-style: normal
+    font-size: 3em
+  .inner
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    .button.is-primary
+      background-color: $main-text-color_inverted !important
+      color: $main-color
+      border-color: $main-text-color_inverted !important
+      &:hover, &:active, &:focus
+        background-color: $main-color !important
+        color: $main-text-color_inverted !important
+        border-color: $main-color !important
+.workshop-single__container
+  h1, h2
+    color: $main-color
+  .workshop-single__intro
+    .row-info
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: center
+      text-transform: uppercase
+      color: $main-text-color
+      justify-content: space-around
+      font-size: 1.1em
+      font-weight: 600
+      margin: 1em 0
+      border-bottom: 1px solid $main-text-color_hue-medium
+      .column
+        display: flex
+        align-items: center
+        .info__language, .info__teacher
+          padding: 0 10px 0 10px
+    iframe
+      max-width: 100%
+      margin-top: 1em
+    .button.is-primary
+      border-color: $main-color !important
+      &:hover, &:active, &:focus
+        border-color: $main-color !important
+  .workshop-single__teacher
+    background-color: $main-text-color_hue-lighter
+    h2
+      text-align: center
+      font-style: normal
+      font-size: 3em
+    .inner
+      padding: 2em 0
+  .workshop-single__moreinfo
+    h3
+      color: $main-color
+      margin: 1em 0
+    ul
+      list-style: disc inside
+  .workshop-single__cta
+    background-color: $main-color
+    .inner
+      margin: 0 auto
+      padding: 2em 0
+      text-align: center
+      h3
+        color: $main-text-color_inverted
+        margin-bottom: 1em
+      .button.is-primary
+        background-color: $main-text-color_inverted !important
+        color: $main-color
+        border-color: $main-text-color_inverted
+        &:hover, &:active, &:focus
+          background-color: $main-color !important
+          color: $main-text-color_inverted !important
+          border-color: $main-text-color_inverted !important
+  .workshop-single__summary
+    background-color: $main-text-color
+    color: $main-text-color_inverted
+    .inner
+      margin: 0 auto
+    .summary-blocks
+      display: flex
+      flex: 1
+      flex-wrap: wrap
+      justify-content: space-between
+      .block
+        padding: 2em
+        max-width: 90%
+        +desktop
+          min-width: 40%
+          max-width: 40%
+        .row-info
+          display: flex
+          flex-direction: row
+          flex-wrap: wrap
+          font-size: .8em
+          +tablet
+            font-size: 1em
+          .info-icon
+            margin-left: -.8em
+          svg
+            fill: $main-text-color_inverted
+            width: 3em
+            height: 3em
+          .info__location
+            font-size: 2em
+            text-transform: uppercase
+        strong
+          color: $main-color_hue-medium
+        a
+          color: $main-text-color_inverted
+    .is-centered
+      padding: 2em 0

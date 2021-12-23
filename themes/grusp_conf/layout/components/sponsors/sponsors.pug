@@ -1,0 +1,133 @@
+section(id="sponsors").section_nopadding
+  .sponsors__container
+    .inner
+      if(is_home())
+        h2(role="heading" aria-level="2").title.is-2 !{site.data.defaults.conference.sponsor_title_home}
+      else
+        h2(role="heading" aria-level="2").title.is-2 !{site.data.sponsors.sponsors_block_title}
+      if site.data.sponsors.main
+        .row__underlined
+          h3(role="heading" aria-level="3").title.is-3 Main
+        .columns
+          each sponsor in site.data.sponsors.main
+            .column.column__main
+              - filename = `/img/logos/${sponsor.logo_filename}`
+              a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+                img(src=filename alt=sponsor.name)
+      if site.data.sponsors.diamond
+        .row__underlined
+          h3(role="heading" aria-level="3").title.is-3 Diamond
+        .columns
+          each sponsor in site.data.sponsors.diamond
+            .column.column__diamond
+              - filename = `/img/logos/${sponsor.logo_filename}`
+              a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+                img(src=filename alt=sponsor.name)
+      if site.data.sponsors.platinum
+        .row__underlined
+          h3(role="heading" aria-level="3").title.is-3 Platinum
+        .columns
+          each sponsor in site.data.sponsors.platinum
+            .column.column__platinum
+              - filename = `/img/logos/${sponsor.logo_filename}`
+              a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+                img(src=filename alt=sponsor.name)
+      if site.data.sponsors.gold
+        .row__underlined
+          h3(role="heading" aria-level="3").title.is-3 Gold
+        .columns
+          each sponsor in site.data.sponsors.gold
+            .column.column__gold
+              - filename = `/img/logos/${sponsor.logo_filename}`
+              a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+                img(src=filename alt=sponsor.name)
+      if site.data.sponsors.silver
+        .row__underlined
+          h3(role="heading" aria-level="3").title.is-3 Silver
+        .columns
+          each sponsor in site.data.sponsors.silver
+            .column.column__silver
+              - filename = `/img/logos/${sponsor.logo_filename}`
+              a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+                img(src=filename alt=sponsor.name)
+      if site.data.sponsors.bronze
+        .row__underlined
+          h3(role="heading" aria-level="3").title.is-3 Bronze
+        .columns
+          each sponsor in site.data.sponsors.bronze
+            .column.column__bronze
+              - filename = `/img/logos/${sponsor.logo_filename}`
+              a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+                img(src=filename alt=sponsor.name)
+
+      .row__underlined
+        h3(role="heading" aria-level="3").title.is-3 Media partners
+      .columns.grusp_media_partners(data-name=config.slug data-tags=site.data.sponsors.partner_tags.join(' '))
+
+  //- schema.org microdata
+  if site.data.sponsors.main
+    each sponsor in site.data.sponsors.main
+      script(type="application/ld+json").
+        {
+          "sponsor":
+          {
+            "type": "Organization",
+            "name": "#{sponsor.name}",
+            "url": "#{sponsor.site_url}"
+          }
+        }
+  if site.data.sponsors.diamond
+    each sponsor in site.data.sponsors.diamond
+      script(type="application/ld+json").
+        {
+          "sponsor":
+          {
+            "type": "Organization",
+            "name": "#{sponsor.name}",
+            "url": "#{sponsor.site_url}"
+          }
+        }
+  if site.data.sponsors.platinum
+    each sponsor in site.data.sponsors.platinum
+      script(type="application/ld+json").
+        {
+          "sponsor":
+          {
+            "type": "Organization",
+            "name": "#{sponsor.name}",
+            "url": "#{sponsor.site_url}"
+          }
+        }
+  if site.data.sponsors.gold
+    each sponsor in site.data.sponsors.gold
+      script(type="application/ld+json").
+        {
+          "sponsor":
+          {
+            "type": "Organization",
+            "name": "#{sponsor.name}",
+            "url": "#{sponsor.site_url}"
+          }
+        }
+  if site.data.sponsors.silver
+    each sponsor in site.data.sponsors.silver
+      script(type="application/ld+json").
+        {
+          "sponsor":
+          {
+            "type": "Organization",
+            "name": "#{sponsor.name}",
+            "url": "#{sponsor.site_url}"
+          }
+        }
+  if site.data.sponsors.bronze
+    each sponsor in site.data.sponsors.bronze
+      script(type="application/ld+json").
+        {
+          "sponsor":
+          {
+            "type": "Organization",
+            "name": "#{sponsor.name}",
+            "url": "#{sponsor.site_url}"
+          }
+        }

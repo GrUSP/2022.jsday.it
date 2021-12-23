@@ -1,0 +1,27 @@
+intro:
+  main_title: "Welcome"
+  content_1: "jsday is the main conference in Italy that is dedicated solely to JavaScript and its ecosystem."
+  content_2: "The event's goal is to allow the community to meet and share experiences while having fun and networking in an enjoyable context."
+# this is the global "read more" label
+readmore_label: "Read more"
+# these are the title and descriptions of the 6 blocks
+info_about:
+  title: "About"
+  content: "GrUSP and the team behind jsday"
+info_coc:
+  title: "COC"
+  content: "Be nice to everyone"
+info_scholarships:
+  title: "Scholarships"
+  content: "How to apply"
+info_cfp:
+  title: "Call for papers"
+  content: "Be one of our speaker"
+info_venue:
+  title: "Where"
+  content: "Practical info"
+info_ticket:
+  title: "Tickets"
+  content: "The tickets are available on Eventbrite"
+  # the tickets link is the only one that does not use the "global" label
+  readmore_label: "GET YOURS"

@@ -1,0 +1,119 @@
+
+- var pageTitle = page.title || config.subtitle || ''
+- if (is_home()) pageTitle = 'home'
+- pageTitle += ' | ' + config.title
+
+doctype html
+html(lang=config.language)
+  head
+    meta(charset='UTF-8')
+    title=pageTitle
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="canonical" href=url)
+
+    meta(property='og:title', content=site.data.defaults.conference.title)
+    if(is_home())
+      meta(property='og:description', content=config.description)
+    else
+      meta(property='og:description', content=page.description)
+
+    meta(property="og:image" content=full_url_for(`/assets/img/social-1200x630.png`))
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+
+    //- Favicons
+    link(rel="apple-touch-icon" sizes="180x180" href=`/assets/favicons/apple-touch-icon.png`)
+    link(rel="icon" type="image/png" sizes="32x32" href=`/assets/favicons/favicon-32x32.png`)
+    link(rel="icon" type="image/png" sizes="16x16" href=`/assets/favicons/favicon-16x16.png`)
+    
+    link(rel="manifest" href=`/assets/favicons/site.webmanifest`)
+    link(rel="mask-icon" href=`/assets/favicons/safari-pinned-tab.svg` color="#5bbad5")
+
+    link(rel="shortcut icon" href=`/assets/favicons/favicon.ico`)
+
+    meta(name='msapplication-TileColor', content="#5bbad5")
+    meta(name='msapplication-config', content=`/assets/favicons/browserconfig.xml`)
+    meta(name='theme-color', content="#ffffff")
+
+    != open_graph()
+
+    if theme.stylesheets !== undefined && theme.stylesheets.length > 0
+      //- stylesheets list from _config.yml
+      each url in theme.stylesheets
+        link(rel='stylesheet', href=url)
+
+    if theme.scripts !== undefined && theme.scripts.length > 0
+      //- scripts list from config.yml
+      each url in theme.scripts
+        script(src=url)
+
+    //- schema.org microdata
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "@id": "#{full_url_for(site.root)}",
+        "location": 
+        {
+          "@type": "Place",
+          "address": 
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "#{site.data.defaults.conference.md_city}",
+            "addressRegion": "#{site.data.defaults.conference.md_province}",
+            "postalCode": "#{site.data.defaults.conference.md_postal_code}",
+            "streetAddress": "#{site.data.defaults.conference.md_address}"
+          },
+          "name": "#{site.data.defaults.conference.location_name}"
+        },
+        "name": "#{site.data.defaults.conference.title}",
+        "image": "#{config.image}",
+        "startDate": "#{site.data.defaults.conference.date}",
+        "description": "#{config.description}",
+        "offers": [
+        {
+          "@type": "Offer",
+          "description": "Tickets",
+          "availability": "https://schema.org/LimitedAvailability",
+          "url": "#{site.data.defaults.conference.buy_tickets_url}"
+        },
+        {
+          "@type": "Offer",
+          "description": "Scholarships",
+          "availability": "https://schema.org/LimitedAvailability",
+          "url": "#{site.data.page_scholarships.long_version.content_2_link_url}",
+          "priceCurrency": "EUR",
+          "price": "0"
+        }],
+        "organizer":
+        {
+          "@type": "Organization",
+          "name": "#{config.author}",
+          "url": "#{site.data.defaults.conference.organizer_url}",
+          "logo": "#{full_url_for(config.image)}",
+          "contactPoint": [
+          {
+            "@type": "contactPoint",
+            "email": "mailto:#{site.data.defaults.conference.contact_email}"
+          }],
+          "sameAs": 
+          [
+            "#{site.data.defaults.conference.social_fb_url}",
+            "#{site.data.defaults.conference.social_twitter_url}",
+            "#{site.data.defaults.conference.social_vimeo_url}",
+            "#{site.data.defaults.conference.social_youtube_url}",
+            "#{site.data.defaults.conference.social_linkedin_url}",
+            "#{site.data.defaults.conference.social_instagram_url}",
+          ]
+        }
+      }
+
+    body
+      #content-outer
+        include header.pug
+        #content-inner(role="main")
+          if body
+            div!= body
+          else
+            block content
+      include footer.pug

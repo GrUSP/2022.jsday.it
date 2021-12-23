@@ -1,0 +1,14 @@
+extends includes/layout.pug
+
+block content
+  section(id="404")
+    .container.container_404
+      .inner
+        .columns
+          .column.centered
+            p.text_giant ?
+          .column
+            h1(role="heading" aria-level="1").is-title.is-1= page.title
+            != page.content
+            p
+              a(href="/" role="button" aria-label="back to home page").button.is-primary.is-large.is-rounded !{site.data.defaults.conference.back_to_home_label}

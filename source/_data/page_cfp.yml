@@ -1,0 +1,22 @@
+intro:
+  main_title: "Call for papers"
+  date_intro: "The call for papers has been closed on"
+  # NB la data è definita in `defaults`
+  content_1: "Propose a talk! Take the chance to share your experience, test yourself on topics you know well and learn something new while preparing your presentation.
+  You will also make yourself known in the community."
+  content_2: "The selected speakers will have the conference ticket, access to all of our 2021 digital conferences, and a free bronze sponsorship for their company (or same amount discount to upgrade to an higher sponsorship level)"
+more_info:
+  title: "Diversity and Inclusion"
+  description_1: "GrUSP is committed to creating a conference that is as inclusive as possible. We welcome submissions from all over the world, regardless of ethnicity, gender, age.
+We are also committed to ensuring the conference is a place where ideas are exchanged, old friends get together, new friends meet, and harassment is not tolerated. We expect all attendees and speakers to follow our <a href='https://2021.jsday.it/welcome/coc.html'>code of conduct</a>.<br>
+All of our conferences have a <a href='https://2021.jsday.it/welcome/scholarships.html'>Scholarships Program</a> to encourage students, people from under-represented groups, and those who can't otherwise afford tickets to experience the event."
+  description_2: ""
+contact:
+  email_intro: "If you are a first time speaker and need help or suggestions, or for any information that you may need, feel free to contact us writing to "
+  help_intro: "If you need suggestions on how to write the abstract, see "
+  help_url: "http://helpmeabstract.com/"
+cfp_register_url: "https://cfp.jsday.it/"
+# address_aria_label: "hotel address"
+# email_aria_label: "hotel email"
+# phone_aria_label: "hotel phone"
+# website_aria_label: "hotel phone"

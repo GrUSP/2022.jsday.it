@@ -1,0 +1,169 @@
+read_more_label: "read more"
+summary_page_aria_label: "back"
+summary_page_button_label: "back"
+# image credits (l'esempio è per la hero del CSS Day!)
+# workshop_img_credits: "Image by Gianni Careddu - Own work, <a href='https://commons.wikimedia.org/w/index.php?curid=74821344ì target='_blank' rel='noopener noreferrer'>CC BY-SA 4.0</a>"
+
+workshops:
+  workshop_1:
+    ws_id: front-end-testing
+    is_external: false
+    page_uri: "workshop/front-end-testing.html"
+    page_title: "workshop: Front-end testing on steroids with Cypress"
+    workshop_title: "Front-end testing on steroids with Cypress"
+    ticket_url: "https://jsday-2021.eventbrite.it?utm_medium=web&utm_source=site&utm_campaign=2021"
+    ticket_label: "Registrati"
+    location_title: "Dove"
+    # location: "Verona"
+    online_location: "online"
+    # location_name: "Hotel San Marco"
+    # location_name: "The Internet"
+    #location_contact_phone: "+045569011"
+    #location_contact_email: "sanmarco@sanmarco.vr.it"
+    #location_contact_url: "https://www.sanmarco.vr.it/"
+    #location_address: "Via Longhena 42, 37138 Verona (VE) Italy"
+    #location_maps_url: "https://www.google.com/maps/place/Hotel+San+Marco+Fitness+Pool+%26+SPA/@45.4399961,10.9697441,17z/data=!3m1!4b1!4m8!3m7!1s0x4781e1e30a8be6af:0x8091b108e1d130c6!5m2!4m1!1i2!8m2!3d45.4399961!4d10.9719328"
+    #location_maps_label: "Get directions"
+    # location_additional_info: "L'hotel offre tariffe scontate ai partecipanti ai workshop, sia per camere singole sia per camere doppie."
+    location_additional_info: "Il workshop si svolge online, in aula virtuale"
+    whatandwhen_title: "Cosa e quando"
+    # whatandwhen_additional_info: "Registrazione, caffè e pranzo inclusi"
+    whatandwhen_additional_info: "8 ore, divise in due sessioni: Martedì 13 e Giovedì 15 Luglio 2021, dalle 9 alle 13."
+    date: 2021-07-13T09:00+02:00
+    end_date: 2021-07-15T13:00+02:00
+    date_text: "Martedì 13 e Giovedì 15 Luglio 2021"
+    language_title: "Lingua"
+    language: "italian / italiano"
+    language_ext: "Language: Italian / Lingua: italiano"
+    language_additional_info: "No translation provided."
+    # collab: "Workshop realizzato in collaborazione con <a href='https://example.com/' target='_blank' rel='external noopener nofererrer'>Example.com</a>"
+    description: "Testare le proprie web-app è molto più facile e profittevole di quanto si possa pensare. Questo corso serve ad oltrepassare gli ostacoli iniziali e a capire come trarre un vantaggio immediato dai test, non solo nel medio e lungo periodo."
+    description_long:
+        "<p>Essere in grado di testare le proprie web-app è un requisito sempre più importante per uno sviluppatore front-end. Ci sono strumenti e librerie che semplificano il processo di testing ma la curva di apprendimento può sembrare scoraggiante.</p>
+        <p>I dubbi più comuni in ambito testing sono:
+        <ul>
+        <li>- 'Da che parte devo cominciare a testare le mie web-app?'</li>
+        <li>- 'Non mi è chiaro cosa devo testare (e cosa no) e come testarlo...'</li>
+        <li>- 'I miei attuali test falliscono continuamente e non mi aiutano nel prevenire nuovi bug...'</li>
+        </ul> <br />
+        <strong>L'obiettivo del corso è quello di fornire le informazioni di base, i principi e alcuni consigli dati dell'esperienza, per entrare nel mondo delle metodologie di testing. Testare le proprie web-app è molto più facile e profittevole di quanto si possa pensare. Questo corso serve ad oltrepassare gli ostacoli iniziali e a capire come trarre un vantaggio immediato dai test, non solo nel medio e lungo periodo.</strong><br  />
+        <br  />Durante il corso imparerai ad usare Cypress, uno strumento creato per offrire la migliore Developer Experience per il testing di applicazioni front-end, che è diventato famoso grazie alla sua semplicità e alla sua bassa curva di apprendimento.</p>
+        <p>Durante il corso imparerai:
+        <ul>
+        <li>- Come scrivere test end-to-end test (E2E) efficaci</li>
+        <li>- Come sfruttare Cypress per implementare e testare un?applicazione front-end senza un back-end funzionante</li>
+        <li>- Le best practice da seguire per scrivere test utili e duraturi</li>
+        <li>- Come funziona Cypress e le sue API più importanti</li>
+        <li>- Come aggiungere Cypress ad un progetto esistente</li>
+        <li>- Come fare di Cypress uno strumento di sviluppo per migliorare la produttività</li>
+        <li>- Un'introduzione e alcune demo di unit testing visuali per componenti React</li>
+        <ul>
+        <p>Alterneremo spiegazioni teoriche a sessioni di live coding, al termine del corso verrà rilasciato il codice sorgente di tutti gli esercizi, il materiale utilizzato per le spiegazioni ed altri materiali di approfondimento.</p>"
+    # video trailer?
+    trailer: false
+    trailer_url: "https://player.vimeo.com/video/352012164"
+    # nota sul titolo: se il linguaggio specificato in `language` NON in clude 'italian', in pagina viene aggiunta la "s" finale
+    teacher_title: "Docente"
+    teachers:
+      teacher_1:
+        teacher_name: "Stefano Magni"
+        teacher_bio: "Sono uno sviluppatore front-end, team leader, speaker e Cypress Ambassador. Mi piace studiare e imparare cose nuove, in particolare in ambito testing. Nella mia carriera, ho sviluppato diversi tipi di interfacce: giochi, configuratori, app di disegno, siti responsive, applicazioni mobile e backoffice. Amo migliorare sempre di più la qualità dei prodotti che creo, condividere le mie conoscenze e lavorare con persone appassionate. In questo momento sono concentrato sullo sviluppo con React, TypeScript e tutto il loro ecosistema.
+        Mi trovi su <a href='https://github.com/NoriSte'> Github</a>, <a href='https://www.linkedin.com/in/noriste/'>LinkedIn</a>, <a href'https://twitter.com/NoriSte'>Twitter.</a>"
+        pic_filename: "stefano-magni.jpeg"
+        teacher_role: "Front-end Developer"
+        teacher_org: ""
+      #teacher_2:
+      #  teacher_name: "Another Teacher"
+      #  teacher_bio: "This is the other speaker's bio. Lorem ipsum dolor sic amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. And so on."
+      #  pic_filename: "pic2.jpg"
+      #  teacher_role: "full stack developer"
+      #  teacher_org: "AnotherAgency"
+    topics_title: "Argomenti"
+    topics:
+      - <strong>Cos’è un test E2E</strong>
+      - "<i>Automazione del browser</i>"
+      - "<i>Pro e contro dei test E2E vs. test di integrazione di UI</i>"
+      - <strong>Cypress</strong>
+      - "<i>Il Test Runner</i>"
+      - "<i>Attese automatiche</i>"
+      - "<i>Screenshot e video automatici</i>"
+      - "<i>Esecuzione asincrona</i>"
+      - <strong>Cypress come browser di sviluppo principale</strong>
+      - <strong>Best practice</strong>
+      - "<i>Come identificare gli elementi in pagina</i>"
+      - "<i>Attese al posto delle pause, concetto di deterministic event</i>"
+      - "<i>Utilizzo corretto delle asserzioni</i>"
+      - <strong>Perchè mantenere i test il più semplici possibile</strong>
+      - <strong>Utilità per gli altri membri del team</strong>
+      - "<i>Convenzioni di naming e script dedicati</i>"
+      - "<i>Test di monitoraggio</i>"
+      - <strong>Utilizzo avanzato di cypress</strong>
+      - "<i>Comandi custom</i>"
+      - <strong>Visual Regression Testing per l'intera web-app</strong>
+      - <strong>Come aggiungere Cypress ad un progetto esistente</strong>
+      - <strong>Come aggiungere Cypress in Continuous Integration</strong>
+      - <strong>Unit Testing di componenti React con un’interfaccia visuale</strong>
+
+    addressees_title: "A chi è rivolto"
+    addressees_description: "Questo corso è rivolto a developer front-end che non hanno ancora iniziato, o non riescono, a testare con successo le proprie web-app. Al termine del corso sarai in grado di applicare i principi fondamentali delle metodologie di testing per comprendere cosa e come testare in modo efficace."
+    requirements_title: "Requisiti di partecipazione"
+    requirements_description: "Per partecipare è necessario avere <strong>almeno due anni di esperienza nello sviluppo front-end e conoscere le Promise di JavaScript</strong>"
+    useful_info_title: "Informazioni utili"
+    useful_info_description: "Il workshop si svolge online e dura 8 ore, divise in due mattine: Martedì 13 e Giovedì 15 Luglio 2021, dalle 9 alle 13."
+    # CTA
+    cta_title: "Assicurati un posto! I biglietti sono in vendita!"
+  # workshop_2:
+  #   ws_id: workshop_2
+  #   is_external: false
+  #   page_uri: "workshop/workshop_2.html"
+  #   page_title: "Sample second workshop"
+  #   workshop_title: "Workshop on multiple workshops"
+  #   location: "Verona"
+  #   location_name: "Hotel San Marco"
+  #   location_contact_phone: "+045569011"
+  #   location_contact_email: "sanmarco@sanmarco.vr.it"
+  #   location_contact_url: "https://www.sanmarco.vr.it/"
+  #   location_address: "Via Longhena 42, 37138 Verona (VE) Italy"
+  #   location_maps_url: "https://www.google.com/maps/place/Hotel+San+Marco+Fitness+Pool+%26+SPA/@45.4399961,10.9697441,17z/data=!3m1!4b1!4m8!3m7!1s0x4781e1e30a8be6af:0x8091b108e1d130c6!5m2!4m1!1i2!8m2!3d45.4399961!4d10.9719328"
+  #   location_maps_label: "Get directions"
+  #   location_additional_info: "L'hotel offre tariffe scontate ai partecipanti ai workshop, sia per camere singole sia per camere doppie."
+  #   whatandwhen_title: "Cosa e quando"
+  #   whatandwhen_additional_info: "Registrazione, caffè e pranzo inclusi"
+  #   date: 2020-09-15T09:30
+  #   end_date: 2020-09-15T16:30
+  #   language_title: "Lingua"
+  #   language: "italian / italiano"
+  #   language_ext: "Language: Italian / Lingua: italiano"
+  #   language_additional_info: "No translation provided."
+  #   # no collab / commented out
+  #   # collab:
+  #   description: "Testo qualsiasi per descrizione breve"
+  #   description_long: "Testo della descrizione lunga, Testo della descrizione lunga, Testo della descrizione lunga, Testo della descrizione lunga, Testo della descrizione lunga, Testo della descrizione lunga."
+  #   # video trailer?
+  #   trailer: false
+  #   trailer_url: ""
+  #   # nota sul titolo: se il linguaggio specificato in `language` NON in clude 'italian', in pagina viene aggiunta la "s" finale
+  #   teacher_title: "Teacher"
+  #   teachers:
+  #     teacher_1:
+  #       teacher_name: "Sample Teacher"
+  #       teacher_bio: "This is the bio. Lorem ipsum dolor sic amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. And so on."
+  #       pic_filename: "pic1.png"
+  #       teacher_role: "CEO"
+  #       teacher_org: "ExampleCom"
+  #   topics_title: "Argomenti"
+  #   topics:
+  #     - "Workshops on workshops"
+  #     - "Talk on talks"
+  #     - "Meta-workshop"
+  #   addressees_title: "A chi è rivolto"
+  #   addressees_description: "Il workshop è rivolto a chi vuole fare un workshop sui workshop per sapere come si fa un workshop sui workshop."
+  #   requirements_title: "Requisiti di partecipazione"
+  #   requirements_description: "Basta saper leggere e scrivere."
+  #   useful_info_title: "Informazioni utili"
+  #   useful_info_description: "Presentarsi un quarto d'ora prima dell'inizio è consigliabile perché così ti offriamo un caffè."
+  #   # CTA
+  #   cta_title: "Hurry up. There are only a few available places!"
+  #   location_title: "Dove"
+  #   ticket_url: ""
+  #   ticket_label: "Register now"

@@ -1,0 +1,114 @@
+section(id="workshop").section_nopadding
+  - no_of_workshops = 0
+  - suffix = ""
+  each workshop in site.data.workshop.workshops
+    - no_of_workshops++
+  if no_of_workshops > 1 && config.language === 'en'
+    - suffix = "s"
+
+  .container
+    .inner
+      if(page.layout != "page_workshops")
+        h2(role="heading" aria-level="2").title.is-2 !{no_of_workshops} !{site.data.defaults.conference.workshops_title}!{suffix}
+      else
+        h1(role="heading" aria-level="1").title.is-1 !{no_of_workshops} !{site.data.defaults.conference.workshops_title}!{suffix}
+
+  each workshop in site.data.workshop.workshops
+    .workshop__container
+      .columns.inner
+        .column.workshop__info
+          - read_more_url = workshop.page_uri
+          - aria_label = site.data.workshop.read_more_label
+          .row-info
+            .info-icon
+
+              if(site.data.defaults.conference.is_online_only === true)
+                include ../../../source/assets/ico/ico-online-conference.svg
+              else
+                include ../../../source/assets/ico/ico-where.svg
+
+            if(site.data.defaults.conference.is_online_only === true)
+              .info__location !{site.data.defaults.conference.online_location}
+            else
+              .info__location !{site.data.defaults.conference.city}
+
+            | &nbsp;|&nbsp;
+
+            .info-icon.padded
+              include ../../../source/assets/ico/ico-calendar.svg
+            .info__date
+
+              - var start_date = ""
+              if(workshop.date_text)
+                - start_date = workshop.date_text
+              else if(site.data.defaults.conference.is_online_only === true)
+                - start_date = date(workshop.date, config.date_format_hero_online)
+              else
+                - start_date = date(workshop.date, config.date_format_hero)
+
+              time(datetime=workshop.date) !{start_date}
+          a(href=url_for(read_more_url) role="button" aria-label=aria_label)
+            h5(role="heading" aria-level="5") !{workshop.workshop_title}
+          p !{workshop.description}
+          p
+            each teacher in workshop.teachers
+              strong !{teacher.teacher_name}
+              | &nbsp;
+              span !{teacher.teacher_role}
+              | &nbsp;@&nbsp;
+              span !{teacher.teacher_org}
+              br
+        .column.workshop-buttons
+          .workshop-buttons__button-container
+            a(href=url_for(read_more_url) role="button" aria-label=aria_label)
+              .workshop-buttons__button
+                include ../../../source/assets/ico/ico-readmore.svg
+            a(href=url_for(read_more_url) role="button" aria-label=aria_label) !{aria_label}
+          .workshop-buttons__button-container
+            if (!workshop.is_external)
+              a(href=workshop.ticket_url role="button" target="_blank" rel="noopener noreferrer external")
+                .workshop-buttons__button
+                  include ../../../source/assets/ico/ico-ticket.svg
+              a(href=workshop.ticket_url role="button" aria-label=site.data.defaults.conference.workshops_tickets_label target="_blank" rel="noopener noreferrer external") !{site.data.defaults.conference.workshops_tickets_label}
+            else
+              a(href="#" role="button" target="_blank" rel="noopener noreferrer external")
+                .workshop-buttons__button
+                  include ../../../source/assets/ico/ico-pencil.svg
+              a(href="#" role="button" aria-label=site.data.defaults.conference.workshops_register_label target="_blank" rel="noopener noreferrer external") !{site.data.defaults.conference.workshops_register_label}
+    //- (sub)event microdata
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "@id": "#{read_more_url}",
+        "superEvent": 
+        {
+          "@type": "Event",
+          "@id": "#{full_url_for(site.root)}" 
+        },
+        "location": 
+        {
+          "@type": "Place",
+          "address": 
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "#{workshop.location}",
+            "streetAddress": "#{workshop.location_address}"
+          },
+          "name": "#{workshop.location_name}"
+        },
+        "name": "#{workshop.workshop_title}",
+        "startDate": "#{workshop.date}",
+        "endDate": "#{workshop.end_date}",
+        "description": "#{workshop.description}"
+      }
+    //- schema.org microdata for speaker
+    each teacher in workshop.teachers
+      - desc = teacher.teacher_role + " at " + teacher.teacher_org
+      script(type="application/ld+json").
+        {
+          "@type": "Person",
+          "name": "#{teacher.teacher_name}",
+          "disambiguatingDescription": "#{desc}",
+          "performerIn": { "@id": "#{full_url_for(workshop.page_uri)}" }
+        }

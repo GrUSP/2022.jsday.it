@@ -1,0 +1,56 @@
+@import "defaults"
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/sass/utilities/mixins"
+
+#scholarships
+  h4
+    border-bottom: 1px solid
+  p
+    &.text_bigger
+      font-size: 1.2em
+      font-weight: 600
+    a
+      font-weight: 600
+
+.title-container
+  display: flex
+  align-items: center
+  svg
+    background-color: $main-color
+    fill: $main-text-color_inverted
+    margin-right: 1em
+  h1
+    font-size: 2em
+    line-height: 1.2
+    +tablet
+      font-size: 3em
+      line-height: 1.5
+
+.container__short-version
+  background-color: $main-color_hue-medium
+  h2
+    font-style: normal
+    text-align: center
+    color: $main-text-color_inverted
+    font-size: 1.8em
+    line-height: 1.2
+    +tablet
+      font-size: 2em
+      line-height: 1.5
+  a
+    color: $main-text-color_inverted
+
+.container__long-version
+  background-color: $main-text-color_inverted
+  h3
+    color: $main-color
+    font-size: 1.8em
+    line-height: 1.2
+    +tablet
+      font-size: 2em
+      line-height: 1.5
+
+.container_diversity-sponsors
+  img
+    max-width: 300px

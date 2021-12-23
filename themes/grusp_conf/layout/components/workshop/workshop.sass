@@ -1,0 +1,117 @@
+#workshop
+  h2
+    text-align: center
+    font-style: normal
+    color: $main-color !important
+
+.workshop__container
+  padding: 1em 0 2em
+  margin: 0
+  .inner
+    margin: 0 auto
+    max-width: 1200px
+    border-bottom: 1px solid $main-text-color_hue-medium
+    .workshop__info
+      text-align: left
+      strong
+        color: $main-color
+  &:last-of-type .inner
+    border-bottom: none
+  h5
+    text-transform: none
+    font-weight: 600
+    color: $main-color !important
+  p
+    color: $main-text-color
+  .columns
+    margin-top: 1em
+    margin-bottom: 0
+    flex-wrap: wrap
+    &.no-margin-top
+      margin-top: 0
+    &.workshop__info
+      display: flex
+      flex-direction: column
+      align-content: space-between
+      min-width: 240px
+    .workshop__info
+      max-width: 80%
+      margin: 0 auto
+      +tablet
+        min-width: 600px
+  .workshop-buttons
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-content: center
+    max-width: 80%
+    margin: 0 auto
+    +tablet
+      min-width: 450px
+    .workshop-buttons__button-container
+      min-width: 190px
+      height: 190px
+      margin: 10px
+      display: flex
+      flex-direction: column
+      align-items: center
+      align-content: center
+      justify-content: center
+      text-align: center
+      background-color: $main-color !important
+      border: 1px solid $main-color !important
+      &:hover, &:focus, &:active
+        background-color: $main-text-color_inverted !important
+        svg path, svg polygon
+          fill: $main-color !important
+      a
+        color: $main-text-color_inverted
+        text-transform: uppercase
+        font-size: .8em
+        font-weight: 600
+        &:hover > a, &:focus > a, &:active > a
+          color: $main-color !important
+          text-decoration: none
+  .workshop-buttons__button
+    width: 120px
+    height: 120px
+    svg path, svg polygon
+      fill: $main-text-color_inverted
+
+  .row-info
+    color: $main-text-color
+    display: flex
+    flex-direction: row
+    align-items: center
+    text-transform: uppercase
+    font-size: .7em
+    +tablet
+      font-size: .9em
+    .info__date
+      padding: 0 10px 0 10px
+    .info-icon
+      margin-top: 6px
+    .info-icon.padded
+      padding: 0 0 0 10px
+      +tablet
+        padding: 0 0 0 10px
+      svg
+        height: 30px
+        width: auto
+  .row__more
+    padding-top: 2em
+    flex-wrap: wrap
+  .button.is-primary
+    background-color: $main-color
+    font-weight: 700
+    padding-left: 1em
+    padding-right: 1em
+    margin: 10px auto
+    +tablet
+      padding-left: 2em
+      padding-right: 2em
+      margin-right: 1em
+    &:hover, &:active, &:focus
+      color: $main-color
+      border-color: $main-color
+      background-color: $main-text-color_inverted

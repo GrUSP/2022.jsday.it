@@ -1,0 +1,386 @@
+@charset "utf-8"
+
+//- Fonts
+@import "fonts"
+
+//- Defaults: colors, etc
+@import "defaults"
+@import "_mixins"
+
+//- Bulma
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/functions"
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/sass/utilities/mixins"
+@import "bulma/sass/base/_all"
+@import "bulma/sass/grid/columns"
+@import "bulma/sass/components/navbar"
+
+//- Common rules
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+  box-sizing: content-box
+  margin: 0
+  padding: 0
+  font-size: 16px
+  line-height: 1.5
+  --lh: 24px
+  width: 100vw
+  color: $main-text-color
+
+section
+  width: 100%
+  margin: 0
+  padding: 0
+  padding-top: 64px
+  +desktop
+    padding-top: 80px
+  &.section_nopadding
+    padding-top: 0
+
+h1
+  font-size: 3em
+  font-weight: 700
+  text-transform: none
+  color: $main-color
+
+h2
+  font-size: 2.4em
+  font-weight: 700
+  font-style: italic
+
+h3
+  font-size: 2em
+  font-weight: 700
+
+h4
+  font-size: 1.5em
+  font-style: italic
+  text-transform: uppercase
+
+h5
+  font-size: 1.2em
+  text-transform: uppercase
+
+p
+  margin: 1em 0
+
+a
+  color: $main-color
+  font-weight: 600
+a:hover, a:active, a:focus
+  color: $main-color
+  text-decoration: underline
+
+a.button:hover, a.button:active, a.button:focus
+  text-decoration: none
+
+//- Common classes
+
+.container
+  padding: 1em 0
+
+.inner
+  width: 90%
+  max-width: 1200px
+  margin: 2em auto
+
+.is-centered
+  text-align: center
+
+
+//- Overrides
+
+.button.is-primary
+  background-color: $main-color !important
+  border-color: $main-color !important
+  font-weight: 700
+  padding-left: 1em
+  padding-right: 1em
+  text-transform: uppercase
+  +tablet
+    padding-left: 2em
+    padding-right: 2em
+  &:hover, &:active, &:focus
+    color: $main-color !important
+    background-color: $main-text-color_inverted !important
+    border-color: $main-text-color_inverted !important
+  //- "buy tickets" button in main menu
+  &.in-menu
+    color: $main-text-color_inverted !important
+    background-color: $main-color
+    border-color: $main-text-color_inverted !important
+    font-size: 1em
+    margin: 0 1em
+    padding-left: .75rem
+    padding-right: .75rem
+    text-transform: lowercase
+    +desktop
+      color: $main-color
+      background-color: $main-text-color_inverted
+      border-width: 1px
+      margin-left: 3em
+      padding-left: 1em
+      padding-right: 1em
+      text-transform: uppercase
+    &:hover, &:active, &:focus
+      color: $main-color !important
+      background-color: $main-text-color_inverted !important
+      border-color: $main-text-color_inverted !important
+
+//- Header
+
+header
+  position: fixed
+  width: 100%
+  z-index: 999
+  transition: background-color .5s ease-in
+  background-color: $main-color
+  padding: 0
+  +desktop
+    padding: 1em 0 0
+  &.is-transparent
+    background-color: transparent
+
+.header-logo
+  width: 160px
+  height: auto
+  margin-top: -.75em
+  +tablet
+    width: 200px
+
+.header-logo svg
+  width: 200px
+  height: 60px
+  max-width: 160px
+  +desktop
+    max-width: 200px
+  
+.header-logo svg path
+  fill: $main-text-color_inverted
+
+.nav-container
+  width: 100%
+  max-width: 1280px
+  margin: 0 auto
+
+.navbar
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  background-color: transparent
+  .navbar-menu
+    background-color: transparent
+    box-shadow: none
+    transition: display .5s ease-in
+    &.is-active
+      background-color: $main-color
+      .navbar-end
+        width: 100vw
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        background-color: $main-color
+  .navbar-link
+    color: $main-text-color_inverted
+    font-weight: 600
+    &:not(.is-arrowless)::after
+      content: "+"
+      transform: none
+      top: 40%
+      color: transparent
+      +desktop
+        color: $main-text-color_inverted
+    &:hover, &:active, &:focus
+      color: $main-text-color_inverted
+      background-color: transparent
+      text-decoration: underline
+  .navbar-item
+    color: $main-text-color_inverted
+    margin: 0 1em
+    font-weight: 600
+    &:hover, &:active, &:focus
+      color: $main-text-color_inverted
+      background-color: transparent
+    &:hover > a, &:active > a, &:focus > a
+      text-decoration: underline
+    &.has-dropdown:focus .navbar-link, &.has-dropdown:hover .navbar-link, &.has-dropdown.is-active .navbar-link
+      background-color: transparent
+    a
+      background-color: transparent
+      &:hover, &:active, &:focus
+        background-color: transparent
+        color: $main-text-color_inverted
+
+.navbar-dropdown
+  background-color: $main-color
+  border: none
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+  box-shadow: none
+  font-size: 1em
+
+.navbar-burger
+  color: $main-text-color_inverted
+  position: absolute
+  right: 0
+  z-index: 100
+  &:hover, &:active, &:focus
+    color: $main-text-color_inverted
+    text-decoration: none
+
+//- Home page
+//-   Hero section
+@import "../../../layout/components/hero/hero"
+//-   Updates section
+@import "../../../layout/components/update/update"
+//-   Call for papers section
+@import "../../../layout/components/cfp/cfp"
+//-   General information section
+@import "../../../layout/components/generalinfo/generalinfo"
+//-   Speakers section
+@import "../../../layout/components/speakers/speakers"
+//-   Topics section
+@import "../../../layout/components/topics/topics"
+//-   Workshop section
+@import "../../../layout/components/workshop/workshop"
+//-   Media section
+@import "../../../layout/components/media/media"
+//-   Location section
+@import "../../../layout/components/location/location"
+//-   Sponsors section
+@import "../../../layout/components/sponsors/sponsors"
+//-   Community partners section
+@import "../../../layout/components/community_partners/community_partners"
+//-   Newsletter section
+@import "../../../layout/components/newsletter/newsletter"
+
+//- Page: Sponsor
+@import "./page_sponsor"
+//- Page: Welcome
+@import "./page_welcome"
+//- Page: Welcome / About
+@import "./page_about"
+//- Page: Welcome / COC
+@import "./page_coc"
+//- Page: Welcome / Scholarships
+@import "./page_scholarships"
+//- Page: Welcome / Where
+@import "./page_where"
+//- Page: CFP
+@import "./page_cfp"
+//- Page: Speakers & talks
+@import "./page_talks_speakers"
+//- Page: Schedule
+@import "./page_schedule"
+//- Page: Workshops
+@import "./page_workshops"
+//- Page: Workshop (single)
+@import "./page_workshop_single"
+
+//-   Breadcrumbs
+@import "./breadcrumbs"
+
+//- 404 page
+
+.text_giant
+  font-weight: 600
+  font-size: 15em
+  color: $main-color
+  margin: 0 auto
+  text-align: center
+
+.container_404 .button.is-primary:hover, .container_404 .button.is-primary:active, .container_404 .button.is-primary:focus
+  border-color: $main-color !important
+
+//- Footer
+
+footer
+  background-color: #4e4d4d
+  .columns.inner
+    margin: 0 auto
+    *
+      color: $main-text-color_inverted
+    .footer__p_padded, .footer__a_padded
+      padding: 1em 0
+    a
+      font-weight: 600
+    a.past-edition
+      display: inline-block
+      margin-right: 8px
+      &:after
+        content: "|"
+        display: inline
+        padding-left: 8px
+    a.past-edition:last-of-type:after
+        content: ""
+    .row__social
+      font-size: .9em
+      font-weight: 700
+      padding: 2em 0
+      p
+        margin-bottom: 8px
+      .social-icon
+        background-color: $main-text-color_inverted
+        border: 1px solid $main-text-color_inverted
+        &:hover, &:active, &:focus
+          background-color: $main-color
+          svg 
+            path, rect, ellipse, circle
+              fill: $main-text-color_inverted
+      svg
+        path, rect, ellipse, circle
+          fill: $main-color
+    nav
+      padding: 1em
+      margin-top: .5em
+      text-align: left
+      ul
+        li
+          display: block
+          padding: .5em 0
+          a
+            text-transform: uppercase
+    .footer__logo, .footer__logo svg
+      max-width: 300px
+      +desktop
+        max-width: 400px
+
+footer .inner.is-centered .column
+  font-size: .9em
+
+// scroll to top button
+.back-to-top
+  width: 60px
+  height: 50px
+  background-color: $main-color
+  position: fixed
+  bottom: 20px
+  right: 0
+  transition: all .5s ease-in
+  border-top-left-radius: 30px
+  border-bottom-left-radius: 30px
+
+// not indented to make it general (used in speakers page)
+.chevron
+  color: $main-text-color_inverted
+  transition: all .5s ease-in
+  &::before
+    border-style: solid
+    border-width: 4px 4px 0 0
+    content: ''
+    display: inline-block
+    height: 16px
+    right: 18px
+    position: absolute
+    top: 20px
+    transform: rotate(-45deg)
+    vertical-align: top
+    width: 16px

@@ -1,0 +1,47 @@
+intro:
+  main_title: "About"
+  content_1:
+    "<strong>js</strong>day is proudly organised by <a href='http://www.grusp.org'>GrUSP.</a> <br>
+    GrUSP is a community founded in 2003 as a PHP User Group, that has become the reference point in Italy for good practice in all fields of web development.
+    We have been organising community-oriented conferences since then, always pursuing the goal of creating opportunities for people to meet, learn, share and grow together."
+  content_2:
+    "GrUSP is a non-profit organisation whose aim is to improve a healthier and sustainable web development ecosystem in Italy. We organise affordable, high-quality events and workshops for developers and promote the creation of local user groups (PUG), helping them in their activities. <br>
+    Diversity and inclusion have always been at the heart of our initiative. We have been applying a code of conduct for many years, and we have scholarship programs for each of our conferences."
+more:
+  title: "jsday"
+  content_1:
+    "<strong>js</strong>day is the main conference in Italy that is dedicated solely to JavaScript and its ecosystem.
+    <br><br  />"
+  content_2:
+past_edition:
+  title: "Browse past editions of jsday"
+  video_url: "https://www.youtube.com/embed/videoseries?list=PLWK9j6ps_unkLg4R7_tnIfoyi0Wr-QPkD"
+  video_caption: "Watch the videos from the past editions"
+team:
+  title: "Our team"
+  intro: ""
+  members:
+    member_1:
+      name: "Giulia Tosato"
+      role: "Event Manager"
+      pic_filename: "giulia.jpg"
+    member_2:
+      name: "Michela Bertaina"
+      role: "Community Manager"
+      pic_filename: "michela.png"
+    member_3:
+      name: "Giovanna Ferrari"
+      role: "Sponsors Manager"
+      pic_filename: "giovanna.jpg"
+    member_4:
+      name: "Cesare D'Amico"
+      role: "GrUSP Board Member"
+      pic_filename: "cesare.jpg"
+    member_5:
+      name: "Daniel Londero"
+      role: "GrUSP Board Member"
+      pic_filename: "daniel.jpg"
+    member_6:
+      name: "Francesco Fullone"
+      role: "Troublemaker"
+      pic_filename: "fullo.jpg"

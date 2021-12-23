@@ -1,0 +1,91 @@
+- classes = ""
+if(is_home())
+  script(type="text/javascript" src='/assets/js/header.js')
+  - classes += "is-transparent"
+
+header(class=classes id="header")
+  .nav-container
+    nav(role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="Main menu").navbar.dropdown
+      .navbar-brand
+        a(href="/" aria-label="home page").navbar-item
+          .header-logo
+            include ../../source/assets/img/conference-logo.svg
+        a.navbar-burger(role="button" aria-label="menu" aria-expanded="false" data-target="main_menu")
+          span(aria-hidden="true")
+          span(aria-hidden="true")
+          span(aria-hidden="true")
+      .navbar-menu(id="main_menu")
+        .navbar-start
+        .navbar-end
+          each page_label, page_key in theme.menu
+            - aria_label = page_label + " page"
+            if(theme[page_key + '_submenu'])
+              .navbar-item.has-dropdown.is-hoverable
+                a(href=url_for(page_key) aria-label=aria_label).navbar-link !{page_label}
+                .navbar-dropdown
+                  each sub_label, sub_key in theme[page_key + '_submenu']
+                    - subpage_url = `${url_for(site.url)}${page_key}/${sub_key}.html`
+                    - aria_label = sub_label + " page"
+                    a(href=url_for(subpage_url) aria-label=aria_label).navbar-item !{sub_label}
+            else
+              a(href=url_for(page_key) aria-label=aria_label).navbar-item !{page_label}
+          if (site.data.defaults.conference.ticket_button_visible)
+            a(href=site.data.defaults.conference.buy_tickets_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=site.data.defaults.conference.buy_tickets_label).button.is-small.is-rounded.is-primary.in-menu !{site.data.defaults.conference.menu_buy_tickets_label}
+
+//- Google Tag Manager
+script(type="text/javascript").
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','!{site.data.defaults.conference.google.tag_manager_id}');
+
+
+//- Cookie solution (iubenda)
+script(type="text/javascript").
+  var _iub = _iub || [];
+  _iub.csConfiguration = {
+    "lang": `!{site.data.defaults.conference.iubenda.lang}`,
+    "siteId": !{site.data.defaults.conference.iubenda.siteId},
+    "cookiePolicyId": !{site.data.defaults.conference.iubenda.cookiePolicyId},
+    "localConsentDomain": `!{site.data.defaults.conference.iubenda.localConsentDomain}`,
+    "rebuildIframe": !{site.data.defaults.conference.iubenda.rebuildIframe},
+    "banner": {
+      "position": "float-top-center",
+      "acceptButtonDisplay": true,
+      "customizeButtonDisplay": true
+    },
+    "callback": {
+      onPreferenceExpressedOrNotNeeded: function(preference) {
+        dataLayer.push({
+          iubenda_ccpa_opted_out: _iub.cs.api.isCcpaOptedOut()
+        });
+        if (!preference) {
+          dataLayer.push({
+            event: "iubenda_preference_not_needed"
+          });
+        } else {
+          if (preference.consent === true) {
+            dataLayer.push({
+              event: "iubenda_consent_given"
+            });
+          } else if (preference.consent === false) {
+            dataLayer.push({
+              event: "iubenda_consent_rejected"
+            });
+          } else if (preference.purposes) {
+            for (var purposeId in preference.purposes) {
+              if (preference.purposes[purposeId]) {
+                dataLayer.push({
+                  event: "iubenda_consent_given_purpose_" + purposeId
+                });
+              }
+            }
+          }
+        }
+      }
+    }
+  };
+
+//- Cookie solution (iubenda)
+script(async type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8").

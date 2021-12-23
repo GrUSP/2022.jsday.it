@@ -1,0 +1,12 @@
+//- Additional mixins
+=small-phone
+  @media screen and (orientation: portrait) and (max-width: 360px)
+    @content
+
+=medium-phone
+  @media screen and (orientation: portrait) and (max-width: 600px)
+    @content
+
+=tablet-vertical
+  @media screen and (orientation: portrait) and (min-width: 768px)
+    @content

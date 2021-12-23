@@ -1,0 +1,199 @@
+extends includes/layout.pug
+
+block content
+  section(id="speakers")
+    include includes/_breadcrumbs.pug
+
+    //- first we create a unique list of speaker names. it will be used for both assigning the right anchor (see right below) for the talk titles (linked from schedule) and the secondary menu items, and for creating the secondary menu itself.
+    //- EXPLANATION: the items in the secondary menu must point to the title of the talk where the first occurrence of the speaker is found.
+    - const var_speakers = []
+    //- also, we count the days - useful for the page layout
+    - var no_days = 0
+    each day in site.data.talks_speakers.days
+      - no_days++
+      each talk in day.talks
+        if(talk.speakers)
+          each speaker in talk.speakers
+            if(speaker.speaker_in_speaker_lists === true)
+              - var_speakers.push(speaker)
+    - const filtered_speaker_names = var_speakers.map(speaker => speaker.speaker_name).filter((value, index, self) => self.indexOf(value) === index).sort((a, b) => (a > b) ? 1 : -1)
+
+    //- we count the number of tracks in order to know if we have to add the track title to the talks' info row
+    - no_tracks = 0
+    each track in site.data.talks_speakers.tracks
+      - no_tracks++
+
+    .container
+      .inner
+        .title-container
+          - title_classes = ""
+          if(no_days > 1)
+            - title_classes += "is-centered"
+            h1(class=title_classes role="heading" aria-level="1").title-is-1= page.title
+          else
+            - title_classes += "has-text-left"
+            .columns
+              .column
+                h1(class=title_classes role="heading" aria-level="1").title-is-1= page.title
+              .column.has-text-right
+                .row-info
+                  .info-icon
+
+                    if(site.data.defaults.conference.is_online_only === true)
+                      include ../source/assets/ico/ico-online-conference.svg
+                    else
+                      include ../source/assets/ico/ico-where.svg
+
+
+                  if(site.data.defaults.conference.is_online_only === true)
+                    .info__location !{site.data.defaults.conference.online_location}
+                  else
+                    .info__location !{site.data.defaults.conference.city}
+
+                  | &nbsp;|&nbsp;
+
+                  .info-icon.padded
+                    include ../source/assets/ico/ico-calendar.svg
+
+                  - var start_date = ""
+                  if(site.data.defaults.conference.is_online_only === true)
+                    - start_date = date(site.data.defaults.conference.date, config.date_format_hero_online)
+                  else
+                    - start_date = date(site.data.defaults.conference.date, config.date_format_hero)
+
+                  .info__date
+                    time(datetime=site.data.defaults.conference.date) !{start_date}
+      //- links to every day in page if there is more than 1 day
+      if(no_days > 1)
+        .container.date-menu
+          .inner
+            each day in site.data.talks_speakers.days
+              - anchor = `#${day.title}`
+              a(role="button" href=anchor).button.is-rounded.is-primary.is-medium !{day.title}
+
+    //- day title band if there is more than 1 day
+    each day in site.data.talks_speakers.days
+      if(no_days > 1)
+        .container.date-holder
+          .inner
+
+            - var the_date = ""
+            if(site.data.defaults.conference.is_online_only === true)
+              - the_date = date(day.date, config.date_format_hero_online)
+            else
+              - the_date = date(day.date, config.date_format_hero)
+
+            - the_id = day.title
+            .row-info(id=the_id)
+
+              .info-icon
+                if(site.data.defaults.conference.is_online_only === true)
+                  include ../source/assets/ico/ico-online-conference.svg
+                else
+                  include ../source/assets/ico/ico-where.svg
+
+              if(site.data.defaults.conference.is_online_only === true)
+                .info__location !{site.data.defaults.conference.online_location}
+              else
+                .info__location !{site.data.defaults.conference.city}
+
+              | &nbsp;|&nbsp;
+
+              .info-icon.padded
+                include ../source/assets/ico/ico-calendar.svg
+
+              .info__date
+                time(datetime=site.data.defaults.conference.date) !{the_date}
+
+      each talk, key in day.talks
+        //- verifichiamo se tra gli speaker ce n'è almeno uno che deve comparire
+        - include_talk = false
+        if(talk.speakers)
+          each speaker in talk.speakers
+            if(speaker.speaker_in_speaker_lists === true)
+              - include_talk = true
+
+        if(include_talk === true)
+          .container.has-dynamic-background
+            .inner
+              if(talk.start_datetime && talk.end_datetime)
+                .row-info
+                  if(no_tracks > 1)
+                    if(talk.track)
+                      strong !{talk.track.title}
+                      .info-icon.padded
+                  else
+                    .info-icon
+                  include ../source/assets/ico/ico-clock.svg
+                  - start_time = date(talk.start_datetime, config.time_format_schedule)
+                  - end_time = date(talk.end_datetime, config.time_format_schedule)
+                  .info__date
+                    time(datetime=talk.start_datetime) !{start_time}
+                    | &nbsp;-&nbsp;
+                    time(datetime=talk.end_datetime) !{end_time}
+
+                  if(no_days > 1)
+                    - curr_day = date(talk.start_datetime, config.date_format_extended)
+                    .info-icon.padded
+                      include ../source/assets/ico/ico-calendar.svg
+                    .info__date !{curr_day}
+
+              //- the key to the talk will be user as the ID of the anchor: same in secondary menu below
+              - schedule_url = url_for("schedule") + "#" + key
+
+              h2(role="heading" aria-level="2" id=key).is-title.is-2
+                a(href=schedule_url).schedule-anchor !{talk.talk_title}
+              p !{talk.talk_description}
+              if(talk.talk_video_url)
+                .video-container
+                  iframe(type="text/html" src=talk.talk_video_url frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="400px" height="225px")
+              if(talk.speakers)
+                each speaker in talk.speakers
+                  if(speaker.speaker_in_speaker_lists === true)
+                    .block-speaker
+                      .has-border
+                        .columns
+                          .column.column_speaker
+                            - filename = `/img/speakers/${speaker.speaker_pic_filename}`
+                            .card.speaker-card
+                              .card-image
+                                img(src=filename role="figure" aria-label=speaker.speaker_name alt=speaker.speaker_name)
+                            .row__social
+                              if(speaker.speaker_github_url)
+                                a(role="button" href=speaker.speaker_github_url rel="external noopener noreferrer" aria-label="github profile")
+                                  .social-icon
+                                    include ../source/assets/ico/ico-social-github.svg
+                              if(speaker.speaker_twitter_url)
+                                a(role="button" href=speaker.speaker_twitter_url rel="external noopener noreferrer" aria-label="twitter profile")
+                                  .social-icon
+                                    include ../source/assets/ico/ico-social-twitter.svg
+                          .column
+                            .columns.speaker-info
+                              .column
+                                h3(role="heading" aria-level="3" id=speaker.speaker_name).speaker-name !{speaker.speaker_name}
+                              .column
+                                p !{speaker.speaker_role}
+                            .columns.speaker-bio
+                              .column
+                                p
+                                  | !{speaker.speaker_bio}
+
+  script(type="text/javascript" src='/assets/js/speakers_menu.js')
+  aside(id="secondary_menu").menu.secondary-menu
+    .secondary-menu-button-container
+      a(href="#menu" id="secondary_menu_button" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="Speakers menu").secondary-menu-button.is-active
+        .chevron(id="speaker_menu_chevron")
+    ul.menu-list
+      each name in filtered_speaker_names
+        - the_id = ""
+        each day in site.data.talks_speakers.days
+          each talk, key in day.talks
+            if(talk.speakers)
+              each speaker in talk.speakers
+                if(speaker.speaker_name === name)
+                  - the_id = key
+          - target_href = "#" + the_id
+        li
+          a(href=target_href role="button" aria-label=name).secondary-menu-list-item !{name}
+
+  include components/newsletter/newsletter.pug

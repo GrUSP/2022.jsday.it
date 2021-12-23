@@ -1,0 +1,125 @@
+#mc_embed_signup
+  form(action="https://grusp.us5.list-manage.com/subscribe/post?u=29d918424cd5375f4c0c54c00&amp;id=204120a4eb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank")
+    #mc_embed_signup_scroll
+      //- hidden
+      .indicates-required.is-hidden
+        span.asterisk *
+        | required
+      .columns.is-desktop
+        //- visible: email
+        .column.mc-field-group.inset-label
+          input(type="email" value="" name="EMAIL" id="mce-EMAIL" required  title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+|\\x22([^\\x0d\\x22\\x5c\\x80-\\xff]|\\x5c[\\x00-\\x7f])*\\x22)(\\x2e([^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+|\\x22([^\\x0d\\x22\\x5c\\x80-\\xff]|\\x5c[\\x00-\\x7f])*\\x22))*\\x40([^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+|\\x5b([^\\x0d\\x5b-\\x5d\\x80-\\xff]|\\x5c[\\x00-\\x7f])*\\x5d)(\\x2e([^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+|\\x5b([^\\x0d\\x5b-\\x5d\\x80-\\xff]|\\x5c[\\x00-\\x7f])*\\x5d))*(\\.\\w{2,})+$").email
+          label(for="mce-EMAIL") !{site.data.defaults.conference.newsletter_email_label}
+        .column.mc-field-group.inset-label
+          input(type="text" value="" name="FNAME" class="" id="mce-FNAME")
+          label(for="mce-FNAME") !{site.data.defaults.conference.newsletter_firstname_label}
+        .column.mc-field-group.inset-label
+          input(type="text" value="" name="LNAME" class="" id="mce-LNAME")
+          label(for="mce-LNAME") !{site.data.defaults.conference.newsletter_lastname_label}
+      .columns
+        //- visible: accept privacy policy
+        .column.mc-field-group.input-group
+          - privacy_policy_url = site.data.defaults.conference.privacy_policy_url_common + site.data.defaults.conference.iubenda.cookiePolicyId
+          span !{site.data.defaults.conference.newsletter_privacy_label}
+            a(role="button" href=privacy_policy_url target="_blank" rel="external noopener noreferrer" aria-label=site.data.defaults.conference.newsletter_privacy_link_label) !{site.data.defaults.conference.newsletter_privacy_link_label}
+          ul
+            li
+              label(for="mce-MMERGE11-0") &nbsp;
+                input(type="checkbox" value="Yes" name="MMERGE11" id="mce-MMERGE11-0" required)
+        //- hidden: list(s) to subscribe -- configura in site.defaults
+        .mc-field-group.input-group.is-hidden
+          ul
+            li
+              if(site.data.defaults.conference.newsletter_lists.php)
+                input(type="checkbox" value="2" name="group[13285][2]" id="mce-group[13285]-13285-0" checked)
+              else
+                label(for="mce-group[13285]-13285-0") php
+            li
+              if(site.data.defaults.conference.newsletter_lists.javascript)
+                input(type="checkbox" value="4" name="group[13285][4]" id="mce-group[13285]-13285-1" checked)
+              else
+                input(type="checkbox" value="4" name="group[13285][4]" id="mce-group[13285]-13285-1")
+              label(for="mce-group[13285]-13285-1") javascript
+            li
+              if(site.data.defaults.conference.newsletter_lists.design)
+                input(type="checkbox" value="8" name="group[13285][8]" id="mce-group[13285]-13285-2" checked)
+              else
+                input(type="checkbox" value="8" name="group[13285][8]" id="mce-group[13285]-13285-2")
+              label(for="mce-group[13285]-13285-2") design
+            li
+              if(site.data.defaults.conference.newsletter_lists.devops)
+                input(type="checkbox" value="16" name="group[13285][16]" id="mce-group[13285]-13285-3" checked)
+              else
+                input(type="checkbox" value="16" name="group[13285][16]" id="mce-group[13285]-13285-3")
+              label(for="mce-group[13285]-13285-3") devops
+            li
+              if(site.data.defaults.conference.newsletter_lists.frontend)
+                input(type="checkbox" value="32" name="group[13285][32]" id="mce-group[13285]-13285-4" checked)
+              else
+                input(type="checkbox" value="32" name="group[13285][32]" id="mce-group[13285]-13285-4")
+              label(for="mce-group[13285]-13285-4") frontend
+            li
+              if(site.data.defaults.conference.newsletter_lists.ruby)
+                input(type="checkbox" value="512" name="group[13285][512]" id="mce-group[13285]-13285-5" checked)
+              else
+                input(type="checkbox" value="512" name="group[13285][512]" id="mce-group[13285]-13285-5")
+              label(for="mce-group[13285]-13285-5") ruby
+            li
+              if(site.data.defaults.conference.newsletter_lists.entrepreneurship)
+                input(type="checkbox" value="256" name="group[13285][256]" id="mce-group[13285]-13285-6" checked)
+              else
+                input(type="checkbox" value="256" name="group[13285][256]" id="mce-group[13285]-13285-6")
+              label(for="mce-group[13285]-13285-6") entrepreneurship
+            li
+              if(site.data.defaults.conference.newsletter_lists.local_events)
+                input(type="checkbox" value="64" name="group[13285][64]" id="mce-group[13285]-13285-7" checked)
+              else
+                input(type="checkbox" value="64" name="group[13285][64]" id="mce-group[13285]-13285-7")
+              label(for="mce-group[13285]-13285-7") local_events
+            li
+              if(site.data.defaults.conference.newsletter_lists.everything)
+                input(type="checkbox" value="128" name="group[13285][128]" id="mce-group[13285]-13285-8" checked)
+              else
+                input(type="checkbox" value="128" name="group[13285][128]" id="mce-group[13285]-13285-8")
+              label(for="mce-group[13285]-13285-8") everything
+        //- visible: language
+        .column.mc-field-group.input-group
+          span !{site.data.defaults.conference.newsletter_lang_challenge}
+          ul
+            li
+              input(type="checkbox" value="1" name="group[7981][1]" id="mce-group[7981]-7981-0")
+              label(for="mce-group[7981]-7981-0") !{site.data.defaults.conference.newsletter_lang_label}
+      //- hidden: email format
+      .mc-field-group.input-group.is-hidden
+        strong Email Format
+        ul
+          li
+            input(type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0" checked)
+            label(for="mce-EMAILTYPE-0") html
+          li
+            input(type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1")
+            label(for="mce-EMAILTYPE-1") text
+      //- hidden: GDPR and permissions -- configura in site.defaults
+      div(id="mergeRow-gdpr").mergeRow.gdpr-mergeRow.content__gdprBlock.mc-field-group.is-hidden
+        .content__gdpr
+          label I give you these marketing permissions
+          p We will use the information you provide on this form to be in touch with you and to provide updates and marketing. Please let us know all the ways you would like to hear from us - SELECT AT LEAST ONE!
+          fieldset(id="interestgroup_field").mc_fieldset.gdprRequired.mc-field-group
+            label(for="gdpr_1").checkbox.subfield Email (updates about the conferences)
+            input(type="checkbox" id="gdpr_1" name="gdpr[1]" value="Y").av-checkbox
+            label(for="gdpr_5").checkbox.subfield Direct Mail (like discount codes, commercials info from us and/or from our sponsors)
+            input(type="checkbox" id="gdpr_5" name="gdpr[5]" value="Y").av-checkbox
+            label(for="gdpr_9").checkbox.subfield Customized online advertising (that means you could see other online ads that may likely interest you)
+            input(type="checkbox" id="gdpr_9" name="gdpr[9]" value="Y").av-checkbox
+          .content__gdprLegal
+            p !{site.data.defaults.conference.newsletter_disclaimer}
+              a(href=site.data.defaults.conference.newsletter_legal_url target="_blank" rel="external noopener noreferrer") !{site.data.defaults.conference.newsletter_legal_label}
+      div(id="mce-responses").clear
+        div(id="mce-error-response" style="display:none").response
+        div(id="mce-success-response" style="display:none").response
+      //- hidden: mailchimp key
+      div(style="position: absolute; left: -5000px;" aria-hidden="true")
+        input(type="text" name="b_29d918424cd5375f4c0c54c00_204120a4eb" tabindex="-1" value="")
+      //- visible: submit!
+      div.clear
+        input(type="submit" value=site.data.defaults.conference.newsletter_subscribe_label name="subscribe" id="mc-embedded-subscribe").button.is-medium.is-rounded.is-primary

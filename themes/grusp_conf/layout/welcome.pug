@@ -1,0 +1,82 @@
+extends includes/layout.pug
+
+block content
+  - contact_url = "mailto:" + site.data.defaults.conference.contact_email
+  section(id="welcome")
+    include includes/_breadcrumbs.pug
+
+    .container
+      .inner
+        .title-container
+          h1(role="heading" aria-level="1").title-is-1 !{site.data.page_welcome.intro.main_title}
+        p !{site.data.page_welcome.intro.content_1}
+        p !{site.data.page_welcome.intro.content_2}
+    .container
+      .columns.inner
+        .column
+          p
+            strong !{site.data.defaults.conference.past_editions_pre}
+          p
+            each item in site.data.defaults.conference.past_editions
+              - url = "https://" + item + "." + site.data.defaults.conference.base_url
+              a(href=url target="_blank" rel="noopener noreferrer").past-edition !{item}
+        .column
+          include includes/_social.pug
+
+  section.section_nopadding.welcome__container_moreinfo
+    .inner
+      .summary-blocks
+        - page_key = "welcome"
+        if(theme[page_key + '_submenu'])
+          each sub_label, sub_key in theme[page_key + '_submenu']
+            - subpage_url = `${url_for(site.url)}${page_key}/${sub_key}.html`
+            - aria_label = sub_label + " page"
+            - ico_uri = `../source/assets/ico/ico-${sub_key}.svg`
+            .block
+              .row-info
+                .info-icon
+                  if(sub_key === "about")
+                    include ../source/assets/ico/ico-about.svg
+                    - the_title = site.data.page_welcome.info_about.title
+                    - the_content = site.data.page_welcome.info_about.content
+                  if(sub_key === "coc")
+                    include ../source/assets/ico/ico-coc.svg
+                    - the_title = site.data.page_welcome.info_coc.title
+                    - the_content = site.data.page_welcome.info_coc.content
+                  if(sub_key === "scholarships")
+                    include ../source/assets/ico/ico-scholarship.svg
+                    - the_title = site.data.page_welcome.info_scholarships.title
+                    - the_content = site.data.page_welcome.info_scholarships.content
+                  if(sub_key === "cfp")
+                    include ../source/assets/ico/ico-cfp.svg
+                    - the_title = site.data.page_welcome.info_cfp.title
+                    - the_content = site.data.page_welcome.info_cfp.content
+                  if(sub_key === "where")
+                    include ../source/assets/ico/ico-where.svg
+                    - the_title = site.data.page_welcome.info_venue.title
+                    - the_content = site.data.page_welcome.info_venue.content
+                .info__location
+                  a(href=url_for(subpage_url) aria-label=aria_label)
+                    span !{the_title}
+              p !{the_content}
+              p
+                a(href=url_for(subpage_url) aria-label=aria_label) !{site.data.page_welcome.readmore_label}
+          .block
+            .row-info
+              .info-icon
+                include ../source/assets/ico/ico-ticket.svg
+                - the_title = site.data.page_welcome.info_ticket.title
+                - the_content = site.data.page_welcome.info_ticket.content
+              .info__location
+                a(href=site.data.defaults.conference.buy_tickets_url aria-label=site.data.defaults.conference.menu_buy_tickets_label)
+                  span !{the_title}
+            p !{the_content}
+            p
+              a(href=site.data.defaults.conference.buy_tickets_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=site.data.defaults.conference.menu_buy_tickets_label) !{site.data.page_welcome.info_ticket.readmore_label}
+
+    //- imported components
+    include components/newsletter/newsletter
+    if(site.data.defaults.conference.sponsors_visible)
+      include components/sponsors/sponsors
+    if site.data.defaults.conference.community_partners
+      include components/community_partners/community_partners

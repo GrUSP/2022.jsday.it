@@ -1,0 +1,17 @@
+section(id="newsletter").section_nopadding
+  if(site.data.defaults.conference.workshop_visible)
+    .newsletter__container
+      .inner
+        h2(role="heading" aria-level="2").title-is-2 !{site.data.defaults.conference.newsletter_title}
+        p
+          strong !{site.data.defaults.conference.newsletter_subtitle}
+        .mailchimp-container
+          include _mailchimp.pug
+  else
+    .newsletter__container.negative
+      .inner
+        h2(role="heading" aria-level="2").title-is-2 !{site.data.defaults.conference.newsletter_title}
+        p
+          strong !{site.data.defaults.conference.newsletter_subtitle}
+        .mailchimp-container
+          include _mailchimp.pug

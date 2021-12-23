@@ -1,0 +1,116 @@
+extends includes/layout.pug
+
+block content
+  - contact_url = "mailto:" + site.data.defaults.conference.contact_email
+  section(id="venue")
+
+    - classes = "venue__header"
+    if(site.data.defaults.conference.is_online_only === true)
+      - classes += " is-online-conference"
+    
+    div(class=classes)
+      .inner
+
+        - title = ""
+        if(site.data.defaults.conference.is_online_only === true)
+          - title = site.data.defaults.conference.online_location_title
+        else
+          - title = site.data.page_where.header.title_pre + " " + site.data.defaults.conference.city
+
+        h2(role="header" aria-level="2").is-title.is-2 !{title}
+    if(site.data.defaults.conference.venue_img_credits)
+      .image-credits !{site.data.defaults.conference.venue_img_credits}
+
+    include includes/_breadcrumbs.pug
+
+    .container
+      .inner
+        .title-container
+          if(site.data.defaults.conference.is_online_only === true)
+            include ../source/assets/ico/ico-online-conference-120.svg
+          else
+            include ../source/assets/ico/ico-where-120.svg
+
+          h1(role="heading" aria-level="1").is-title-is-1 !{site.data.page_where.intro.main_title}
+        p !{site.data.page_where.intro.content_1}
+        if(site.data.page_where.intro.content_2)
+          p !{site.data.page_where.intro.content_2}
+    .venue-container__more
+      .inner
+        h2(role="heading" aria-level="2").is-title.is-2 !{site.data.page_where.city_info.title}
+        if(site.data.page_where.city_info.subtitle_1)
+          h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_where.city_info.subtitle_1}
+        p !{site.data.page_where.city_info.description_1}
+        if(site.data.page_where.city_info.subtitle_2)
+          h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_where.city_info.subtitle_2}
+        if(site.data.page_where.city_info.description_2)
+          p !{site.data.page_where.city_info.description_2}
+
+    if(site.data.defaults.conference.is_online_only === false)
+      if(site.data.page_where.map)
+        .container.container__map
+          .inner
+            h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_where.map.title}
+            .iframe-container
+              .iframe-holder
+                iframe(type="text/html" src=site.data.page_where.map.map_url frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="800px" height="450px")
+
+    if(site.data.defaults.conference.is_online_only === false)
+        .container.container__hotels
+          .inner
+            .row-info
+              .info-icon
+                include ../source/assets/ico/ico-hotel.svg
+              h3(role="heading" aria-level="3").is-title.is-3 !{site.data.page_where.hotels.title}
+            p !{site.data.page_where.hotels.intro}
+            .columns
+              each hotel in site.data.page_where.hotels.agreements
+                .column
+                  h4(role="heading" aria-level="4").is-title.is-4 !{hotel.name}
+                  p
+                    a(href=hotel.maps_url role="button" target="_blank" rel="external noopener noreferrer" aria-label=site.data.page_where.address_aria_label) !{hotel.address}
+                  if(hotel.website)
+                    a(href=hotel.website role="button" target="_blank" rel="external noopener noreferrer" aria-label=site.data.page_where.website_aria_label) !{hotel.website}
+                  if(hotel.phone)
+                    - phone_url = "tel:" + hotel.phone
+                    p
+                      a(href=phone_url role="button" target="_blank" rel="external noopener noreferrer" aria-label=site.data.page_where.phone_aria_label) !{hotel.phone_label}
+                  if(hotel.email)
+                    - email_url = "mailto:" + hotel.email
+                    p
+                      a(href=email_url role="button" target="_blank" rel="external noopener noreferrer" aria-label=site.data.page_where.email_aria_label) !{hotel.email}
+                script(type="application/ld+json").
+                  {
+                  "offers": 
+                    {
+                      "@type": "Offer",
+                      "description": "Hotel agreement: we have conventions with hotels in the area",
+                      "availability": "https://schema.org/LimitedAvailability",
+                      "location": 
+                        {
+                          "@type": "Place",
+                          "name": "#{hotel.name}",
+                          "url": "#{hotel.website}",
+                          "address": 
+                          {
+                            "@type": "PostalAddress",
+                            "addressLocality": "#{site.data.defaults.conference.md_city}",
+                            "addressRegion": "#{site.data.defaults.conference.md_province}",
+                            "postalCode": "#{site.data.defaults.conference.md_postal_code}",
+                            "streetAddress": "#{hotel.address}"
+                          },
+                          "contactPoint": [
+                            {
+                              "@type": "contactPoint",
+                              "email": "mailto:#{hotel.email}"
+                            }]
+                        }
+                    }
+                  }
+
+    //- imported components
+    include components/newsletter/newsletter
+    if(site.data.defaults.conference.sponsors_visible)
+      include components/sponsors/sponsors
+    if site.data.defaults.conference.community_partners
+      include components/community_partners/community_partners

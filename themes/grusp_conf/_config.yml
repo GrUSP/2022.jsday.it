@@ -1,0 +1,36 @@
+basedir: /
+
+# html lang
+language: "en"
+
+# main menu navigation
+menu:
+  welcome: welcome
+  # talks_speakers: talks
+  sponsor: sponsor
+  # scommentare per generare pagina
+  # schedule: schedule
+  # menu item for workshop
+  # workshop: workshop
+
+# workshops submenu (comment out if only one workshop: add items for multiple workshops)
+workshop_submenu:
+  workshop_1: rails and vue
+  workshop_2: sample second workshop
+
+# welcome submenu
+welcome_submenu:
+  about: about
+  coc: code of conduct
+  scholarships: scholarships
+  where: where
+  # delete this row to take out of the menu
+  cfp: call for papers
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /assets/css/global.css
+
+# scripts loaded in the end of the body / commented out to prevent errors in compiling layout.pug
+scripts:
+- /assets/js/menu.js

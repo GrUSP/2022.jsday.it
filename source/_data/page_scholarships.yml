@@ -1,0 +1,29 @@
+intro:
+  main_title: "Scholarships"
+  content_1: "Diversity and inclusivity matter"
+  content_2: "Apply for a Scholarship"
+  content_3: "Our purpose is to create an <strong>accessible</strong> and <strong>welcoming</strong> conference, where people from various backgrounds could meet, feel safe and free to express theirselves. We want to enable all the people to attend our conferences, and <strong>promote an inclusive community</strong>."
+short_version:
+  title:
+  content_1: "We are involved in many ways in order to build a better environment in tech for everyone. In 2016 we became <strong>Diversity Sponsor</strong> of <a target='_blank' href='https://www.kickstarter.com/projects/1817732114/the-phpdiversity-rainbow-elephpant'>The PHPDiversity Rainbow Elephpant campaign</a> on Kickstarter when the project was seemingly about to end without making it. We are very proud that many others followed us and that the project reached its goal. In 2019 we sponsored and organised for the first time <a target='_blank' href='http://railsgirls.com/verona2019.html'>RailsGirls Verona</a>, a free coding workshop for women."
+  content_2: "We know very well that for some people attending a conference could be difficult, because of personal or financial circumstances. That's why we offer discounted or free tickets especially to those who are underrepresented and marginalised in tech (women, members of the LGBTQIA+ community, people with disabilities, minorities, or other under-represented groups) and anybody who would otherwise be unable to attend without financial assistance."
+  content_3:
+  content_4:
+  content_5:
+  content_6:
+long_version:
+  title:
+  content_1: "Application"
+  content_2_beginning: "You are invited to apply for "
+  content_2_link_label: "a single conference ticket for jsday"
+  content_2_link_url: "https://forms.gle/K7b38LbqVuAJ61MK9"
+  content_2_ending: "  . We will notify all applicants regarding the outcome of their application. We don’t cover travel/accommodation expenses."
+  content_3: "Sponsor"
+  content_4: "We are looking for “diversity sponsor” to fund this program and enable GrUSP to offer more scholarships! If you are representing an amazing tech company that is looking to give back to the developer community, get in touch!"
+  content_5: "Contact"
+  content_6: "May you have any questions please don’t hesitate to contact us at "
+diversity_sponsors_title: "Thanks to our diversity sponsor!"
+diversity_sponsors:
+  - logo_filename: "auth0.svg"
+    site_url: "https://a0.to/jsday2021"
+    name: "Auth0"

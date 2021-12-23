@@ -1,0 +1,135 @@
+extends includes/layout.pug
+
+block content
+  - contact_url = "mailto:" + site.data.defaults.conference.contact_email
+  section(id="sponsor")
+    include includes/_breadcrumbs.pug
+
+    .container
+      .inner
+        h1(role="heading" aria-level="1").title-is-1= page.title
+        p.is-size-4.has-text-weight-bold !{site.data.page_sponsor.intro.slogan_1}
+        p.is-size-4.has-text-weight-bold !{site.data.page_sponsor.intro.slogan_2}
+        p !{site.data.page_sponsor.intro.content_1}
+        p !{site.data.page_sponsor.intro.content_2}
+        if(site.data.page_sponsor.intro.content_3)
+          p !{site.data.page_sponsor.intro.content_3}
+    .container.background-light.is-centered
+      .inner
+        h2(role="heading" aria-level="2").title.is-2 !{site.data.page_sponsor.block_2.title}
+        p.is-size-4.has-text-weight-bold !{site.data.page_sponsor.block_2.slogan}
+        .columns.has-text-left
+          .column
+            h3(role="heading" aria-level="3").title.is-3 !{site.data.page_sponsor.block_2.subtitle_1}
+            p !{site.data.page_sponsor.block_2.content_1}
+          .column
+            h3(role="heading" aria-level="3").title.is-3 !{site.data.page_sponsor.block_2.subtitle_2}
+            p !{site.data.page_sponsor.block_2.content_2}
+      //- count number of occupied slots (number of items in each sponsorship level in 'sponsors.yml')
+      //- at each sponsorship level, the number of available slots is calculated based on the maximum number of slots specified in 'page_sponsor.yml' for the level
+      - occupied_slots_main = 0
+      - occupied_slots_diamond = 0
+      - occupied_slots_platinum = 0
+      - occupied_slots_gold = 0
+      - occupied_slots_silver = 0
+      - occupied_slots_bronze = 0
+      if site.data.sponsors.main
+        each sponsor in site.data.sponsors.main
+          - occupied_slots_main++
+      if site.data.sponsors.diamond
+        each sponsor in site.data.sponsors.diamond
+          - occupied_slots_diamond++
+      if site.data.sponsors.platinum
+        each sponsor in site.data.sponsors.platinum
+          - occupied_slots_platinum++
+      if site.data.sponsors.gold
+        each sponsor in site.data.sponsors.gold
+          - occupied_slots_gold++
+      if site.data.sponsors.silver
+        each sponsor in site.data.sponsors.silver
+          - occupied_slots_silver++
+      if site.data.sponsors.bronze
+        each sponsor in site.data.sponsors.bronze
+          - occupied_slots_bronze++
+    .container
+      .inner.options-container
+        each level in site.data.page_sponsor.levels
+          .level-block
+            .level-block__intro
+              if level.name == "Main"
+                - available_slots = level.available_slots - occupied_slots_main
+              if level.name == "Diamond"
+                - available_slots = level.available_slots - occupied_slots_diamond
+              if level.name == "Platinum"
+                - available_slots = level.available_slots - occupied_slots_platinum
+              if level.name == "Gold"
+                - available_slots = level.available_slots - occupied_slots_gold
+              if level.name == "Silver"
+                - available_slots = level.available_slots - occupied_slots_silver
+              if level.name == "Bronze"
+                - available_slots = level.available_slots - occupied_slots_bronze
+              h3.is-title.is-3 !{level.name}
+              p.is-size-1.has-text-weight-bold € !{number_format(level.amount)}
+              p !{level.vat_label}
+              p !{available_slots} available slots
+
+            if level.description_1
+              .triangle
+            else
+              if level.description_2
+                .triangle.triangle_description_2
+              else
+                if level.description_3
+                  .triangle.triangle_description_3
+                else
+                  if level.description_4
+                    .triangle.triangle_description_4
+                  else
+                    if level.description_5
+                      .triangle.triangle_description_5
+                    else
+                      if level.description_6
+                        .triangle.triangle_description_6
+
+            if level.description_1
+              .level-block__description_1
+                ul
+                  each item in level.description_1
+                    li !{item}
+            if level.description_2
+              .level-block__description_2
+                ul
+                  each item in level.description_2
+                    li !{item}
+            if level.description_3
+              .level-block__description_3
+                ul
+                  each item in level.description_3
+                    li !{item}
+            if level.description_4
+              .level-block__description_4
+                ul
+                  each item in level.description_4
+                    li !{item}
+            if level.description_5
+              .level-block__description_5
+                ul
+                  each item in level.description_5
+                    li !{item}
+            if level.description_6
+              .level-block__description_6
+                ul
+                  each item in level.description_6
+                    li !{item}
+            if level.description_7
+              .level-block__description_7
+                ul
+                  each item in level.description_7
+                    li !{item}
+
+  //- imported components
+  include components/newsletter/newsletter
+  if(site.data.defaults.conference.sponsors_visible)
+    include components/sponsors/sponsors
+  if site.data.defaults.conference.community_partners
+    include components/community_partners/community_partners

@@ -1,0 +1,99 @@
+@import "defaults"
+@import "bulma/sass/utilities/_all"
+@import "bulma/sass/utilities/mixins"
+@import "bulma/sass/base/helpers"
+@import "bulma/sass/elements/table"
+
+.title-container_schedule
+  text-align: center
+  h1
+    text-transform: capitalize
+    &.has-text-left
+      margin-bottom: 1em
+    &.is-centered
+      margin: 0 auto
+
+.date-menu
+  padding: 0
+  text-align: center
+  a
+    margin: 0 1em
+    +tablet
+      margin: 0 2em
+    &:hover, &:active, &:focus
+      border-color: $main-color !important
+
+.timeline
+  margin-bottom: 3em
+  border: 1px solid $main-color
+  &:last-of-type
+    padding-bottom: 0
+  .info-bar
+    background-color: $main-color
+    padding: 1em
+    .row-info
+      display: flex
+      align-items: center
+      .info__date
+        color: $main-text-color_inverted
+        text-transform: uppercase
+        //- this is to avoid hiding the title under the top header on scroll
+        padding-top: 8em
+        margin-top: -8em
+    svg path
+      fill: $main-text-color_inverted
+  .talk-anchor-pre
+    padding-top: 10em
+    margin-top: -10em
+  table
+    color: $main-text-color
+    tr
+      td
+        padding: .5em 1em
+        border-left: 1px solid $main-color
+        &.has-background
+          background-color: $main-text-color_hue-lighter
+        &::before
+          content: "\2022"
+          color: $main-color
+          font-weight: 600
+          font-size: 2em
+          display: inline-block
+          width: 1em
+          margin-left: -.7em
+        &.empty-item::before
+          content: ""
+        &.has-service-icon
+          padding-bottom: 1em
+        time
+          font-weight: 600
+          color: $main-color
+          margin-left: -.7em
+        span
+          font-weight: 200
+          font-style: italic
+          color: $main-text-color
+          &::after
+            content: ", "
+          &:last-of-type::after
+            content: ""
+          &.talk-anchor-pre
+            &::after
+              content: ""
+        .track-title
+          font-weight: 600
+          font-style: normal
+          color: $main-color
+          &::after
+            content: ""
+        svg
+          margin-top: -3em
+          margin-bottom: -2em
+          path
+            fill: $main-color
+        img
+          display: inline
+          margin-top: -50px
+          margin-bottom: 5px
+          max-width: 60px
+          margin-left: 180px

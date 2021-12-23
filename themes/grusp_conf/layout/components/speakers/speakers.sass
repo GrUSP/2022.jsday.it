@@ -1,0 +1,51 @@
+.speakers__container
+  padding: 3em 0
+  margin: 0
+  background-color: $main-text-color_hue-lighter
+  .inner
+    margin: 0 auto
+    max-width: 1200px
+  h2
+    text-align: center
+    font-style: normal
+    color: $main-color
+  a:hover, a:active, a:focus
+    text-decoration: none
+  a p.subtitle, a p em
+    color: $main-text-color
+  p:hover, a p:active, a p:focus
+    color: $main-color_hue-medium
+  a p em:hover, a p em:active, a p em:focus
+    color: $main-color_hue-medium
+  a .card-image
+    max-height: 200px
+    overflow: hidden
+    img
+      transition: transform .5s
+      &:hover, &:active, &:focus
+        transform: scale(1.1)
+  .inner_holder
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    .speaker-card
+      max-width: 200px
+      padding: 20px
+      text-align: center
+      font-weight: 300
+      &.speaker-card--mc
+        background-color: $main-color
+        .card-content
+          .subtitle, p, .title, em
+            color: $main-text-color_inverted
+      .card-content
+        display: flex
+        flex-direction: column
+        font-weight: initial
+        .subtitle, p
+          font-size: .9em
+          margin: .5em 0 0
+        .title
+          font-size: 1em
+          font-weight: 600
+          color: $main-color

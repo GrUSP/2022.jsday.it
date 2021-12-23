@@ -1,0 +1,50 @@
+section(id="location").section_nopadding
+  .location__container
+    .inner
+      .row-info
+        .info-icon
+
+          if(site.data.defaults.conference.is_online_only === true)
+            include ../../../source/assets/ico/ico-online-conference.svg
+          else
+            include ../../../source/assets/ico/ico-where.svg
+
+
+        if(site.data.defaults.conference.is_online_only === true)
+          .info__location !{site.data.defaults.conference.online_location}
+        else
+          .info__location !{site.data.defaults.conference.city}
+
+      if(site.data.defaults.conference.is_online_only === true)
+        //- .info__location !{site.data.defaults.conference.online_location}
+        h2(role="heading" aria-level="2").title.is-2 !{site.data.defaults.conference.online_location_title}
+        p
+          strong !{site.data.defaults.conference.online_location_info}
+      else
+        .info__location !{site.data.defaults.conference.city}
+        h2(role="heading" aria-level="2").title.is-2 !{site.data.defaults.conference.location_name}
+        p
+          strong !{site.data.defaults.conference.location_address}
+
+      a(href=url_for("welcome/where.html")).button.is-medium.is-rounded.is-primary !{site.data.defaults.conference.location_readmore_label}
+
+      if(site.data.defaults.conference.is_online_only === false)
+        a(href=site.data.defaults.conference.location_maps_url target="_blank" rel="noopener noreferrer").button.is-medium.is-rounded.is-primary !{site.data.defaults.conference.location_maps_label}
+
+  if(site.data.defaults.conference.venue_img_credits)
+    .image-credits !{site.data.defaults.conference.venue_img_credits}
+
+  //- schema.org microdata
+  script(type="application/ld+json").
+    {
+      "@type": "Place",
+      "address": 
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "#{site.data.defaults.conference.md_city}",
+          "addressRegion": "#{site.data.defaults.conference.md_province}",
+          "postalCode": "#{site.data.defaults.conference.md_postal_code}",
+          "streetAddress": "#{site.data.defaults.conference.md_address}"
+        },
+      "name": "#{site.data.defaults.conference.location_name}"
+    }

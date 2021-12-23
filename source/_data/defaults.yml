@@ -1,0 +1,196 @@
+
+#####################
+# Conference defaults
+#####################
+
+# conference config
+conference:
+  # Online-only conferences
+  is_online_only: true
+  online_location: "online"
+  online_location_title: "The Internet"
+  online_location_info: "The conference is taking place virtually"
+
+  # menu and general params
+  menu_buy_tickets_label: "Buy tickets"
+  buy_tickets_url: "https://jsday-2021.eventbrite.it?utm_medium=web&utm_source=site&utm_campaign=2021"
+  # additional info for microdata / schema.org
+  #md_city: "Verona"
+  #md_province: "VR"
+  #md_postal_code: "37138"
+  #md_address: "Via Longhena 42"
+  organizer_url: "http://grusp.org/"
+  # contact email
+  contact_email: "jsday@grusp.org"
+  # these are for the hero section
+  title_pre: "Welcome to"
+  title: "jsday Digital Edition"
+  city: "online"
+  date: 2021-07-06T10:00+02:00
+  # Use the next field to override the date in the hero
+  hero_date_text: July 06-07th, 2021
+  countdown_visible: false
+  countdown_days: "days"
+  countdown_hours: "hours"
+  countdown_minutes: "minutes"
+  countdown_seconds: "seconds"
+  ticket_button_visible: true
+  hero_buy_tickets_label: "Buy tickets now"
+  # image credits (l'esempio è per la hero del CSS Day!)
+  # hero_img_credits: "Image by Gianni Careddu - Own work, <a href='https://commons.wikimedia.org/w/index.php?curid=74821344 target='_blank' rel='noopener noreferrer'>CC BY-SA 4.0</a>"
+  # "update" component. set the first parameter to true to make it appear in home page, false means hidden
+  update_visible: false
+  update_is_warning: false
+  update_warning_header: "Questo testo appare se l'update è impostato a *warning*. Potremmo sostituirlo con un'icona o altro 'segnale'"
+  update_title: "Important information"
+  update_description: "This is the description of such important information"
+  update_link_url: "https://google.com/"
+  update_link_label: "link to google, just for the demo"
+  # "call for papers" component. set the first parameter to true to make it appear in home page, false means hidden
+  cfp_open: false
+  cfp_readmore_label: "Read more"
+  cfp_open_label: "Submissions accepted until"
+  cfp_open_title: "Call For Papers Now Open!"
+  cfp_deadline: 2021-05-23T23:59+02:00
+  cfp_register_label: "Apply now"
+  cfp_register_aria_label: "Apply now to our Call for Papers"
+  # "general information" ("what is it?") component
+  geninfo_visible: true
+  geninfo_title: "What is it?"
+  geninfo_description: "jsday 2021 is the 10th edition of the Italian JavaScript conference, organized by GrUSP, organizers of events like <a href='https://www.phpday.it/'>phpday</a>, <a href='https://www.reactjsday.it/'>reactjsday</a> and many others.
+  <br> <br /> The event is international and all sessions will be in English. This 2021 edition is taking place online, and will last 2 days (July 6th and 7th)"
+  geninfo_about_label: "About"
+  geninfo_coc_label: "Code of conduct"
+  geninfo_scholarships_label: "Scholarships"
+  geninfo_tickets_label: "Buy tickets"
+  # this is for the Newsletter block
+  newsletter_title: "Stay in the loop!"
+  newsletter_subtitle: "Subscribe to our newsletter"
+  # fields taken from the Mail chimp default form -- set to `true` to add subscription
+  newsletter_lists:
+    php: false
+    javascript: true
+    design: true
+    devops: false
+    frontend: true
+    ruby: false
+    entrepreneurship: false
+    local_events: false
+    everything: false
+  newsletter_firstname_label: "First name"
+  newsletter_lastname_label: "Surname"
+  newsletter_email_label: "Email"
+  newsletter_subscribe_label: "Subscribe"
+  newsletter_lang_challenge: "Can you understand Italian?"
+  newsletter_lang_label: "Of course, certamente!"
+  newsletter_privacy_label: "I have read and accept the "
+  newsletter_privacy_link_label: "privacy policy"
+  newsletter_disclaimer: "We use Mailchimp as our email marketing platform. By subscribing to the newsletter, you accept that your data are transmitted to Mailchimp to be processed. "
+  newsletter_legal_url: "https://mailchimp.com/legal/"
+  newsletter_legal_label: "Information about Mailchimp's privacy policy"
+  # "speakers" component. set the first parameter to true to make it appear in home page, false means hidden
+  speakers_visible: true
+  speakers_title: "speaker"
+  mcs_title: "MC"
+  speaker_count_text:
+  # "topics" component. set the first parameter to true to make it appear in home page, false means hidden
+  topics_visible: true
+  topics_title: "Topics and themes"
+  topics_description: "We'll talk about..."
+  topics:
+    - "Automation"
+    - "Testing"
+    - "Frameworks"
+    - "IoT"
+    - "Performance"
+    - "Type System"
+    - "NodeJS"
+    - "Vue.js"
+    - "React"
+  topics_payoff: "...and much more!"
+  # "workshop" component. set the first parameter to true to make it appear in home page, false means hidden
+  workshop_visible: true
+  workshops_title: "workshop (in Italian Language)"
+  workshops_tickets_label: "Buy tickets"
+  workshops_readmore_label: "Read more"
+  workshops_register_label: "Register"
+  # Media section in home page. set the first parameter to true to make it appear in home page, false means hidden
+  media_visible: true
+  media_pic_1: ""
+  media_pic_2: ""
+  media_pic_3: ""
+  media_pic_4: ""
+  #   playlist: if true, the iframe will be created. if false, it will not
+  media_video_playlist: true
+  # if `media_video_is_youtube` is `true`, the relevant playlist will be embedded via "media_video_playlist". If it is `false`, the relevant Vimeo channel will be embedded via "media_vimeo_channel"
+  media_video_is_youtube: true
+  youtube_base_url: "https://www.youtube.com/embed/videoseries?list="
+  vimeo_base_url: "https://vimeo.com/album/"
+  vimeo_url_suffix: "/embed"
+  #   (embed YouTube playlist: prendere l'ID della lista dall'URL, la parte dopo '&list=', e metterla qui sotto)
+  youtube_playlist_id: "PLWK9j6ps_unkLg4R7_tnIfoyi0Wr-QPkD"
+  #   (embed Vimeo showcase: prendere l'ID dello showcase e metterla qui sotto)
+  vimeo_showcase_id: "6048109"
+  # Location section in home page. set the first parameter to true to make it appear in home page, false means hidden
+  location_visible: false
+  location_name: "Hotel San Marco"
+  location_address: "Via Longhena 42, 37138 Verona (VE) Italy"
+  location_maps_url: "https://www.google.com/maps/place/Hotel+San+Marco+Fitness+Pool+%26+SPA/@45.4399961,10.9697441,17z/data=!3m1!4b1!4m8!3m7!1s0x4781e1e30a8be6af:0x8091b108e1d130c6!5m2!4m1!1i2!8m2!3d45.4399961!4d10.9719328"
+  location_maps_label: "Get directions"
+  location_readmore_label: "Read more"
+  # image credits (l'esempio è per la hero del CSS Day!)
+  venue_img_credits: ""
+  # Sponsors section in home page. set the first parameter to true to make it appear in home page, false means hidden
+  sponsors_visible: true
+  sponsor_title_home: "Sponsors"
+  # this is for the Community partners section in home page
+  community_partners: true
+  community_partners_title: "Community partners"
+  # this is for the Social links block
+  social_follow: "Follow us on"
+  social_fb_url: "https://www.facebook.com/jsconfit"
+  social_linkedin_url: "https://www.linkedin.com/company/grusp/"
+  social_twitter_url: "https://twitter.com/jsconfit"
+  social_vimeo_url: "https://vimeo.com/grusp"
+  social_youtube_url: "https://www.youtube.com/c/grusp"
+  social_instagram_url: "https://www.instagram.com/grusp_/"
+
+  # 404
+  back_to_home_label: "back to home page"
+  # footer
+  #   this is for the "previous editions" links
+  base_url: "jsday.it/"
+  past_editions_pre: "Browse past editions:"
+  past_editions:
+    2012: "2012"
+    2013: "2013"
+    2014: "2014"
+    2015: "2015"
+    2016: "2016"
+    2017: "2017"
+    2018: "2018"
+    2019: "2019"
+    2020: "2020"
+  past_editions_videos_pre: "Videos from the past editions are available on "
+  past_editions_videos_vimeo_label: "Vimeo"
+  past_editions_videos_mid: " and "
+  past_editions_videos_youtube_label: "YouTube"
+  past_editions_videos_post: "."
+  footer_copy_text: "is &copy; by Grusp and its awesome staff"
+  footer_contact_text: "Contact us at "
+  footer_links_pre: "You can read our "
+  footer_links_privacy_link_label: "privacy policy"
+  iubenda:
+    # sostituire tutti questi parametri con quelli generati nel dashboard di iubenda.com cfr. https://gist.github.com/mbeccati/1bd9e562905a90e14d7d88ed3dcea34c
+    cookiePolicyId: 35664682
+    siteId: 1066517
+    lang: en
+    enableRemoteConsent: true
+    localConsentDomain: jsday.it
+    rebuildIframe: true
+  privacy_policy_url_common: "https://www.iubenda.com/privacy-policy/"
+  footer_link_middle: " and our "
+  footer_coc_link_label: "code of conduct"
+  # Google Tag Manager
+  google:
+    tag_manager_id: " GTM-M4L8PSK"

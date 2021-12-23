@@ -1,0 +1,127 @@
+@import "bulma/sass/layout/hero"
+@import "bulma/sass/utilities/mixins"
+@import "bulma/sass/utilities/controls"
+@import "bulma/sass/elements/button"
+
+.hero__container
+  @extend .hero
+  flex-direction: row
+  width: 100vw
+  //- this is to avoid having `hero-head` and `hero-foot` (see bulma docs)
+  height: 100vh
+  background-image: url("/assets/img/hero/hero.jpg") 
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  background-attachment: fixed
+  position: relative
+  +tablet
+    background-image: url("/assets/img/hero/tablet_hero.jpg")
+  +desktop
+    background-image: url("/assets/img/hero/desktop_hero.jpg")
+  +widescreen
+    background-image: url("/assets/img/hero/widescreen_hero.jpg")
+  +fullhd
+    background-image: url("/assets/img/hero/hero.jpg")
+  +tablet-vertical
+    background-image: url("/assets/img/hero/tablet_vertical_hero.jpg")
+  +medium-phone
+    background-image: url("/assets/img/hero/mobile_medium_hero.jpg")
+  +small-phone
+    background-image: url("/assets/img/hero/mobile_small_hero.jpg")
+  .inner
+    align-items: center
+  .row-info
+    display: flex
+    flex-direction: row
+    align-items: center
+    text-transform: uppercase
+    color: $main-text-color_inverted
+    font-size: .7em
+    +tablet
+      font-size: 1em
+  .info-icon
+    margin-top: 6px
+  .info-icon.padded
+    padding: 0 0 0 10px
+    +tablet
+      padding: 0 0 0 30px
+  svg
+    height: 30px
+    width: auto
+    path
+      fill: $main-text-color_inverted
+  .row__title
+    padding: 8em 0 4em
+    +tablet
+      padding: 1em 0
+  .row__title h1
+    text-transform: none
+    font-weight: 700
+    color: $main-text-color_inverted
+    font-size: 2.2em
+    line-height: 1.2
+    +tablet
+      font-size: 3em
+      line-height: 1.5
+    +widescreen
+      font-size: 4em
+  &.is-online-conference
+    background-image: url("/assets/img/hero/hero-online.jpg")
+    +tablet
+      background-image: url("/assets/img/hero/tablet_hero-online.jpg")
+    +desktop
+      background-image: url("/assets/img/hero/desktop_hero-online.jpg")
+    +widescreen
+      background-image: url("/assets/img/hero/widescreen_hero-online.jpg")
+    +fullhd
+      background-image: url("/assets/img/hero/hero-online.jpg")
+    +tablet-vertical
+      background-image: url("/assets/img/hero/tablet_vertical_hero-online.jpg")
+    +medium-phone
+      background-image: url("/assets/img/hero/mobile_medium_hero-online.jpg")
+    +small-phone
+      background-image: url("/assets/img/hero/mobile_small_hero-online.jpg")
+.info__location
+  padding: 0 30px 0 10px
+
+.info__date
+  padding: 0 0 0 10px
+
+.row__more
+  display: flex
+  justify-content: flex-start
+  .columns
+    width: 100%
+    flex-wrap: wrap
+
+.countdown-container
+  display: flex
+  justify-content: flex-start
+  .is-hidden
+    visibility: hidden
+.days-container, .hours-container, .minutes-container, .seconds-container
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+  width: 120px
+  height: 120px
+
+.days, .hours, .minutes, .seconds
+  font-weight: 600
+  font-size: 2em
+  color: $main-color_hue-medium
+
+.days-label, .hours-label, .minutes-label, .seconds-label
+  font-size: .9em
+  color: $main-text-color_inverted
+
+.image-credits
+  position: relative
+  margin: -2em auto 0
+  text-align: center
+  font-size: .8em
+  color: $main-text-color_inverted
+  a
+    color: $main-text-color_inverted

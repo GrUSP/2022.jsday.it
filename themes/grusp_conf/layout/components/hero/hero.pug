@@ -1,0 +1,74 @@
+section(id="hero").section_nopadding
+
+  - classes = "hero__container"
+  if(site.data.defaults.conference.is_online_only === true)
+    - classes += " is-online-conference"
+
+  div(class=classes)
+    .columns.inner
+      .column
+        .row-info
+          .info-icon
+            if(site.data.defaults.conference.is_online_only === true)
+              include ../../../source/assets/ico/ico-online-conference.svg
+            else
+              include ../../../source/assets/ico/ico-where.svg
+
+          if(site.data.defaults.conference.is_online_only === true)
+            .info__location !{site.data.defaults.conference.online_location}
+          else
+            .info__location !{site.data.defaults.conference.city}
+          | &nbsp;|&nbsp;
+
+          .info-icon.padded
+            include ../../../source/assets/ico/ico-calendar.svg
+
+            - var start_date = ""
+            if(site.data.defaults.conference.hero_date_text)
+              - start_date = site.data.defaults.conference.hero_date_text
+            else if(site.data.defaults.conference.is_online_only === true)
+              - start_date = date(site.data.defaults.conference.date, config.date_format_hero_online)
+            else
+              - start_date = date(site.data.defaults.conference.date, config.date_format_hero)
+
+          .info__date
+            time(datetime=site.data.defaults.conference.date) !{start_date}
+        .row__title
+          h1(role="heading" aria-level="1").title.is-1 !{site.data.defaults.conference.title_pre} !{site.data.defaults.conference.title}
+        .row__more
+          .columns
+            .column.is-two-thirds
+              if(site.data.defaults.conference.countdown_visible)
+                .countdown-container(role="timer" id="countdown").is-hidden
+                  .days-container
+                    .days 00
+                    .days-label !{site.data.defaults.conference.countdown_days}
+                  .hours-container
+                    .hours 00
+                    .hours-label !{site.data.defaults.conference.countdown_hours}
+                  .minutes-container
+                    .minutes 00
+                    .minutes-label !{site.data.defaults.conference.countdown_minutes}
+                  .seconds-container
+                    .seconds 00
+                    .seconds-label !{site.data.defaults.conference.countdown_seconds}
+              script(type="text/javascript" src='/assets/js/layout/components/hero/hero.js')
+              script(type="text/javascript").
+                document.addEventListener("DOMContentLoaded", function(event) {
+                  var a = `#{site.data.defaults.conference.date}`;
+                  countDownClock(a);
+                });
+              script(type="text/javascript").
+                setTimeout(
+                  function()
+                  {
+                    document.getElementById('countdown').classList.remove('is-hidden');
+                  }, 
+                  1500);
+                
+
+            .column
+              if(site.data.defaults.conference.ticket_button_visible)
+                a(href=site.data.defaults.conference.buy_tickets_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=site.data.defaults.conference.hero_buy_tickets_label).button.is-large.is-rounded.is-primary !{site.data.defaults.conference.hero_buy_tickets_label}
+  if(site.data.defaults.conference.hero_img_credits)
+    .image-credits !{site.data.defaults.conference.hero_img_credits}

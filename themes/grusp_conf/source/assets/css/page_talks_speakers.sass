@@ -1,0 +1,211 @@
+@import "defaults"
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/sass/utilities/mixins"
+
+#speakers
+  .title-container
+    .columns
+      width: 100%
+      .row-info
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-end
+        text-transform: uppercase
+        color: $main-text-color
+        font-size: .7em
+        +tablet
+          font-size: 1em
+        .info-icon
+          margin-top: 6px
+          svg
+            background-color: $main-text-color_inverted
+            path
+              fill: $main-color
+        .info-icon.padded
+          padding: 0 0 0 10px
+          +tablet
+            padding: 0 0 0 30px
+  h1
+    color: $main-color
+    &.is-centered
+      margin: 0 auto
+  h2
+    font-style: normal
+    text-align: left
+    font-size: 1.8em
+    line-height: 1.2
+    color: $main-color 
+    //- this is to avoid hiding the title under the top header on scroll
+    padding-top: 5em
+    margin-top: -5em
+    +tablet
+      font-size: 2em
+      line-height: 1.5
+    &.talk-title
+      text-align: left
+      font-size: 1.4em
+      line-height: 1.2
+      color: $main-color
+    strong::after
+      content: ' '
+  h3
+    font-size: 1.5em
+    color: $main-color
+    //- this is to avoid hiding the title under the top header on scroll
+    padding-top: 5em
+    margin-top: -5em
+    +tablet
+      font-size: 1.8em
+    &.speaker-name
+  p
+    margin: .5em 0
+  .video-container
+    margin: 2em auto 0
+    text-align: center
+  .date-menu
+    padding: 0
+    text-align: center
+    .inner
+      margin: 2em auto 1em
+    a
+      margin: 0 1em
+      +tablet
+        margin: 0 2em
+      &:hover, &:active, &:focus
+        border: 1px solid $main-color
+
+.date-holder
+  background-color: $main-color
+  color: $main-text-color_inverted
+  .inner
+    padding: 0
+    margin: 0 auto
+  .row-info
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    text-transform: uppercase
+    color: $main-text-color_inverted
+    font-size: .7em
+    +tablet
+      font-size: 1em
+    .info-icon
+      margin-top: 6px
+      svg
+        path
+          fill: $main-text-color_inverted
+    .info-icon.padded
+      padding: 0 0 0 10px
+      +tablet
+        padding: 0 0 0 30px
+
+.has-dynamic-background
+  .row-info
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    .info-icon
+      margin-top: 6px
+      svg
+        path
+          fill: $main-text-color
+    .info-icon.padded
+      padding: 0 0 0 10px
+      +tablet
+        padding: 0 0 0 30px
+
+.has-dynamic-background:nth-of-type(even)
+  background-color: $main-text-color_hue-lighter
+
+.block-speaker
+  padding: 1em 0
+  margin: 1em
+  +tablet
+    margin: 1em 3em
+  +desktop
+    margin: 1em 5em
+  .columns
+    margin: 0
+    .column
+      padding: 0
+    .column_speaker
+      flex-basis: auto
+      flex-grow: 0
+  .speaker-card
+    max-width: 200px
+    padding: 0
+    margin-right: 2em
+  .speaker-info
+    display: flex
+    justify-content: flex-start
+    align-items: baseline
+    .column
+      display: flex
+      flex-basis: auto
+    .column:first-of-type
+      flex-grow: 0
+    .column:last-of-type
+      flex-grow: 1
+      margin: 0 1em
+    p
+      font-size: 1.2em
+      font-weight: 600
+  .speaker-bio
+    strong::after
+      content: ' '
+  .columns_talk-title
+    display: block
+  .has-border
+    border: 8px solid $main-color_hue-medium
+    background-color: $main-text-color_inverted
+    padding: 1em
+    margin-top: 2em
+    text-align: left
+    span.speaker-name
+      color: $main-color
+      &:after
+        content: " "
+
+a.secondary-menu-button
+  width: 60px
+  height: 50px
+  margin-left: -80px
+  margin-top: -16px
+  right: 0
+  background-color: $main-color
+  border-top-left-radius: 30px
+  border-bottom-left-radius: 30px
+  color: $main-text-color_inverted
+  font-size: 2em
+  font-weight: 600
+  padding-left: 20px
+  transition: all .5s ease-in
+  &:hover, &:active, &:focus
+    color: $main-text-color_inverted
+    text-decoration: none
+  .chevron
+    position: relative
+    &::before
+      transform: rotate(-135deg)
+      right: 30px
+      top: 16px
+
+aside.menu.secondary-menu
+  width: 12em
+  padding: 1em
+  position: fixed
+  right: -14em
+  top: 6em
+  background-color: $main-color
+  transition: all .5s
+  display: inline-flex
+  .secondary-menu-button-container
+    display: inline-flex
+  a
+    color: $main-text-color_inverted
+  &:target
+    right: 0

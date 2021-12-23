@@ -1,0 +1,63 @@
+section(id="hero__speakers").section_nopadding
+  .speakers__container
+    - no_of_speakers = 0
+    - no_of_mcs = 0
+    - suffix = ""
+    - const var_speakers = []
+    each speaker in site.data.talks_speakers.speakers
+      if(speaker.speaker_in_speaker_lists === true)
+        - var_speakers.push(speaker)
+    each speaker in var_speakers
+      if speaker.is_mc === true
+        - no_of_mcs++
+      else
+        - no_of_speakers++
+    if no_of_speakers > 1 && config.language === 'en'
+      - suffix = "s"
+    if no_of_mcs > 1 && config.language === 'en'
+      - mcs_suffix = "s"
+    .columns
+      .column.inner
+        h2(role="heading" aria-level="2").title.is-2
+          if site.data.defaults.conference.speaker_count_text
+            | !{site.data.defaults.conference.speaker_count_text}
+          else
+            | !{no_of_speakers} !{site.data.defaults.conference.speakers_title}!{suffix}
+            if no_of_mcs > 0
+              = " + "
+              | !{no_of_mcs} !{site.data.defaults.conference.mcs_title}!{mcs_suffix}
+        .inner_holder
+          //- removed sort
+          //-- const filtered_speaker_names = var_speakers.map(speaker => speaker.speaker_name).filter((value, index, self) => self.indexOf(value) === index).sort((a, b) => (a.speaker_name > b.speaker_name) ? 1 : -1)
+          - const filtered_speaker_names = var_speakers.map(speaker => speaker.speaker_name).filter((value, index, self) => self.indexOf(value) === index)
+          - const map = new Map()
+          - const filtered = []
+          each item in var_speakers
+            if(!map.has(item.speaker_name))
+              - map.set(item.speaker_name, true)
+              - filtered.push({speaker_name: item.speaker_name, speaker_pic_filename: item.speaker_pic_filename, speaker_role: item.speaker_role, is_mc: item.is_mc})
+          each speaker in filtered
+            - filename = `/img/speakers/${speaker.speaker_pic_filename}`
+            - target_href = `/talks_speakers#${speaker.speaker_name}`
+            .card.speaker-card(class=speaker.is_mc ? 'speaker-card--mc' : '')
+              a(href=target_href role="button" aria-label=speaker.speaker_name)
+                .card-image
+                  img(src=filename role="figure" aria-label=speaker.speaker_name)
+                .card-content
+                  p.title !{speaker.speaker_name}
+                  p
+                    em !{speaker.speaker_role}
+            //- schema.org microdata for speaker
+            - same_as = []
+            if(speaker.speaker_github_url)
+              - same_as.push(speaker.speaker_github_url)
+            if(speaker.speaker_twitter_url)
+              - same_as.push(speaker.speaker_twitter_url)
+            //- TODO add same_as as array
+            script(type="application/ld+json").
+              {
+                "@type": "Person",
+                "name": "#{speaker.speaker_name}",
+                "disambiguatingDescription": "#{speaker.speaker_role}",
+                "performerIn": { "@id": "#{full_url_for(site.url)}" }
+              }

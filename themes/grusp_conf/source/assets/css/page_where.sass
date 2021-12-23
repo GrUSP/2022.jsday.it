@@ -1,0 +1,147 @@
+@import "defaults"
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/sass/utilities/mixins"
+@import "_mixins"
+
+.venue__header 
+  width: 100vw
+  padding: 8em 0
+  background-image: url("/assets/img/venue/venue.jpg")
+  +tablet
+    background-image: url("/assets/img/venue/tablet_venue.jpg")
+  +desktop
+    background-image: url("/assets/img/venue/desktop_venue.jpg")
+  +widescreen
+    background-image: url("/assets/img/venue/widescreen_venue.jpg")
+  +fullhd
+    background-image: url("/assets/img/venue/venue.jpg")
+  +tablet-vertical
+    background-image: url("/assets/img/venue/tablet_vertical_venue.jpg")
+  +medium-phone
+    background-image: url("/assets/img/venue/mobile_medium_venue.jpg")
+  +small-phone
+    background-image: url("/assets/img/venue/mobile_small_venue.jpg")
+  h2
+    color: $main-text-color_inverted
+    font-style: normal
+    font-size: 3em
+  &.is-online-conference
+    background-image: url("/assets/img/venue/venue-online.jpg")
+    +tablet
+      background-image: url("/assets/img/venue/tablet_venue-online.jpg")
+    +desktop
+      background-image: url("/assets/img/venue/desktop_venue-online.jpg")
+    +widescreen
+      background-image: url("/assets/img/venue/widescreen_venue-online.jpg")
+    +fullhd
+      background-image: url("/assets/img/venue/venue-online.jpg")
+    +tablet-vertical
+      background-image: url("/assets/img/venue/tablet_vertical_venue-online.jpg")
+    +medium-phone
+      background-image: url("/assets/img/venue/mobile_medium_venue-online.jpg")
+    +small-phone
+      background-image: url("/assets/img/venue/mobile_small_venue-online.jpg")
+
+.title-container
+  display: flex
+  align-items: center
+  svg
+    background-color: $main-color
+    fill: $main-text-color_inverted
+    margin-right: 1em
+  h1
+    font-size: 2em
+    line-height: 1.2
+    +tablet
+      font-size: 3em
+      line-height: 1.5
+
+.venue-container__more
+  background-color: $main-color_hue-medium
+  padding: 2em 0
+  h2
+    font-size: 2.4em
+    font-style: normal
+    text-align: center
+    color: $main-text-color_inverted
+  h3
+    color: $main-text-color
+    font-style: normal
+    text-transform: none
+    font-weight: 600
+    text-align: left
+    font-size: 1.8em
+    line-height: 1.2
+    +tablet
+      font-size: 2em
+      line-height: 1.5
+
+.container__map
+  background-color: $main-text-color_inverted
+  color: $main-color
+  text-align: center
+  padding: 2em
+  h2
+    font-size: 2.4em
+  .inner
+    margin: 0 auto
+    *
+    .footer__p_padded, .footer__a_padded
+      padding: 1em 0
+    a
+      font-weight: 600
+      font-size: 2em
+      color: $main-text-color_inverted
+    h3
+      margin: 1em auto
+    .iframe-container
+      max-width: 800px
+      margin: 0 auto 2em
+      .iframe-holder
+        overflow: hidden
+        height: 0
+        padding: 56.25% 0 0 0
+        position: relative
+        iframe
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+
+.container__hotels
+  background-color: $main-text-color
+  color: $main-text-color_inverted
+  padding: 2em 0
+  .row-info
+    display: flex
+    flex-direction: row
+    svg
+      width: 4em
+      height: 4em
+      path
+        fill: $main-text-color_inverted
+  .column
+    margin-top: 2em
+  h3
+    text-align: left
+    text-transform: uppercase
+    font-weight: 200
+    margin-top: .25em
+  h4
+    color: $main-color_hue-medium
+    font-style: normal
+    font-weight: 600
+    text-transform: none
+  a
+    color: $main-text-color_inverted
+
+.image-credits
+  position: relative
+  margin: -2em auto 0
+  text-align: center
+  font-size: .8em
+  color: $main-text-color_inverted
+  a
+    color: $main-text-color_inverted

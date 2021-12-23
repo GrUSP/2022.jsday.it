@@ -1,0 +1,198 @@
+extends includes/layout.pug
+
+block content
+  section(id="page-workshop").section_nopadding
+
+    each ws in site.data.workshop.workshops
+      if ws.ws_id == page.ws_id
+
+        - classes = "workshop-single__header"
+        if(site.data.defaults.conference.is_online_only === true)
+          - classes += " is-online-conference"
+
+        div(class=classes)
+          .inner
+            h2(role="header" aria-level="2").is-title.is-2 !{ws.page_title}
+            a(role="button" href=ws.ticket_url aria-label=ws.ticket_label target="_blank" rel="external noopener noreferrer").button.is-medium.is-rounded.is-primary !{ws.ticket_label}
+        if(ws.workshop_img_credits)
+          .image-credits !{ws.workshop_img_credits}
+        
+        include includes/_breadcrumbs.pug
+
+        .workshop-single__container
+          section(id="workshop-single__intro").section_nopadding.workshop-single__intro
+            .inner
+              .columns.row-info
+                .column
+                  .info-icon
+                    if(site.data.defaults.conference.is_online_only === true)
+                      include ../source/assets/ico/ico-online-conference.svg
+                    else
+                      include ../source/assets/ico/ico-where.svg
+
+                  if(site.data.defaults.conference.is_online_only === true)
+                    .info__location !{ws.online_location}
+                  else
+                    .info__location !{ws.location}
+
+                .column
+                  .info-icon
+                    include ../source/assets/ico/ico-calendar.svg
+
+                  .info__date 
+                    - var start_date = ""
+                    if(ws.date_text)
+                      - start_date = ws.date_text
+                    else if(site.data.defaults.conference.is_online_only === true)
+                      - start_date = date(ws.date, config.date_format_hero_online)
+                    else
+                      - start_date = date(ws.date, config.date_format_hero)
+
+                    time(datetime=ws.date) !{start_date}
+                .column
+                  .info-icon
+                    include ../source/assets/ico/ico-world.svg
+                  .info__language !{ws.language}
+              h1(role="header" aria-level="1").is-title.is-1 !{ws.workshop_title}
+              .columns
+                .column
+                  if(ws.collab)
+                    p
+                      strong !{ws.collab}
+                  p
+                    em !{ws.language_ext}
+                  p !{ws.description_long}
+                  a(role="button" href=ws.ticket_url aria-label=ws.ticket_label target="_blank" rel="external noopener noreferrer").button.is-medium.is-rounded.is-primary !{ws.ticket_label}
+                if(ws.trailer)
+                  .column.is-one-third
+                    iframe(type="text/html" src=ws.trailer_url frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="400px" height="225px")
+                    p 
+          section(id="workshop-single__teacher").section_nopadding.workshop-single__teacher
+            .inner
+              //- Nota: qui mettiamo il suffisso SOLO se il linguaggio NON è italiano. (se un giorno compare il tedesco siamo panati)
+              - title_suffix = ""
+              - teacher_count = 0
+              if(!ws.language.includes("italian"))
+                each teacher in ws.teachers
+                  - teacher_count++
+                if(teacher_count > 1)
+                  - title_suffix = "s"
+              h2(role="heading" aria-level="2").is-title.is-2 !{ws.teacher_title}!{title_suffix}
+              each teacher in ws.teachers
+                .columns
+                  .column.is-four-fifths
+                    h3(role="heading" aria-level="3") !{teacher.teacher_name}
+                    p !{teacher.teacher_role}
+                      if(teacher.teacher_org)
+                        span.teacher-org !{teacher.teacher_org}
+                    p !{teacher.teacher_bio}
+                  .column
+                    - filename = "/img/ws_teachers/"+teacher.pic_filename
+                    .card.speaker-card
+                      .card-image
+                        img(src=filename role="figure" aria-label=teacher.teacher_name alt=teacher.teacher_name)
+
+          section(id="workshop-single__moreinfo").section_nopadding.workshop-single__moreinfo
+            .inner
+              h3(role="heading" aria-level="3").is-title.is-3 !{ws.topics_title}
+              ul
+                each topic in ws.topics
+                  li !{topic}
+              h3(role="heading" aria-level="3").is-title.is-3 !{ws.addressees_title}
+              p !{ws.addressees_description}
+              h3(role="heading" aria-level="3").is-title.is-3 !{ws.requirements_title}
+              p !{ws.requirements_description}
+              h3(role="heading" aria-level="3").is-title.is-3 !{ws.useful_info_title}
+              p !{ws.useful_info_description}
+
+          section(id="workshop-single__cta").section_nopadding.workshop-single__cta
+            .inner
+              h3(role="heading" aria-level="3").is-title.is-3 !{ws.cta_title}
+              a(role="button" href=ws.ticket_url aria-label=ws.ticket_label target="_blank" rel="external noopener noreferrer").button.is-medium.is-rounded.is-primary !{ws.ticket_label}
+
+          section(id="workshop-single__summary").section_nopadding.workshop-single__summary
+            .inner
+              .summary-blocks
+                .block
+                  .row-info
+                    .info-icon
+
+                      if(site.data.defaults.conference.is_online_only === true)
+                        include ../source/assets/ico/ico-online-conference.svg
+                      else
+                        include ../source/assets/ico/ico-where.svg
+
+                    .info__location
+                      span !{ws.location_title}
+
+                  strong !{ws.location_name}
+                  br
+
+                  if(site.data.defaults.conference.is_online_only === false)
+                    a(role="button" href=ws.location_maps_url target="_blank" rel="external noopener noreferrer") !{ws.location_address} 
+                    br
+
+                    if(ws.location_contact_phone)
+                      - phone_url = `tel:${ws.location_contact_phone}`
+                      a(role="button" href=phone_url target="_blank" rel="external noopener noreferrer") !{ws.location_contact_phone}
+                      | &nbsp;
+                    if(ws.location_contact_email)
+                      | -&nbsp;
+                      - email_url = `mailto:${ws.location_contact_email}`
+                      a(role="button" href=email_url target="_blank" rel="external noopener noreferrer") !{ws.location_contact_email}
+                      br
+                    if(ws.location_contact_url)
+                      a(role="button" href=ws.location_contact_url target="_blank" rel="external noopener noreferrer") !{ws.location_contact_url}
+
+                  if(ws.location_additional_info)
+                    p !{ws.location_additional_info}
+
+                .block
+                  .row-info
+                    .info-icon
+                      include ../source/assets/ico/ico-calendar.svg
+                    .info__location
+                      span !{ws.whatandwhen_title}
+                  strong
+                    - var start_date = ""
+                    if(site.data.defaults.conference.is_online_only === true)
+                      - start_date = date(ws.date, config.date_format_hero_online)
+                    else
+                      - start_date = date(ws.date, config.date_format_hero)
+
+                    //-time(datetime=ws.date) !{start_date}
+                  //-br
+                  //-- start_time = date(ws.date, config.time_format_schedule)
+                  //-- end_time = date(ws.end_date, config.time_format_schedule)
+                  //-time(datetime=ws.date) !{start_time}
+                  //-| &nbsp;-&nbsp;
+                  //-time(datetime=ws.end_date) !{end_time}
+                  if(ws.whatandwhen_additional_info)
+                    p !{ws.whatandwhen_additional_info}
+                .block
+                  .row-info
+                    .info-icon
+                      include ../source/assets/ico/ico-world.svg
+                    .info__location
+                      span !{ws.language_title}
+                  strong !{ws.language}
+                  if(ws.language_additional_info)
+                    p !{ws.language_additional_info}
+                .block
+                  .row-info
+                    .info-icon
+                      include ../source/assets/ico/ico-teacher.svg
+                    .info__location
+                      span !{ws.teacher_title}
+                  each teacher in ws.teachers
+                    p
+                      strong !{teacher.teacher_name}
+                      br
+                      span !{teacher.teacher_role}
+                        if(teacher.teacher_org)
+                          span.teacher-org !{teacher.teacher_org}
+            if(theme.workshop_submenu)
+              .inner.is-centered
+                a(role="button" href=url_for("workshop") aria-label=site.data.workshop.summary_page_aria_label).button.is-medium.is-rounded.is-primary !{site.data.workshop.summary_page_button_label}
+
+  include components/newsletter/newsletter
