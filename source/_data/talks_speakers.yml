@@ -1,142 +1,21 @@
 # NB impostare a `true` per generare la pagina, a `false` per NON generarla
-generate_schedule_page: true
+generate_schedule_page: false
 schedule_under_construction_title: "Schedule under construction"
 schedule_under_construction_description: "We are still defining the schedule. Please be patient"
 
 # Speakers. I mixin "&nome" servono per indicare quali speaker partecipano a ogni talk, sotto
-speaker_1: &karanbalkar
+speaker_1: &speaker
   speaker_in_speaker_lists: true
-  speaker_name: Karan Balkar
-  speaker_pic_filename: karan-balkar.png
-  speaker_role: "Team Lead @ LTI"
-  speaker_bio: "is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies."
-  speaker_twitter_url: ""
-speaker_2: &romanbaran
-  speaker_in_speaker_lists: true
-  speaker_name: Roman Baran
-  speaker_pic_filename: roman-baran.png
-  speaker_role: "Front End Team Leader @ Accenture"
-  speaker_bio: "I have been working as a Front End developer since 2016, carrying on this passion over the years, but always keeping an eye on Back End, AI, and Cloud – and other keywords that make your bio more appealing!"
-  speaker_twitter_url: ""
-speaker_3: &michaelbashurov
-  speaker_in_speaker_lists: true
-  speaker_name: Michael Bashurov
-  speaker_pic_filename: michael-bashurov.png
-  speaker_role: "Senior Frontend Engineer @ Wisebits"
-  speaker_bio: "Fullstack JS/.NET Ronin, Typescript ReasonML enthusiast. Type theory compilers wannabe. @HolyJSConf program committee. He/him"
-  speaker_twitter_url: "https://twitter.com/saitonakamura"
-speaker_4: &rolandbole
-  speaker_in_speaker_lists: true
-  speaker_name: Roland Bole
-  speaker_pic_filename: roland-bole.png
-  speaker_role: "CEO @ samlinux development"
-  speaker_bio: "Roland is a cloud blockchain solution architect and CEO of sdg - samlinux development group in Klagenfurt, Austria. He loves to work with blockchain technologies and Node.js. When not working, Roland is a passionate trail runner."
-  speaker_twitter_url: "https://twitter.com/samlinux"
-speaker_5: &davidburrowes
-  speaker_in_speaker_lists: true
-  speaker_name: David Burrowes
-  speaker_pic_filename: david-burrowes.png
-  speaker_role: "Sr. Software Engineer @ Split Software"
-  speaker_bio: "is a software engineer at Split.io with a decade of experience developing web applications for companies like Box, Delphix, and VMware. Having worked without feature flags, and with clunky in-house feature flagging frameworks, David is deliriously happy to have all of Split's capabilities at his disposal for every project. For fun, and to prove he’s more Star Trek than Star Wars, David likes to randomly quote large sections for Star Trek II: The Wrath of Khan."
-  speaker_twitter_url: ""
-speaker_6: &jeremykeith
-  speaker_in_speaker_lists: true
-  speaker_name: Jeremy Keith
-  speaker_pic_filename: jeremy-keith.png
-  speaker_role: "Founder @ Clearleft"
-  speaker_bio: "lives in Brighton, England where he makes websites with the splendid design agency Clearleft. You may know him from such books as DOM Scripting, Bulletproof Ajax, HTML5 For Web Designers, Resilient Web Design, and, most recently, Going Offline."
-  speaker_twitter_url: "https://twitter.com/adactio"
-speaker_7: &tamaspiros
-  speaker_in_speaker_lists: true
-  speaker_name: Tamas	Piros
-  speaker_pic_filename: tamas-piros.png
-  speaker_role: "Developer Experience Engineer"
-  speaker_bio: "is a Google Developer Expert in Web Technologies and a seasoned Developer Evangelist. He is a passionate advocate for modern web technologies, helping people understand and unlock the latest greatest features of web development."
-  speaker_twitter_url: "https://twitter.com/tpiros"
-speaker_8: &micheleriva
-  speaker_in_speaker_lists: true
-  speaker_name: Michele Riva
-  speaker_pic_filename: michele-riva.png
-  speaker_role: "Senior Software Engineer @ ViacomCBS"
-  speaker_bio: "I’m a passionate and experienced software engineer from Milan, Italy. I’ve been working as a software engineer for 8+ years in both product and consultancy companies, taking the best from both worlds. I’m currently working as a Senior Software Engineer at ViacomCBS, where I’m building a multi-tenant Node.js SSR/React application at the heart of our streaming websites and networks. I'm also writing a book for Packt about advanced and real-world Next.js, published in late 2021."
-  speaker_twitter_url: "https://twitter.com/MicheleRivaCode"
-speaker_9: &jessicarose
-  speaker_in_speaker_lists: true
-  speaker_name: Jessica Rose
-  speaker_pic_filename: jessica-rose.png
-  speaker_role: Devrel @ CodeSee
-  speaker_bio: "is a passionate advocate for better access to technical education and meaningful work in technology. She’s working with CodeSee as their head of developer relations. She’s Birmingham based and will talk your ear off about how great the city is. She’s always interested in hearing about your technical or non-tech passions!"
-  speaker_twitter_url: "https://twitter.com/jesslynnrose"
-speaker_10: &francescostrazzullo
-  speaker_in_speaker_lists: true
-  speaker_name: Francesco Strazzullo
-  speaker_pic_filename: francesco-strazzullo.png
-  speaker_role: "Partner/Developer @ Flowing"
-  speaker_bio: "I’m a Developer and Partner @ flowing. I’m also a speaker at tech conferences and meetup. I’m the author of 'Frameworkless Front-end Development' and 'Decision-making for Software Development Teams'. In my free time, I like to relax playing with my Playstation or cooking some strange ethnic dish for my wife."
-  speaker_twitter_url: "https://twitter.com/TheStrazz86"
-speaker_11: &giltayar
-  speaker_in_speaker_lists: true
-  speaker_name: Gil Tayar
-  speaker_pic_filename: gil-tayar.png
-  speaker_role: Senior Software Architect @ Roundforest
-  speaker_bio: "35 years of experience have not dulled the fascination Gil Tayar has with software development. His passion is distributed systems and figuring out how to scale development to big teams. Extreme modularity and testing are the main tools in his toolbelt, using them to combat the code spaghetti monster at companies like Wix, Applitools, and at his current job as software architect at Roundforest. In his private life, he is a dad to two lovely kids (and a cat), an avid reader of Science Fiction, (he counts Samuel Delany, Robert Silverberg, and Robert Heinlein as favorites) and a passionate film buff. (Stanley Kubrick, Lars Von Trier, David Cronenberg, anybody?) Unfortunately for him, he hasn’t answered the big question of his life—what’s better, static or dynamic languages? But he’s working on it."
-  speaker_twitter_url: "https://twitter.com/giltayar"
-speaker_12: &jenniferwadella
-  speaker_in_speaker_lists: true
-  speaker_name: Jennifer Wadella
-  speaker_pic_filename: jennifer-wadella.png
-  speaker_role: "Director of Angular Development @ Bitovi"
-  speaker_bio: "has been writing code since before she realized it was a credible career path. She currently works as the Director of Angular Consulting at Bitovi and loves building performant web applications, speaking at technical conferences, and brewing kombucha. Jennifer is an active member of the KC tech community and the founder of Kansas City Women in Technology(KCWiT), an organization aimed at growing the number of women in technology careers in Kansas City. She is the PubConf Sydney 2018 Champion, a Silicon Prairie Champion Award Nominee, Rising Trendsetter STEMMy award-winner, and is apparently Missouri's Coolest Woman according to Pure Wow."
-  speaker_twitter_url: "https://twitter.com/likeOMGitsFEDAY"
-speaker_13: &isabellazaczek
-  speaker_in_speaker_lists: true
-  speaker_name: Isabella Zaczek
-  speaker_pic_filename: isabella-zaczek.png
-  speaker_role: "VP BU Transport"
-  speaker_bio: "is a German native who moved to Colorado in 2011 to lead a global customer operations team for a Fortune 500 company. Having worked in telecommunications for 18 years in Europe and the USA, supporting over 250 top global brands across 5 continents and 10 industries, she realized that most businesses were making things harder for themselves by over-engineering processes and systems rather than keeping it simple, causing stale profit growth and employee turnover. At IZ Consulting, Isabella helps organizations untangle the complexities of people, processes and metrics, to create stronger bottom-lines, more engaged employees and customer devotion and leverages process and data to drive human performance."
-  speaker_twitter_url: ""
-speaker_14: &dominikazajac
-  speaker_in_speaker_lists: true
-  speaker_name: Dominika Zajac
-  speaker_pic_filename: dominika-zajac.png
-  speaker_role: "Software Engineer @ Qualtrics"
-  speaker_bio: "is an active, well-organized person who fell in love with web and mobile programming. Frontend and mobile developer at Qualtrics in Cracow. Volunteer, mentor, and organizer of many IT events like Greenlight 4 Girls, Night of Scientists or ngGirls. Passionate about singing, theatre, and IT event organizing."
-  speaker_twitter_url: "https://twitter.com/domizajac"
-
-speaker_15: &tomas
-  speaker_in_speaker_lists: true
-  speaker_name: Tomas Trajan
-  speaker_pic_filename: tomas-trajan.png
-  speaker_role: "MASTER OF CEREMONIES - Google Developer Expert for Angular and Web Technologies"
+  speaker_name:
+  speaker_pic_filename: .png
+  speaker_role: ""
   speaker_bio: ""
-  is_mc: true
-
-speaker_16: &sharone
-  speaker_in_speaker_lists: true
-  speaker_name: Sharone Zitzman
-  speaker_pic_filename: sharone-zitzman.png
-  speaker_role: "MASTER OF CEREMONIES - Founder @ RTFM Please"
-  speaker_bio: ""
-  is_mc: true
+  speaker_twitter_url: ""
+  is_mc: false
 
 
 speakers:
-  speaker_1: *karanbalkar
-  speaker_2: *romanbaran
-  speaker_3: *michaelbashurov
-  speaker_4: *rolandbole
-  speaker_5: *davidburrowes
-  speaker_6: *jeremykeith
-  speaker_7: *tamaspiros
-  speaker_8: *micheleriva
-  speaker_9: *jessicarose
-  speaker_10: *francescostrazzullo
-  speaker_11: *giltayar
-  speaker_12: *jenniferwadella
-  speaker_13: *isabellazaczek
-  speaker_14: *dominikazajac
-  speaker_15: *tomas
-  speaker_16: *sharone
+  speaker_1: *speaker
 
 tracks:
   track_1: &track_1
@@ -159,245 +38,48 @@ tracks:
 
 days:
   day_1:
-    date: 2021-07-06T09:45+02:00
+    date: 2022-04-21T09:45+02:00
     title: "Day 1"
     talks:
     # service
       opening:
         item_type: "service"
-        start_datetime: 2021-07-06T09:45+02:00
-        end_datetime: 2021-07-06T10:00+02:00
+        start_datetime:
+        end_datetime:
         talk_title: "Opening by GrUSP"
       closing:
         item_type: "service"
-        start_datetime: 2021-07-06T18:15+02:00
-        end_datetime: 2021-07-06T18:30+02:00
+        start_datetime:
+        end_datetime:
         talk_title: "See you tomorrow!"
       coffee-morning:
         item_type: "service"
-        start_datetime: 2021-07-06T11:00+02:00
-        end_datetime: 2021-07-06T11:30+02:00
+        start_datetime:
+        end_datetime:
         talk_title: "Coffee break"
         service_icon: "coffee"
       coffee-afternoon:
         item_type: "service"
-        start_datetime: 2021-07-06T16:00+02:00
-        end_datetime: 2021-07-06T16:30+02:00
+        start_datetime:
+        end_datetime:
         talk_title: "Coffee break"
         service_icon: "coffee"
       lunch:
         item_type: "service"
-        start_datetime: 2021-07-06T13:15+02:00
-        end_datetime: 2021-07-06T14:30+02:00
+        start_datetime:
+        end_datetime:
         talk_title: "Lunch break"
         service_icon: "cutlery"
 
       # talk
-      karan-touchless:
+      talk_1:
         item_type: "talk"
         track: *track_1
-        start_datetime: 2021-07-06T17:30+02:00
-        end_datetime: 2021-07-06T18:15+02:00
-        talk_title: "Developing Touchless apps that Talk!"
-        talk_description: "This sessions talks about how to develop touchless apps (apps that can be controlled via gestures,voice etc.) using JavaScript libraries. It also talks about how one can get started in developing a PWA app that is touchless and voice controlled. During the last year, due to COVID-19 pandemic, a lot of companies, restaurants, airports felt the need to develop touchless apps to make the overall experience contact-free. Also, it is believed that touchless technology is one of the best ways to deal with this issue. They are slowly becoming the new norm in offices across the globe."
+        start_datetime:
+        end_datetime:
+        talk_title: ""
+        talk_description: ""
         talk_video_url:
         speakers:
-          speaker_1: *karanbalkar
+          speaker_1: *speaker
 
-      michael-type-directed-emit:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-06T12:15+02:00
-        end_datetime: 2021-07-06T13:15+02:00
-        talk_title: "Bending reality with Type-directed emit"
-        talk_description: "Ever wondered why even if you have a Flow/TypeScript type you still can't use it in the runtime? Say, for JSON validation or some other stuff. What if I say you that it's possible to emit based solely on type? In this talk we'll explore what type-directed emit is, it's applications and limitations."
-        talk_video_url:
-        speakers:
-          speaker_1: *michaelbashurov
-      michele-nextjs:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-06T16:30+02:00
-        end_datetime: 2021-07-06T17:30+02:00
-        talk_title: "Multi-tenant Next.js at any scale"
-        talk_description: "Serving hundreds of different websites from a single Next.js installation? Is it really possible? Yes, let's see how! This talk will explore how a multi-tenant architecture can solve many different problems at any scale, both for small startups and big corporates working on enterprise-level software. We'll see how to design a multi-tenant architecture using one of the most popular and loved frameworks out there: Next.js! Are you ready to bring your architecture to the next level?"
-        talk_video_url:
-        speakers:
-          speaker_1: *micheleriva
-      jessica-literacy:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-06T14:30+02:00
-        end_datetime: 2021-07-06T15:15+02:00
-        talk_title: "Code Literacy"
-        talk_description: "As programmers think about our own work with code, we place an incredible emphasis on the act of production. We focus on the act of writing code as if writing and often present it as the primary way we expect to interact with a codebase. This talk will approach codebases as living texts and explore the value of re-examining the twin skills of reading and understanding codebases. We’ll look at linguistics and literacy concepts that give us new ways to conceptualize how we read code, as well as software specific tools and approaches we can use to further our reading skills."
-        talk_video_url:
-        speakers:
-          speaker_1: *jessicarose
-      francesco-ddd:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-06T10:00+02:00
-        end_datetime: 2021-07-06T11:00+02:00
-        talk_title: "Domain-Driven Frontend"
-        talk_description: "DDD is probably one of the most important ecosystems of the last 20 years of software engineering. Nowadays frontend applications are an important piece of software architecture. Nevertheless, Bounded Contexts, Aggregates, Anticorruption Layers are all well-known concept that somehow are often not applied when building large and complex frontend applications. The purpose of this talk is to show how some of the DDD techniques are easily applied to Frontend engineering, resulting in more robust and evolvable codebases."
-        talk_video_url:
-        speakers:
-          speaker_1: *francescostrazzullo
-      gil-es-modules:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-06T11:30+02:00
-        end_datetime: 2021-07-06T12:15+02:00
-        talk_title: "Aaaaaaaaaaaaaah, They’re Here! ES Modules in Node.JS"
-        talk_description: "Yes, they’re here. Node v12 marked the first version of Node.JS where ESM support is unflagged, meaning you can start using ES Modules. It’s been a long, four year journey from defining them in the spec (June 2015!) till they could be used in Node.JS (November 2019). Why did it take so long? What were the major hurdles? What does the migration path look like? Are they really better than CommonJS Modules? What is in store for the future? And most importantly: can I start the migration? Gil Tayar, a former member of the Node.JS Modules Working Group, will try and navigate these confusing waters, and hopefully make you understand why, when, and how to migrate your Node.JS code to use ES Modules."
-        talk_video_url:
-        speakers:
-          speaker_1: *giltayar
-      jennifer-microfrontends:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-06T15:15+02:00
-        end_datetime: 2021-07-06T16:00+02:00
-        talk_title: "The Problems Micro Frontends Won't Solve That No One Wants to Talk About"
-        talk_description: "Everyone wants to ship more software faster, and following the lead of the MicroServices craze the front-end community has begun to reach for Micro Frontends as a silver bullet solution. Micro Frontends promise large teams the ability to independently ship pieces of applications without code collisions, bug creation, that can be team-agnostic, and with Webpack 5 leaning in to offer Module Federation, this seems to be the way of the future. But what problems aren't solved by Micro Frontends? There is a large gap in what large complex teams need to ship better software and what Micro Frontends are able to provide ... and that gap is the basis of this talk. We'll discuss what Micro Frontends are, approaches and tools to using this architecture pattern, and discuss the consequences that arise that no on seems to want to talk about."
-        talk_video_url:
-        speakers:
-          speaker_1: *jenniferwadella
-
-  day_2:
-    date: 2021-07-07T09:45+02:00
-    title: "Day 2"
-    talks:
-    # service
-      opening:
-        item_type: "service"
-        start_datetime: 2021-07-07T09:45+02:00
-        end_datetime: 2021-07-07T10:00+02:00
-        talk_title: "Opening by GrUSP"
-      closing:
-        item_type: "service"
-        start_datetime: 2021-07-07T18:15+02:00
-        end_datetime: 2021-07-07T18:30+02:00
-        talk_title: "Closing by GrUSP"
-      coffee-morning:
-        item_type: "service"
-        start_datetime: 2021-07-07T11:00+02:00
-        end_datetime: 2021-07-07T11:30+02:00
-        talk_title: "Coffee break"
-        service_icon: "coffee"
-      coffee-afternoon:
-        item_type: "service"
-        start_datetime: 2021-07-07T16:00+02:00
-        end_datetime: 2021-07-07T16:30+02:00
-        talk_title: "Coffee break"
-        service_icon: "coffee"
-      lunch:
-        item_type: "service"
-        start_datetime: 2021-07-07T13:15+02:00
-        end_datetime: 2021-07-07T14:30+02:00
-        talk_title: "Lunch break"
-        service_icon: "cutlery"
-
-      roman-whats-new:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-07T11:30+02:00
-        end_datetime: 2021-07-07T12:15+02:00
-        talk_title: "What's new in ES2020/ES2021"
-        talk_description: "JavaScript is a constantly evolving language and during this talk we are going to explore together the most interesting features of the last two versions, with some live coding that never hurts."
-        talk_video_url:
-        speakers:
-          speaker_1: *romanbaran
-      roland-hyperledger:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-07T12:15+02:00
-        end_datetime: 2021-07-07T13:15+02:00
-        talk_title: "Hyperledger Fabric for Node.js Developers"
-        talk_description: "Blockchain is one of the future technologies and for JavaScript developers it could be an interesting playground. In this talk I take the attendee on a journey through the world of Hyperledger Fabric and how a Node.js developer can write chaincode and interact with the network. This is demonstrated with a CRUD application. The talk starts with a short introduction of Hyperledger Fabric. Then, I demonstrate how the fabric-contract-api can be used to write a chaincode (smart contract) with Node.js. Concluding, I explain a proper express.js REST application to interact with the network. After the session you will have a basic understanding of Hyperledger Fabric and how a Node.js developer can use it."
-        talk_video_url:
-        speakers:
-          speaker_1: *rolandbole
-      david-feature-flags:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-07T16:30+02:00
-        end_datetime: 2021-07-07T17:15+02:00
-        talk_title: "Managing Feature Flags Efficiently"
-        talk_description: "Our React/Redux JavaScript application has around 3000K lines of code and more active feature flags at any given moment than we have fingers and toes. As we have moved into a world of continuous deployment with controlled releases, the use of feature flags has become an essential way of writing software. Yet, when we started out, we ended up with code that was hard to read, hard to reason about, and hard to manage. After exploring several strategies, we have found a pattern that aligns feature flags with larger code units (components, reducers, actions) rather than at individual lines of code. This alleviates much of the pain that a naîve application of feature flags to a code base can introduce, restoring the development velocity we need. I’ll share what works for us and pass along some tips for right-sizing practices to your unique situation. While the focus here is on a React/Redux codebase, the principles will apply to any framework or technology."
-        talk_video_url:
-        speakers:
-          speaker_1: *davidburrowes
-      jeremy-state-of-web:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-07T10:00+02:00
-        end_datetime: 2021-07-07T11:00+02:00
-        talk_title: "The State Of The Web"
-        talk_description: "The World Wide Web has come a long way in its three decades of existence. There’s so much we can do now with HTML, CSS, and JavaScript: animation, layout, powerful APIs… we can even make websites that work offline! And yet the web isn’t exactly looking rosy right now. The problems we face aren’t technical in nature. We’re facing a crisis of expectations: we’ve convinced people that the web is slow, buggy, and inaccessible. But it doesn’t have to be this way. There is no fate but what we make. In this perspective-setting talk, we’ll go on a journey to the past, present, and future of web design and development. You’ll laugh, you’ll cry, and by the end, you’ll be ready to make the web better."
-        talk_video_url:
-        speakers:
-          speaker_1: *jeremykeith
-      tamas-web-assembly:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-07T15:15+02:00
-        end_datetime: 2021-07-07T16:00+02:00
-        talk_title: "Supercharge your JavaScript with Web Assembly"
-        talk_description: "Browser and Web APIs along with JavaScript have seen an incredible amount of development and enhancement over the past decade, however they still have certain limitations. With the rise of Web Assembly we can very easily enhance JavaScript and give our application(s) access to low-level processing and potentially transform web experiences. By the end of the talk attendees will have a throughout understanding of Web Assembly, and why it's such a great option for extending the capabilities of the browser and JavaScript via a real life example."
-        talk_video_url:
-        speakers:
-          speaker_1: *tamaspiros
-      isabella-diversity:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-07T17:15+02:00
-        end_datetime: 2021-07-07T18:15+02:00
-        talk_title: "Tales of a German Building Diverse Teams Across All Time Zones"
-        talk_description: "Cultural growth is inevitable to create community. While everyone is talking about culture, diversity and growth, my talk provides actions and experiences of operating globally and putting humans first. The session will highlight how to build a sustainable and diverse customer operations team that produces results and makes a difference using the philosophy to work towards one goal 80% of the time and allow 20% for local needs, customs and quirks."
-        talk_video_url:
-        speakers:
-          speaker_1: *isabellazaczek
-      dominika-accessibility:
-        item_type: "talk"
-        track: *track_1
-        start_datetime: 2021-07-07T14:30+02:00
-        end_datetime: 2021-07-07T15:15+02:00
-        talk_title: "How to make the Internet available for everyone — accessibility in the web development"
-        talk_description: "The Internet is an awesome place where everyone can find interesting materials for them. Unfortunately, sometimes we forget some people cannot use it the same way as most of us - e.g. people with vision, motion, or cognitive disabilities. Why accessibility is so unpopular topic among developers? I believe it's not because of bad will - we often don't understand our users' problems. It's why I want to show some tricks to better understand users with disabilities, talk about the most popular mistakes (and fixes for them), and improvements you can include in your development process to avoid accessibility problems in the future."
-        talk_video_url:
-        speakers:
-          speaker_1: *dominikazajac
-
-
-  # day_2:
-  #   date: 2020-09-17T09:00
-  #   title: "Day 2"
-  #   talks:
-  #     talk_1:
-  #       item_type: "service"
-  #       start_datetime: 2020-09-16T09:00
-  #       end_datetime: 2020-09-16T09:30
-  #       talk_title: "Welcome Coffee"
-  #       service_icon: "coffee"
-  #     talk_2:
-  #       track: *track_1
-  #       item_type: "talk"
-  #       start_datetime: 2020-09-17T09:30
-  #       end_datetime: 2020-09-17T10:45
-  #       talk_title: "This is a talk at the beginning of the second day"
-  #       talk_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  #       talk_video_url:
-  #       speakers:
-  #         speaker_1: *regular_speaker
-  #     talk_3:
-  #       track: *track_2
-  #       item_type: "talk"
-  #       start_datetime: 2020-09-17T09:30
-  #       end_datetime: 2020-09-17T10:45
-  #       talk_title: "This is a talk in the second day, track 2"
-  #       talk_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  #       talk_video_url:
-  #       speakers:
-  #         speaker_1: *regular_speaker

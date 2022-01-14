@@ -1,21 +1,28 @@
 intro:
   main_title: "Call for papers"
-  date_intro: "The call for papers has been closed on"
+  date_intro: "The call for papers is open until"
   # NB la data è definita in `defaults`
   content_1: "Propose a talk! Take the chance to share your experience, test yourself on topics you know well and learn something new while preparing your presentation.
   You will also make yourself known in the community."
-  content_2: "The selected speakers will have the conference ticket, access to all of our 2021 digital conferences, and a free bronze sponsorship for their company (or same amount discount to upgrade to an higher sponsorship level)"
+  content_2: "What we offer you if your talk is selected:
+  <ul>
+  <li>• conference ticket;</li>
+  <li>• a single room for up to 2 nights (3 nights for people coming from outside the European continent);</li>
+  <li>• speakers' dinner; </li>
+  <li>• a refund of up to €250 for travel costs within Europe (up to €500 outside the European continent);</li>
+  <li>• taxi fare from the Verona airport or train station to the conference venue;</li>
+  <li>• coffee breaks, lunch on the event's days and an after-conference happy hour with snacks, GrUSP beer and the famous Spritz!"
 more_info:
   title: "Diversity and Inclusion"
   description_1: "GrUSP is committed to creating a conference that is as inclusive as possible. We welcome submissions from all over the world, regardless of ethnicity, gender, age.
-We are also committed to ensuring the conference is a place where ideas are exchanged, old friends get together, new friends meet, and harassment is not tolerated. We expect all attendees and speakers to follow our <a href='https://2021.jsday.it/welcome/coc.html'>code of conduct</a>.<br>
-All of our conferences have a <a href='https://2021.jsday.it/welcome/scholarships.html'>Scholarships Program</a> to encourage students, people from under-represented groups, and those who can't otherwise afford tickets to experience the event."
+We are also committed to ensuring the conference is a place where ideas are exchanged, old friends get together, new friends meet, and harassment is not tolerated. We expect all attendees and speakers to follow our <a href='https://2022.jsday.it/welcome/coc.html'>code of conduct</a>.<br>
+All of our conferences have a <a href='https://2022.jsday.it/welcome/scholarships.html'>Scholarships Program</a> to encourage students, people from under-represented groups, and those who can't otherwise afford tickets to experience the event."
   description_2: ""
 contact:
   email_intro: "If you are a first time speaker and need help or suggestions, or for any information that you may need, feel free to contact us writing to "
-  help_intro: "If you need suggestions on how to write the abstract, see "
-  help_url: "http://helpmeabstract.com/"
-cfp_register_url: "https://cfp.jsday.it/"
+  help_intro: "Find more details and useful information on "
+  help_url: "https://www.grusp.org/en/speakers/apply/"
+cfp_register_url: "https://docs.google.com/forms/u/1/d/1vMBQNvIMD5Rx5h8gYGLe9igdSU9_J-r2gpwPVp-otv8"
 # address_aria_label: "hotel address"
 # email_aria_label: "hotel email"
 # phone_aria_label: "hotel phone"

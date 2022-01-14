@@ -6,14 +6,14 @@
 # conference config
 conference:
   # Online-only conferences
-  is_online_only: true
+  is_online_only: false
   online_location: "online"
   online_location_title: "The Internet"
   online_location_info: "The conference is taking place virtually"
 
   # menu and general params
   menu_buy_tickets_label: "Buy tickets"
-  buy_tickets_url: "https://jsday-2021.eventbrite.it?utm_medium=web&utm_source=site&utm_campaign=2021"
+  buy_tickets_url: "https://jsday-2022.eventbrite.it"
   # additional info for microdata / schema.org
   #md_city: "Verona"
   #md_province: "VR"
@@ -24,18 +24,18 @@ conference:
   contact_email: "jsday@grusp.org"
   # these are for the hero section
   title_pre: "Welcome to"
-  title: "jsday Digital Edition"
-  city: "online"
-  date: 2021-07-06T10:00+02:00
+  title: "jsday 2022"
+  city: "Verona"
+  date: 2022-04-21T09:00+02:00
   # Use the next field to override the date in the hero
-  hero_date_text: July 06-07th, 2021
+  hero_date_text: 21 and 22 April 2022
   countdown_visible: false
   countdown_days: "days"
   countdown_hours: "hours"
   countdown_minutes: "minutes"
   countdown_seconds: "seconds"
   ticket_button_visible: true
-  hero_buy_tickets_label: "Buy tickets now"
+  hero_buy_tickets_label: "Get your ticket"
   # image credits (l'esempio è per la hero del CSS Day!)
   # hero_img_credits: "Image by Gianni Careddu - Own work, <a href='https://commons.wikimedia.org/w/index.php?curid=74821344 target='_blank' rel='noopener noreferrer'>CC BY-SA 4.0</a>"
   # "update" component. set the first parameter to true to make it appear in home page, false means hidden
@@ -47,18 +47,18 @@ conference:
   update_link_url: "https://google.com/"
   update_link_label: "link to google, just for the demo"
   # "call for papers" component. set the first parameter to true to make it appear in home page, false means hidden
-  cfp_open: false
+  cfp_open: true
   cfp_readmore_label: "Read more"
   cfp_open_label: "Submissions accepted until"
   cfp_open_title: "Call For Papers Now Open!"
-  cfp_deadline: 2021-05-23T23:59+02:00
+  cfp_deadline: 2022-02-01T23:59+02:00
   cfp_register_label: "Apply now"
   cfp_register_aria_label: "Apply now to our Call for Papers"
   # "general information" ("what is it?") component
   geninfo_visible: true
   geninfo_title: "What is it?"
-  geninfo_description: "jsday 2021 is the 10th edition of the Italian JavaScript conference, organized by GrUSP, organizers of events like <a href='https://www.phpday.it/'>phpday</a>, <a href='https://www.reactjsday.it/'>reactjsday</a> and many others.
-  <br> <br /> The event is international and all sessions will be in English. This 2021 edition is taking place online, and will last 2 days (July 6th and 7th)"
+  geninfo_description: "jsday 2021 is the 11th edition of the Italian JavaScript conference, organized by GrUSP, organizers of events like <a href='https://www.phpday.it/'>phpday</a>, <a href='https://www.reactjsday.it/'>reactjsday</a> and many others.
+  <br> <br /> The event is international and all sessions will be in English. This 2022 edition is taking place in Verona, and will last 2 days (21st and 22nd April)"
   geninfo_about_label: "About"
   geninfo_coc_label: "Code of conduct"
   geninfo_scholarships_label: "Scholarships"
@@ -89,7 +89,7 @@ conference:
   newsletter_legal_url: "https://mailchimp.com/legal/"
   newsletter_legal_label: "Information about Mailchimp's privacy policy"
   # "speakers" component. set the first parameter to true to make it appear in home page, false means hidden
-  speakers_visible: true
+  speakers_visible: false
   speakers_title: "speaker"
   mcs_title: "MC"
   speaker_count_text:
@@ -109,7 +109,7 @@ conference:
     - "React"
   topics_payoff: "...and much more!"
   # "workshop" component. set the first parameter to true to make it appear in home page, false means hidden
-  workshop_visible: true
+  workshop_visible: false
   workshops_title: "workshop (in Italian Language)"
   workshops_tickets_label: "Buy tickets"
   workshops_readmore_label: "Read more"
@@ -123,14 +123,14 @@ conference:
   #   playlist: if true, the iframe will be created. if false, it will not
   media_video_playlist: true
   # if `media_video_is_youtube` is `true`, the relevant playlist will be embedded via "media_video_playlist". If it is `false`, the relevant Vimeo channel will be embedded via "media_vimeo_channel"
-  media_video_is_youtube: true
+  media_video_is_youtube: false
   youtube_base_url: "https://www.youtube.com/embed/videoseries?list="
-  vimeo_base_url: "https://vimeo.com/album/"
+  vimeo_base_url: "https://vimeo.com/showcase/"
   vimeo_url_suffix: "/embed"
   #   (embed YouTube playlist: prendere l'ID della lista dall'URL, la parte dopo '&list=', e metterla qui sotto)
   youtube_playlist_id: "PLWK9j6ps_unkLg4R7_tnIfoyi0Wr-QPkD"
   #   (embed Vimeo showcase: prendere l'ID dello showcase e metterla qui sotto)
-  vimeo_showcase_id: "6048109"
+  vimeo_showcase_id: "8639312"
   # Location section in home page. set the first parameter to true to make it appear in home page, false means hidden
   location_visible: false
   location_name: "Hotel San Marco"
@@ -142,7 +142,7 @@ conference:
   venue_img_credits: ""
   # Sponsors section in home page. set the first parameter to true to make it appear in home page, false means hidden
   sponsors_visible: true
-  sponsor_title_home: "Sponsors"
+  sponsor_title_home: "Thanks to our amazing sponsors"
   # this is for the Community partners section in home page
   community_partners: true
   community_partners_title: "Community partners"
@@ -171,6 +171,7 @@ conference:
     2018: "2018"
     2019: "2019"
     2020: "2020"
+    2021: "2021"
   past_editions_videos_pre: "Videos from the past editions are available on "
   past_editions_videos_vimeo_label: "Vimeo"
   past_editions_videos_mid: " and "

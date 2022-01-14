@@ -1,9 +1,9 @@
 sponsors_block_title: "Thanks to our sponsors"
 main:
-  sponsor1:
-    name: "accenture"
-    logo_filename: "accenture.png"
-    site_url: "https://www.accenture.com/"
+  # sponsor1:
+  #   name: ""
+  #   logo_filename: ""
+  #   site_url: ""
 # diamond:
 #   sponsor1:
 #     name: ""
@@ -14,53 +14,26 @@ platinum:
     name: "workwave"
     logo_filename: "workwave.svg"
     site_url: "https://www.workwave.com/"
-gold:
-  sponsor1:
-    name: "Auth0"
-    logo_filename: "auth0.svg"
-    site_url: "https://a0.to/jsday2021"
-  sponsor2:
-    name: "Cloudinary"
-    logo_filename: "cloudinary.svg"
-    site_url: "https://cloudinary.rocks/jq2"
-silver:
-  sponsor1:
-    name: "Facile.it"
-    logo_filename: "facile.svg"
-    site_url: "https://www.facile.it/"
-  sponsor2:
-    name: "Madisoft"
-    logo_filename: "madisoft.svg"
-    site_url: "https://labs.madisoft.it"
-  sponsor3:
-    name: "Mia Platform"
-    logo_filename: "miaplatform.svg"
-    site_url: "https://www.mia-platform.eu/it/"
+# gold:
+#   sponsor1:
+#     name: ""
+#     logo_filename: ""
+#     site_url: ""
+# silver:
+#   sponsor2:
+#     name: "Madisoft"
+#     logo_filename: "madisoft.svg"
+#     site_url: "https://labs.madisoft.it"
 bronze:
   sponsor1:
-    name: "clearleft"
-    logo_filename: "clearleft.png"
-    site_url: "https://clearleft.com/"
-  sponsor2:
-    name: "codesee"
-    logo_filename: "codesee.svg"
-    site_url: "https://www.codesee.io/"
-  sponsor3:
-    name: "flowing"
-    logo_filename: "flowing.png"
-    site_url: "https://www.flowing.it/"
-  sponsor4:
-    name: "qualtrics"
-    logo_filename: "qualtrics.svg"
-    site_url: "https://www.qualtrics.com/"
-  sponsor5:
     name: "stickermule"
     logo_filename: "stickermule.svg"
-    site_url: "https://mule.to/p1j5"
-  sponsor6:
-    name: "split"
-    logo_filename: "split.svg"
-    site_url: "https://www.split.io/"
+    site_url: "https://mule.to/p2gc"
+diversity:
+  sponsor1:
+    name: "balsamiq"
+    logo_filename: "balsamiq.svg"
+    site_url: "https://balsamiq.com/"
 
 # Partner configuration
 partner_tags:

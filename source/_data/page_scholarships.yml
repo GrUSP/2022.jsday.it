@@ -24,6 +24,6 @@ long_version:
   content_6: "May you have any questions please don’t hesitate to contact us at "
 diversity_sponsors_title: "Thanks to our diversity sponsor!"
 diversity_sponsors:
-  - logo_filename: "auth0.svg"
-    site_url: "https://a0.to/jsday2021"
-    name: "Auth0"
+  - logo_filename: "balsamiq.svg"
+    site_url: "https://balsamiq.com/"
+    name: "balsamiq"
