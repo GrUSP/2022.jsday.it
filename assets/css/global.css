@@ -5306,6 +5306,9 @@ header {
     .sponsors__container .inner .columns .column__bronze, .sponsors__container .inner .columns .column__bronze img {
       min-width: 120px;
       max-width: 120px; }
+    .sponsors__container .inner .columns .column__diversity, .sponsors__container .inner .columns .column__diversity img {
+      min-width: 120px;
+      max-width: 120px; }
     .sponsors__container .inner .columns .column__media, .sponsors__container .inner .columns .column__media img {
       min-width: 100px;
       max-width: 100px; }
