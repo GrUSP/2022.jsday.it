@@ -59,6 +59,15 @@ section(id="sponsors").section_nopadding
               - filename = `/img/logos/${sponsor.logo_filename}`
               a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
                 img(src=filename alt=sponsor.name)
+      if site.data.sponsors.diversity
+        .row__underlined
+          h3(role="heading" aria-level="3").title.is-3 Diversity
+        .columns
+          each sponsor in site.data.sponsors.diversity
+            .column.column__diversity
+              - filename = `/img/logos/${sponsor.logo_filename}`
+              a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+                img(src=filename alt=sponsor.name)
 
       .row__underlined
         h3(role="heading" aria-level="3").title.is-3 Media partners
