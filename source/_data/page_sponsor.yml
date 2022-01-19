@@ -2,7 +2,7 @@ intro:
   slogan_1: "Is your activity connected with JavaScript?"
   slogan_2: "Do you want to participate in the making of jsday?"
   content_1: "Great idea! You will contribute to the success of an event that is unique in Italy and will receive a remarkable visibility."
-  content_2: "Diversity sponsorships will support the GrUSP Diversity and Inclusion Fund, which lets us run the Scholarship Programs and funds discounted and free tickets for people from underrepresented and/or marginalised groups in tech, and anybody who would otherwise be unable to attend without financial assistance."
+  content_2: "The <i>'Diversity sponsorships'</i> will support the GrUSP Diversity and Inclusion Fund, which lets us run the Scholarship Programs and funds discounted and free tickets for people from underrepresented and/or marginalised groups in tech, and anybody who would otherwise be unable to attend without financial assistance."
   content_3: ""
 block_2:
   title: "Sponsorship options"
@@ -24,91 +24,114 @@ block_2:
 levels:
   level_1:
     name: Main
-    amount: 5000
+    amount: 10000
     vat_label: "(+ VAT 22%)"
     available_slots: 1
     description_1:
       - "1 dedicated session (30 mins max, no commercial talks accepted)"
-      - "Access to opt-in attendees list"
+      - "Access to attendees list (attendees who agreed to share their contact with sponsors)"
     description_2:
-      - "Virtual booth"
+      - "Large Stand (in-person event)"
+      - "Large Virtual booth"
     description_3:
+      - "Your logo on conference rollup banners (in-person event)"
+      - "Your own rollup banner (80x200cm) in the conference room (in-person event)"
       - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
+      - "Bring your gadgets to the in-person event"
       - "Your own digital flyer and/or gadget in digital swag bag"
     description_5:
       - "Your logo in pre-event communications"
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
     description_6:
-      - "<strong>10</strong> free tickets"
+      - "<strong>10</strong> free tickets for the online event"
+      - "<strong>5</strong> free tickets for the in-person event"
 #    description_7:
 #      - "<strong>5</strong> tickets with <strong>50%</strong> discount"
-  # level_2:
-  #   name: Diamond
-  #   amount: 5000
-  #   vat_label: "(+ VAT 22%)"
-  #   available_slots: 2
-  #   description_2:
-  #     - "Access to opt-in attendees list"
-  #   description_3:
-  #     - "Virtual booth (medium)"
-  #   description_4:
-  #     - "Your logo in pre-event communications"
-  #     - "Your logo on conference website"
-  #     - "Your company mentioned and the logo shown during the opening remarks"
-  #     - "Your logo displayed in the lower third of the video, throughout the event"
-  #   description_5:
-  #     - "Your own digital flyer and/or gadget in digital swag bag"
-  #   description_6:
-  #     - "<strong>4</strong> free tickets"
-  #   description_7:
-  #     - "<strong>5</strong> tickets with <strong>20%</strong> discount"
+  level_2:
+    name: Diamond
+    amount: 5000
+    vat_label: "(+ VAT 22%)"
+    available_slots: 2
+    description_1:
+      - "Access to attendees list (attendees who agreed to share their contact with sponsors)"
+    description_2:
+      - "Large Stand (in-person event)"
+      - "Medium Virtual booth"
+    description_3:
+      - "Your logo on conference rollup banners (in-person event)"
+      - "Your own rollup banner (80x200cm) in the conference room (in-person event)"
+      - "Your logo displayed on rotation in the lower third throughout the event"
+    description_4:
+      - "Bring your gadgets to the in-person event"
+      - "Your own digital flyer and/or gadget in digital swag bag"
+    description_5:
+      - "Your logo in pre-event communications"
+      - "Your logo on conference website"
+      - "Your company mentioned and the logo shown during the opening remarks"
+    description_6:
+      - "<strong>8</strong> free tickets for the online event"
+      - "<strong>4</strong> free tickets for the in-person event"
+
   level_3:
     name: Platinum
     amount: 3000
     vat_label: "(+ VAT 22%)"
     available_slots: 4
     description_2:
-      - "Virtual booth"
+      - "Small Stand (in-person event)"
+      - "Small Virtual booth"
     description_3:
+      - "Your logo on conference rollup banners (in-person event)"
+      - "Your own rollup banner (80x200cm) in the conference room (in-person event)"
       - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
+      - "Bring your gadgets to the in-person event"
       - "Your own digital flyer and/or gadget in digital swag bag"
     description_5:
       - "Your logo in pre-event communications"
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
     description_6:
-      - "<strong>6</strong> free tickets"
+      - "<strong>6</strong> free tickets for the online event"
+      - "<strong>3</strong> free tickets for the in-person event"
   level_4:
     name: Gold
     amount: 1500
     vat_label: "(+ VAT 22%)"
     available_slots: 8
     description_3:
+      - "Your logo on conference rollup banners (in-person event)"
+      - "Your own rollup banner (80x200cm) in the conference room (in-person event)"
       - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
+      - "Bring your gadgets to the in-person event"
       - "Your own digital flyer and/or gadget in digital swag bag"
     description_5:
       - "Your logo in pre-event communications"
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
     description_6:
-      - "<strong>4</strong> free tickets"
+      - "<strong>5</strong> free tickets for the online event"
+      - "<strong>2</strong> free tickets for the in-person event"
   level_5:
     name: Silver
     amount: 750
     vat_label: "(+ VAT 22%)"
     available_slots: 16
+    description_3:
+      - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
+      - "Bring your gadgets to the in-person event"
       - "Your own digital flyer and/or gadget in digital swag bag"
     description_5:
       - "Your logo in pre-event communications"
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
     description_6:
-      - "<strong>2</strong> free tickets"
+      - "<strong>5</strong> free tickets for the online event"
+      - "<strong>1</strong> free tickets for the in-person event"
   level_6:
     name: Bronze
     amount: 500
@@ -119,7 +142,7 @@ levels:
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
     description_6:
-      - "<strong>1</strong> free ticket"
+      - "<strong>4</strong> free tickets for the online event"
   level_7:
     name: Diversity
     amount: 500
@@ -129,5 +152,3 @@ levels:
       - "Your logo in pre-event communications"
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
-    description_6:
-      - "<strong>1</strong> free ticket"

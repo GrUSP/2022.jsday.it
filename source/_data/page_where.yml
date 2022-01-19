@@ -1,21 +1,19 @@
 header:
-  title_pre: "...and a lovely "
+  title_pre: "Let's meet in "
 intro:
   main_title: "Where"
-  content_1: "The event is happening in Verona, and will also be accessible remotely. <br /> "
-  content_2: "Access to the physical event will be subject to current regulations (use of masks, spacings)
-              and in particular it will be necessary to show the EU Digital COVID Certificate ('Green Pass')
-              <br /> Access to the online event only (live broadcast of the conference) can be purchased separately."
+  content_1: "The conference is hybrid: it takes place in person in Verona (Italy) and it is also possible to participate online.<br /> "
+  content_2: ""
 city_info:
   title: "How it works"
   subtitle_1: "In-person event"
-  description_1: ""
+  description_1: "Access to the physical event will be subject to current regulations (use of masks, spacings) and in particular it will be necessary to show the EU Digital COVID Certificate ('Green Pass')"
   subtitle_2: "Online event"
-  description_2: ""
+  description_2: "Access to the online event only (live broadcast of the conference) can be purchased separately."
 map:
   title: "Location"
   map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.4793358997117!2d10.969744115556647!3d45.43999607910055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781e1e30a8be6af%3A0x8091b108e1d130c6!2sHotel%20San%20Marco%20Fitness%20Pool%20%26%20SPA!5e0!3m2!1sen!2sit!4v1587388989438!5m2!1sen!2sit"
-  video_caption: "Watch the video of the latest edition"
+  video_caption: ""
 hotels:
   title: "The conference venue"
   intro: ""
