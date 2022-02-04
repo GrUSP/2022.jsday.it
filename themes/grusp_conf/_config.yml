@@ -25,7 +25,7 @@ welcome_submenu:
   scholarships: scholarships
   where: where
   # delete this row to take out of the menu
-  cfp: call for papers
+  # cfp: call for papers
 
 # stylesheets loaded in the <head>
 stylesheets:

@@ -19,11 +19,11 @@ platinum:
 #     name: ""
 #     logo_filename: ""
 #     site_url: ""
-# silver:
-#   sponsor2:
-#     name: "Madisoft"
-#     logo_filename: "madisoft.svg"
-#     site_url: "https://labs.madisoft.it"
+silver:
+  sponsor2:
+    name: "Madisoft"
+    logo_filename: "madisoft.svg"
+    site_url: "https://labs.madisoft.it"
 bronze:
   sponsor1:
     name: "stickermule"
