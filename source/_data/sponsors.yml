@@ -14,12 +14,16 @@ platinum:
     name: "workwave"
     logo_filename: "workwave.svg"
     site_url: "https://www.workwave.com/"
-# gold:
-#   sponsor1:
-#     name: ""
-#     logo_filename: ""
-#     site_url: ""
+gold:
+  sponsor1:
+    name: "Mia Platform"
+    logo_filename: "miaplatform.svg"
+    site_url: "https://www.mia-platform.eu/it/"
 silver:
+  sponsor1:
+    name: "Facile.it"
+    logo_filename: "facile.svg"
+    site_url: "https://www.facile.it/"
   sponsor2:
     name: "Madisoft"
     logo_filename: "madisoft.svg"
