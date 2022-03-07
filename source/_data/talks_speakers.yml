@@ -4,18 +4,120 @@ schedule_under_construction_title: "Schedule under construction"
 schedule_under_construction_description: "We are still defining the schedule. Please be patient"
 
 # Speakers. I mixin "&nome" servono per indicare quali speaker partecipano a ogni talk, sotto
-speaker_1: &speaker
+speaker_1: &eleftheria
   speaker_in_speaker_lists: true
-  speaker_name:
-  speaker_pic_filename: .png
-  speaker_role: ""
-  speaker_bio: ""
-  speaker_twitter_url: ""
-  is_mc: false
+  speaker_name: Eleftheria Batsou
+  speaker_pic_filename: eleftheria-batsou.png
+  speaker_role: "Community Manager @ hashnode"
+  speaker_bio: "Eleftheria is a Community Manager at Hashnode by day and a developer/UX researcher by night. Her studies include a major in Informatics and Telecommunications of engineering and a master's in Graphic Arts and Multimedia. She has created tech courses for several platforms such as Packt, Udemy, and Skillshare and she likes to produce motivational talks and how-to videos on her YouTube channel.
+                When she isn't glued to a computer screen, Eleftheria spends time working out and strolling in nature."
+  speaker_twitter_url: "https://twitter.com/BatsouElef"
+speaker_2: &sam
+  speaker_in_speaker_lists: true
+  speaker_name: Sam Bellen
+  speaker_pic_filename: sam-bellen.png
+  speaker_role: "Senior Developer Advocate Engineer @ Auth0	"
+  speaker_bio: "I'm a Google Developer Expert who works as a Senior Developer Advocate Engineer at Auth0. At Auth0 we're trying to make authentication and identification as easy as possible, while still keeping it secure."
+  speaker_twitter_url: "https://twitter.com/sambego"
+  speaker_github_url: "https://github.com/sambego"
+speaker_3: &adrian
+  speaker_in_speaker_lists: true
+  speaker_name: Adrián Bolonio
+  speaker_pic_filename: adrian-bolonio.png
+  speaker_role: "Accessibility Software Engineer @ GitHub"
+  speaker_bio: "I'm a Google Developer Expert in Web Technologies currently working as an Accessibility Software Engineering at GitHub as part of a talented, diverse, and motivated team that will work on making GitHub and the Internet a better and more accessible place for everyone. When I’m not at the office I enjoy a good read, working my way through any delicious recipe, and indulging my love for travelling to new places."
+  speaker_twitter_url: "https://twitter.com/bolonio"
+  speaker_github_url: "https://github.com/bolonio"
+speaker_4: &estefania
+  speaker_in_speaker_lists: true
+  speaker_name: Estefanía García
+  speaker_pic_filename: estefania-garcia.png
+  speaker_role: "Software Engineer"
+  speaker_bio: "Estefanía is a full stack software engineer from Málaga, international speaker, organiser of Angular Málaga, contributor to the open source community, creator of the Npkill project and advocate of clean code. Her goal is to empower women in tech. She enjoys writing about all things tech and fixing bugs at 2AM."
+  speaker_twitter_url: "https://twitter.com/Nyablk"
+  speaker_github_url: "https://github.com/NyaGarcia"
+speaker_5: &joel
+  speaker_in_speaker_lists: true
+  speaker_name: Joel Lord
+  speaker_pic_filename: joel-lord.png
+  speaker_role: "Developer Advocate @ MongoDB"
+  speaker_bio: "Joel is passionate about the web and technology in general. He likes to learn new things, but most of all, he wants to share his discoveries. He does so by travelling at various conferences all across the globe.
+                He graduated from college in computer programming in the last millennium. Apart from a little break to get his BSc in computational astrophysics, he was always in the industry.
+                In his daily job, Joel is a developer advocate with MongoDB, where he connects with software engineers to help them make the web better by using best practices in web development.
+                During his free time, he can be found stargazing on a campground somewhere or brewing a fresh batch of beer in his garage."
+  speaker_twitter_url: "https://twitter.com/joel__lord"
+  speaker_github_url: "https://github.com/joellord"
+speaker_6: &debbie
+  speaker_in_speaker_lists: true
+  speaker_name: Debbie O'Brien
+  speaker_pic_filename: debbie-obrien.png
+  speaker_role: "Head Developer Advocate @ Bit"
+  speaker_bio: "Over 10 years experience in Frontend development. Microsoft Most Valuable Professional in developer technologies, Google Developer Expert in web technologies, GitHub Star and Cloudinary Media Developer Expert, an Auth0 Ambassador and Nuxt Ambassador, International Speaker. Teacher at Vue School and Jamstack Explorers. Writer for Ultimate Courses."
+  speaker_twitter_url: "https://twitter.com/debs_obrien"
+  speaker_github_url: "https://github.com/debs-obrien"
+speaker_7: &nicolo
+  speaker_in_speaker_lists: true
+  speaker_name: Nicolò Ribaudo
+  speaker_pic_filename: nicolo-ribaudo.png
+  speaker_role: "Open Source Developer"
+  speaker_bio: "Nicolò is an Open Source Developer, a maintainer of Babel (the JavaScript compiler) and a TC39 Invited Expert."
+  speaker_twitter_url: "https://twitter.com/NicoloRibaudo"
+  speaker_github_url: "https://github.com/nicolo-ribaudo"
+speaker_8: &micheleriva
+  speaker_in_speaker_lists: true
+  speaker_name: Michele Riva
+  speaker_pic_filename: michele-riva.png
+  speaker_role: "Senior Software Architect @ NearForm"
+  speaker_bio: "I’m a passionate and experienced software engineer from Milan, Italy. I’ve been working as a software engineer for almost ten years years in both product and consultancy companies, taking the best from both worlds. I’m currently working as a Senior Software Architect at NearForm, while contributing to open-source projects in many languages (including TypeScript, Haskell, and Golang) and writing technical articles and books."
+  speaker_twitter_url: "https://twitter.com/MicheleRivaCode"
+  speaker_github_url: "https://github.com/MicheleRiva"
+speaker_9: &craig
+  speaker_in_speaker_lists: true
+  speaker_name: Craig Spence
+  speaker_pic_filename: craig-spence.png
+  speaker_role: "Senior Engineer @ Spotify"
+  speaker_bio: "Craig is a Software Engineer from New Zealand, working at Spotify in Stockholm. He's an Angular GDE, and he loves using all kinds of technologies to build cool things that help teams build cool things! He also loves punk rock, Disney's Frozen, and his cat Cosy."
+  speaker_twitter_url: "https://twitter.com/phenomnominal"
+  speaker_github_url: "https://github.com/phenomnomnominal"
+speaker_10: &michelestieven
+  speaker_in_speaker_lists: true
+  speaker_name: Michele Stieven
+  speaker_pic_filename: michele-stieven.png
+  speaker_role: "Freelance Consultant, Angular GDE"
+  speaker_bio: "Michele is a Web Developer and Consultant who’s always looking for technologies which allow people to create complex, dynamic and reactive applications. He helps teams of big and small companies with tools like Angular, RxJS, Redux and Web Components. He loves writing and making complex things easy, and he does so in his italian blog (https://accademia.dev) which also hosts his video courses. He’s taken part of many conferences, meetups and online events, and loves to help people in community groups. When he’s not working, he’s a musician."
+  speaker_twitter_url: "https://twitter.com/MicheleStieven"
+  speaker_github_url: "https://github.com/UserGalileo"
+speaker_11: &gil
+  speaker_in_speaker_lists: true
+  speaker_name: Gil Tayar
+  speaker_pic_filename: gil-tayar.png
+  speaker_role: "Software Architect @ Roundforest"
+  speaker_bio: "35 years of experience have not dulled the fascination Gil Tayar has with software development. His passion is distributed systems and figuring out how to scale development to big teams. Extreme modularity and testing are the main tools in his toolbelt, using them to combat the code spaghetti monster at companies like Wix, Applitools, and at his current job as software architect at Roundforest.
+                Unfortunately for him, he hasn’t answered the big question of his life—what’s better, static or dynamic languages? But he’s working on it."
+  speaker_twitter_url: "https://twitter.com/giltayar"
+  speaker_github_url: "https://github.com/giltayar"
+# speaker_1: &speaker
+#   speaker_in_speaker_lists: true
+#   speaker_name:
+#   speaker_pic_filename: .png
+#   speaker_role: ""
+#   speaker_bio: ""
+#   speaker_twitter_url: "https://twitter.com/"
+#   speaker_github_url: "https://github.com/"
 
 
 speakers:
-  speaker_1: *speaker
+  speaker_1: *eleftheria
+  speaker_2: *sam
+  speaker_3: *adrian
+  speaker_4: *estefania
+  speaker_5: *joel
+  speaker_6: *debbie
+  speaker_7: *nicolo
+  speaker_8: *micheleriva
+  speaker_9: *craig
+  speaker_10: *michelestieven
+  speaker_11: *gil
 
 tracks:
   track_1: &track_1
@@ -77,9 +179,129 @@ days:
         track: *track_1
         start_datetime:
         end_datetime:
-        talk_title: ""
-        talk_description: ""
+        talk_title: "When You Think There Is No Time For Learning Or Coding"
+        talk_description: "Do you ever feel like you’re stuck in your career? Do you constantly feel like you don’t have time to work on your projects? Do you want to learn something new, expand your knowledge, develop yourself and be the best you can be?
+          In this session, I am going to share my story on how I started coding, how I make time to work on side projects and how you can grow and advance in your career. After this talk, I hope you 'll be inspired to work smarter, make new habits and continue pushing yourself even when things fall apart.
+          I will present some helpful tips about self-motivation, time-management, setting priorities and goals, staying organized, believing in yourself and keeping a balance between your career and personal life. To do so, I'm going to use as an example my personal story of how I got into the tech world, the struggles, the rejections, what I’ve learned and how you can succeed by being consistent and determined. Additionally, in this session, we are going to talk about building the habit of coding and the benefits of it. We are going to explore ways of finding mentors in your job and outside of it and also expanding your social network.
+          This talk is not only about getting better at your 9 to 5 job but also about developing yourself."
         talk_video_url:
         speakers:
-          speaker_1: *speaker
-
+          speaker_1: *eleftheria
+      talk_2:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "Passwords are so 1990!"
+        talk_description: "As long as we’ve been using the internet, and way before that, we have been authenticating through some sort of username and password combination. It has become the standard. With the ever-increasing number of web-apps, we’re seeing more and more data breaches as well. What if we could build our authentication processes in a way the user doesn’t need a password?"
+        talk_video_url:
+        speakers:
+          speaker_1: *sam
+      talk_3:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "Testing Web Accessibility"
+        talk_description: "When we develop a new web application, we often put a lot of work on the design, on making it beautiful and usable. In other words, we want our web app to be effective, efficient, and satisfying for the user. But a lot of times we don’t think about the user experience for people with disabilities, including people with age-related impairments.
+          Web accessibility (a11y ) means that people with disabilities can perceive, understand, navigate, and interact with websites and tools, and that they can contribute equally without barriers.” (Source: W3C - Web Accessibility Initiative). Our role as frontend and web developers is to create clear interfaces to make people understand and care about data, independently of their disabilities or impairments, but what we, developers, often forget is to ensure that the code we write follows the Web Content Accessibility Guidelines (WCAG), and the only way to achieve that is testing, either manual or automated.
+          Automated web a11y tests can free up our QA team from manual testing every part of our application…but…they can’t automatically, and magically, make our site accessible. We should use automated a11y tests as one step of a larger testing process. Don’t forget that only 20% to 50% of all accessibility issues can automatically be detected."
+        talk_video_url:
+        speakers:
+          speaker_1: *adrian
+      talk_4:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "Who will guard the guards? Mutation Testing in JavaScript"
+        talk_description: "Developers have become used to blindly relying on tests and code coverage. However, if code coverage does not ensure the quality of the tests, and tests do not ensure the quality of the code, why do we rely on these results? In short, if don't trust our own code, why should we trust our tests?"
+        talk_video_url:
+        speakers:
+          speaker_1: *estefania
+      talk_5:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "IoT, JavaScript and Beer Brewing: Cheers to that!"
+        talk_description: "Beer brewing can be fun, but combining brewing with IoT device hacking is even more fun. It is possible to connect and collect data about almost anything, including the fermentation process inside a closed fermenter using open source technologies. In this presentation, the speaker will introduce basic concepts of IoT devices, how to collect the data efficiently and how to use various tools to store, extract and manipulate that data. And if you’re new to beer brewing, don’t worry; you will also learn a thing or two about that as well!"
+        talk_video_url:
+        speakers:
+          speaker_1: *joel
+      talk_6:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "It’s all about components"
+        talk_description: "The frontend is a great place to be in these days and as apps get bigger and bigger, components get more difficult to maintain. But are we really building component driven? Do we really know how to take a design and break it down into components? How small do we go? How do we name things? When is it a good time to make a new component or reuse one that is already created? Making these decisions early on is key to great software architecture. If we think before we build, we can build amazing apps that will easily scale."
+        talk_video_url:
+        speakers:
+          speaker_1: *debbie
+      talk_7:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "Records & Tuples are coming: the next exciting JavaScript feature"
+        talk_description:  "Immutability and deep equality. Two keywords that were initially relegated to strict functional programming environments, but have been popularized across the JavaScript community thanks to libraries like Immutable.js, Immer and React.
+          'Records & Tuples' is a new ECMAScript proposal that brings two new immutable primitives to the language: what do they look like, what capabilities do they bring, and when will you finally be able to use them?"
+        talk_video_url:
+        speakers:
+          speaker_1: *nicolo
+      talk_8:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "Refactoring large JavaScript codebases"
+        talk_description: "What happens if you're in a small team and need to refactor a huge JavaScript codebase? What if you have to upgrade your code following the latest ECMAScript specifications? Updating hundreds of thousands of files by hand seems not the best possible option, so here comes the concept of codemods.
+          In this talk, we will see how JavaScript gets interpreted, transformed, and eventually compiled so that refactoring a large codebase won't be a problem anymore."
+        talk_video_url:
+        speakers:
+          speaker_1: *micheleriva
+      talk_9:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "Into The Unknown"
+        talk_description: "Sven the reindeer and Olaf the snowman have a big problem! They're creating a new TypeScript library, and they want to give their users the best possible experience. They know that TypeScript has incredible powers (they're almost magical! 💫), but they don't know exactly how to use it to its full potential.
+          What is 'unknown'? How is it different from 'any'? How do you use 'infer'? What are conditional types? Unions and Intersections?! It's all too much...
+          Thankfully Elsa, beloved Queen of Arendelle is a TypeScript master, and along with her sister Anna, they *love* to teach others all about type magic.
+          Come along with Elsa, Anna, Olaf and Sven, and they learn all about advanced TypeScript typing by going INTO THE UNKNOWN 🎶❄️🎵"
+        talk_video_url:
+        speakers:
+          speaker_1: *craig
+      talk_10:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "Using Lit and Web Components to build Single-Page Applications"
+        talk_description: "'Web Components are coming', they said. And their time has come! More and more companies are choosing Web Components for their projects, but what exactly can be done with them? Are they intended to be used for UI kits or for entire applications? Let's find out! Let's see what the new version of Lit brings to the table: you might be surprised."
+        talk_video_url:
+        speakers:
+          speaker_1: *michelestieven
+      talk_11:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "The time to migrate to ESM in Node.js is now!"
+        talk_description: "ESM Modules in Node.js have been a reality for the past two years. Many companies now use them in production, and many OSS libraries in NPM are migrating to them.
+          Is it time for you to migrate? YES! Start planning and migrating your Node.js codebase now. This talk will explain why it is important to start migrating this year, how to do the migration, and what will be the benefits of migrating to ESM today."
+        talk_video_url:
+        speakers:
+          speaker_1: *gil
+      # talk_12:
+      #   item_type: "talk"
+      #   track: *track_1
+      #   start_datetime:
+      #   end_datetime:
+      #   talk_title: ""
+      #   talk_description: ""
+      #   talk_video_url:
+      #   speakers:
+      #     speaker_1: *speaker
