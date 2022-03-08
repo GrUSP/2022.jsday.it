@@ -25,12 +25,12 @@ block content
               .columns.row-info
                 .column
                   .info-icon
-                    if(site.data.defaults.conference.is_online_only === true)
+                    if(ws.online_location)
                       include ../source/assets/ico/ico-online-conference.svg
                     else
                       include ../source/assets/ico/ico-where.svg
 
-                  if(site.data.defaults.conference.is_online_only === true)
+                  if(ws.online_location)
                     .info__location !{ws.online_location}
                   else
                     .info__location !{ws.location}

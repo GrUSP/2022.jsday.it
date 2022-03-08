@@ -111,59 +111,7 @@ workshops:
     useful_info_title: "Informazioni utili"
     useful_info_description: "Il workshop si svolge online e dura 8 ore, divise in due mattine: Martedì 13 e Giovedì 15 Luglio 2021, dalle 9 alle 13."
     # CTA
-    cta_title: "Assicurati un posto! I biglietti sono in vendita!"
-  # workshop_2:
-  #   ws_id: workshop_2
-  #   is_external: false
-  #   page_uri: "workshop/workshop_2.html"
-  #   page_title: "Sample second workshop"
-  #   workshop_title: "Workshop on multiple workshops"
-  #   location: "Verona"
-  #   location_name: "Hotel San Marco"
-  #   location_contact_phone: "+045569011"
-  #   location_contact_email: "sanmarco@sanmarco.vr.it"
-  #   location_contact_url: "https://www.sanmarco.vr.it/"
-  #   location_address: "Via Longhena 42, 37138 Verona (VE) Italy"
-  #   location_maps_url: "https://www.google.com/maps/place/Hotel+San+Marco+Fitness+Pool+%26+SPA/@45.4399961,10.9697441,17z/data=!3m1!4b1!4m8!3m7!1s0x4781e1e30a8be6af:0x8091b108e1d130c6!5m2!4m1!1i2!8m2!3d45.4399961!4d10.9719328"
-  #   location_maps_label: "Get directions"
-  #   location_additional_info: "L'hotel offre tariffe scontate ai partecipanti ai workshop, sia per camere singole sia per camere doppie."
-  #   whatandwhen_title: "Cosa e quando"
-  #   whatandwhen_additional_info: "Registrazione, caffè e pranzo inclusi"
-  #   date: 2020-09-15T09:30
-  #   end_date: 2020-09-15T16:30
-  #   language_title: "Lingua"
-  #   language: "italian / italiano"
-  #   language_ext: "Language: Italian / Lingua: italiano"
-  #   language_additional_info: "No translation provided."
-  #   # no collab / commented out
-  #   # collab:
-  #   description: "Testo qualsiasi per descrizione breve"
-  #   description_long: "Testo della descrizione lunga, Testo della descrizione lunga, Testo della descrizione lunga, Testo della descrizione lunga, Testo della descrizione lunga, Testo della descrizione lunga."
-  #   # video trailer?
-  #   trailer: false
-  #   trailer_url: ""
-  #   # nota sul titolo: se il linguaggio specificato in `language` NON in clude 'italian', in pagina viene aggiunta la "s" finale
-  #   teacher_title: "Teacher"
-  #   teachers:
-  #     teacher_1:
-  #       teacher_name: "Sample Teacher"
-  #       teacher_bio: "This is the bio. Lorem ipsum dolor sic amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. And so on."
-  #       pic_filename: "pic1.png"
-  #       teacher_role: "CEO"
-  #       teacher_org: "ExampleCom"
-  #   topics_title: "Argomenti"
-  #   topics:
-  #     - "Workshops on workshops"
-  #     - "Talk on talks"
-  #     - "Meta-workshop"
-  #   addressees_title: "A chi è rivolto"
-  #   addressees_description: "Il workshop è rivolto a chi vuole fare un workshop sui workshop per sapere come si fa un workshop sui workshop."
-  #   requirements_title: "Requisiti di partecipazione"
-  #   requirements_description: "Basta saper leggere e scrivere."
-  #   useful_info_title: "Informazioni utili"
-  #   useful_info_description: "Presentarsi un quarto d'ora prima dell'inizio è consigliabile perché così ti offriamo un caffè."
-  #   # CTA
-  #   cta_title: "Hurry up. There are only a few available places!"
-  #   location_title: "Dove"
-  #   ticket_url: ""
-  #   ticket_label: "Register now"
+    cta_title: "Hurry up. There are only a few available places!"
+    location_title: "Dove"
+    ticket_url: ""
+    ticket_label: "Register now"
