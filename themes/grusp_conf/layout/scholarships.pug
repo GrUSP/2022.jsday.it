@@ -44,23 +44,24 @@ block content
         p !{site.data.page_scholarships.long_version.content_6}
           a(href=contact_url role="button" rel="external" aria-label="contact email") !{site.data.defaults.conference.contact_email}
 
-    .container.container_diversity-sponsors
-      .inner
-        h4(role="heading" aria-level="4").title.is-4  !{site.data.page_scholarships.diversity_sponsors_title}
-        each sponsor in site.data.sponsors.diversity
-          .column
-            - filename = "/img/logos/"+sponsor.logo_filename
-            a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
-              img(src=filename alt=sponsor.name)
-          script(type="application/ld+json").
-            {
-              "sponsor":
+    if (site.data.sponsors.diversity)
+      .container.container_diversity-sponsors
+        .inner
+          h4(role="heading" aria-level="4").title.is-4  !{site.data.page_scholarships.diversity_sponsors_title}
+          each sponsor in site.data.sponsors.diversity
+            .column
+              - filename = "/img/logos/"+sponsor.logo_filename
+              a(href=sponsor.site_url target="_blank" rel="noopener noreferrer external" role="button" aria-label=sponsor.name)
+                img(src=filename alt=sponsor.name)
+            script(type="application/ld+json").
               {
-                "type": "Organization",
-                "name": "#{sponsor.name}",
-                "url": "#{sponsor.site_url}"
+                "sponsor":
+                {
+                  "type": "Organization",
+                  "name": "#{sponsor.name}",
+                  "url": "#{sponsor.site_url}"
+                }
               }
-            }
 
     //- imported components
     include components/newsletter/newsletter

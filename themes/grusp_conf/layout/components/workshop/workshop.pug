@@ -22,15 +22,15 @@ section(id="workshop").section_nopadding
           .row-info
             .info-icon
 
-              if(site.data.defaults.conference.is_online_only === true)
+              if(workshop.online_location)
                 include ../../../source/assets/ico/ico-online-conference.svg
               else
                 include ../../../source/assets/ico/ico-where.svg
 
-            if(site.data.defaults.conference.is_online_only === true)
-              .info__location !{site.data.defaults.conference.online_location}
+            if(workshop.online_location)
+              .info__location !{workshop.online_location}
             else
-              .info__location !{site.data.defaults.conference.city}
+              .info__location !{workshop.location}
 
             | &nbsp;|&nbsp;
 
