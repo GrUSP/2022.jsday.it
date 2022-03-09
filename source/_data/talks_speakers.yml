@@ -47,7 +47,23 @@ speaker_5: &joel
                 During his free time, he can be found stargazing on a campground somewhere or brewing a fresh batch of beer in his garage."
   speaker_twitter_url: "https://twitter.com/joel__lord"
   speaker_github_url: "https://github.com/joellord"
-speaker_6: &debbie
+speaker_6: &jayne
+  speaker_in_speaker_lists: true
+  speaker_name: Jayne Mast
+  speaker_pic_filename: jayne-mast.png
+  speaker_role: "Engineering Manager @ Confrere"
+  speaker_bio: "Jayne is an Engineering Manager at Confrere, based in The Netherlands, and organiser of QueerJS, Global Diversity CFP Day, and CSSClasses. She’s passionate about welcoming everyone into tech and making the web work for everyone.
+        Nowadays, she gives talks about topics like ethics, diversity, and inclusivity, to help make everyone feel as welcome as she was 10 years ago."
+  speaker_twitter_url: "https://twitter.com/jayne_mast"
+speaker_7: &laura
+  speaker_in_speaker_lists: true
+  speaker_name: Laura Morinigo
+  speaker_pic_filename: laura-morinigo.png
+  speaker_role: "Web Developer Advocate/ Principal Engineer @ Samsung"
+  speaker_bio: "Laura is a software developer, advocate, and mentor. She is passionate about sharing her knowledge and connecting with different tech communities around the world. Thanks to her contribution she has been recognized as a Google Developer Expert and a Woman Techmakers Ambassador. As a mentor, she helped startups participating in accelerator programs like Google Launchpad and the World Food Programme by the United Nations.
+        Currently, she is a web developer advocate for Samsung Internet where she spread the word out about advanced web features helping web developers to create great web apps."
+  speaker_twitter_url: "https://twitter.com/thisislalaok"
+speaker_8: &debbie
   speaker_in_speaker_lists: true
   speaker_name: Debbie O'Brien
   speaker_pic_filename: debbie-obrien.png
@@ -55,7 +71,7 @@ speaker_6: &debbie
   speaker_bio: "Over 10 years experience in Frontend development. Microsoft Most Valuable Professional in developer technologies, Google Developer Expert in web technologies, GitHub Star and Cloudinary Media Developer Expert, an Auth0 Ambassador and Nuxt Ambassador, International Speaker. Teacher at Vue School and Jamstack Explorers. Writer for Ultimate Courses."
   speaker_twitter_url: "https://twitter.com/debs_obrien"
   speaker_github_url: "https://github.com/debs-obrien"
-speaker_7: &nicolo
+speaker_9: &nicolo
   speaker_in_speaker_lists: true
   speaker_name: Nicolò Ribaudo
   speaker_pic_filename: nicolo-ribaudo.png
@@ -63,7 +79,7 @@ speaker_7: &nicolo
   speaker_bio: "Nicolò is an Open Source Developer, a maintainer of Babel (the JavaScript compiler) and a TC39 Invited Expert."
   speaker_twitter_url: "https://twitter.com/NicoloRibaudo"
   speaker_github_url: "https://github.com/nicolo-ribaudo"
-speaker_8: &micheleriva
+speaker_10: &micheleriva
   speaker_in_speaker_lists: true
   speaker_name: Michele Riva
   speaker_pic_filename: michele-riva.png
@@ -71,7 +87,7 @@ speaker_8: &micheleriva
   speaker_bio: "I’m a passionate and experienced software engineer from Milan, Italy. I’ve been working as a software engineer for almost ten years years in both product and consultancy companies, taking the best from both worlds. I’m currently working as a Senior Software Architect at NearForm, while contributing to open-source projects in many languages (including TypeScript, Haskell, and Golang) and writing technical articles and books."
   speaker_twitter_url: "https://twitter.com/MicheleRivaCode"
   speaker_github_url: "https://github.com/MicheleRiva"
-speaker_9: &craig
+speaker_11: &craig
   speaker_in_speaker_lists: true
   speaker_name: Craig Spence
   speaker_pic_filename: craig-spence.png
@@ -79,7 +95,7 @@ speaker_9: &craig
   speaker_bio: "Craig is a Software Engineer from New Zealand, working at Spotify in Stockholm. He's an Angular GDE, and he loves using all kinds of technologies to build cool things that help teams build cool things! He also loves punk rock, Disney's Frozen, and his cat Cosy."
   speaker_twitter_url: "https://twitter.com/phenomnominal"
   speaker_github_url: "https://github.com/phenomnomnominal"
-speaker_10: &michelestieven
+speaker_12: &michelestieven
   speaker_in_speaker_lists: true
   speaker_name: Michele Stieven
   speaker_pic_filename: michele-stieven.png
@@ -87,7 +103,7 @@ speaker_10: &michelestieven
   speaker_bio: "Michele is a Web Developer and Consultant who’s always looking for technologies which allow people to create complex, dynamic and reactive applications. He helps teams of big and small companies with tools like Angular, RxJS, Redux and Web Components. He loves writing and making complex things easy, and he does so in his italian blog (https://accademia.dev) which also hosts his video courses. He’s taken part of many conferences, meetups and online events, and loves to help people in community groups. When he’s not working, he’s a musician."
   speaker_twitter_url: "https://twitter.com/MicheleStieven"
   speaker_github_url: "https://github.com/UserGalileo"
-speaker_11: &gil
+speaker_13: &gil
   speaker_in_speaker_lists: true
   speaker_name: Gil Tayar
   speaker_pic_filename: gil-tayar.png
@@ -112,12 +128,15 @@ speakers:
   speaker_3: *adrian
   speaker_4: *estefania
   speaker_5: *joel
-  speaker_6: *debbie
-  speaker_7: *nicolo
-  speaker_8: *micheleriva
-  speaker_9: *craig
-  speaker_10: *michelestieven
-  speaker_11: *gil
+  speaker_6: *jayne
+  speaker_7: *laura
+  speaker_8: *debbie
+  speaker_9: *nicolo
+  speaker_10: *micheleriva
+  speaker_11: *craig
+  speaker_12: *michelestieven
+  speaker_13: *gil
+
 
 tracks:
   track_1: &track_1
@@ -234,12 +253,32 @@ days:
         track: *track_1
         start_datetime:
         end_datetime:
+        talk_title: "jQuery Is Not Dead and That’s Fine"
+        talk_description: "At conferences, we show the latest and greatest tech and often laugh about older technologies. But people still use these tools and frameworks, and shaming them is harmful to the community. In this talk, I want to share my own personal story of how I got confronted with gatekeeping and elitism, how it affected my confidence, and what we can all do to avoid this."
+        talk_video_url:
+        speakers:
+          speaker_1: *jayne
+      talk_7:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
+        talk_title: "Managing data and resources in your Progressive Web App like a pro"
+        talk_description: "Creating a web app means that we will use different resources like assets, fonts, and some other interface elements. The challenge relies on managing those resources to load fast and be available offline.  PWAs use modern capabilities to target this problem and of course, make sure to deliver a good user experience. During this talk, we will learn about client-side storage solutions, cache strategies, and what it means to have an offline-ready web app so you can choose wisely from these strategies like a pro!"
+        talk_video_url:
+        speakers:
+          speaker_1: *laura
+      talk_8:
+        item_type: "talk"
+        track: *track_1
+        start_datetime:
+        end_datetime:
         talk_title: "It’s all about components"
         talk_description: "The frontend is a great place to be in these days and as apps get bigger and bigger, components get more difficult to maintain. But are we really building component driven? Do we really know how to take a design and break it down into components? How small do we go? How do we name things? When is it a good time to make a new component or reuse one that is already created? Making these decisions early on is key to great software architecture. If we think before we build, we can build amazing apps that will easily scale."
         talk_video_url:
         speakers:
           speaker_1: *debbie
-      talk_7:
+      talk_9:
         item_type: "talk"
         track: *track_1
         start_datetime:
@@ -250,7 +289,7 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *nicolo
-      talk_8:
+      talk_10:
         item_type: "talk"
         track: *track_1
         start_datetime:
@@ -261,7 +300,7 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *micheleriva
-      talk_9:
+      talk_11:
         item_type: "talk"
         track: *track_1
         start_datetime:
@@ -274,7 +313,7 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *craig
-      talk_10:
+      talk_12:
         item_type: "talk"
         track: *track_1
         start_datetime:
@@ -284,7 +323,7 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *michelestieven
-      talk_11:
+      talk_13:
         item_type: "talk"
         track: *track_1
         start_datetime:
