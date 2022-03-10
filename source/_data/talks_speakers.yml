@@ -51,8 +51,8 @@ speaker_6: &jayne
   speaker_in_speaker_lists: true
   speaker_name: Jayne Mast
   speaker_pic_filename: jayne-mast.png
-  speaker_role: "Engineering Manager @ Confrere"
-  speaker_bio: "Jayne is an Engineering Manager at Confrere, based in The Netherlands, and organiser of QueerJS, Global Diversity CFP Day, and CSSClasses. She’s passionate about welcoming everyone into tech and making the web work for everyone.
+  speaker_role: "Engineering Manager"
+  speaker_bio: "Jayne is an Engineering Manager, based in The Netherlands, and organiser of QueerJS, Global Diversity CFP Day, and CSSClasses. She’s passionate about welcoming everyone into tech and making the web work for everyone.
         Nowadays, she gives talks about topics like ethics, diversity, and inclusivity, to help make everyone feel as welcome as she was 10 years ago."
   speaker_twitter_url: "https://twitter.com/jayne_mast"
 speaker_7: &laura
