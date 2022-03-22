@@ -1,5 +1,5 @@
 # NB impostare a `true` per generare la pagina, a `false` per NON generarla
-generate_schedule_page: false
+generate_schedule_page: true
 schedule_under_construction_title: "Schedule under construction"
 schedule_under_construction_description: "We are still defining the schedule. Please be patient"
 
@@ -36,7 +36,26 @@ speaker_4: &estefania
   speaker_bio: "Estefanía is a full stack software engineer from Málaga, international speaker, organiser of Angular Málaga, contributor to the open source community, creator of the Npkill project and advocate of clean code. Her goal is to empower women in tech. She enjoys writing about all things tech and fixing bugs at 2AM."
   speaker_twitter_url: "https://twitter.com/Nyablk"
   speaker_github_url: "https://github.com/NyaGarcia"
-speaker_5: &joel
+speaker_5: &yoni
+  speaker_in_speaker_lists: true
+  speaker_name: Yoni Goldberg
+  speaker_pic_filename: yoni-goldberg.png
+  speaker_role: "Independent Node.js consultant"
+  speaker_bio: "Yoni Goldberg is an independent consultant who works with Fortune 500 corporates and garage startups on polishing their Node.js applications. These days, he is fascinated by topics like architecture of modern backends, production hardening and testing. He tries to master these topics, but it's not easy at all. At least he tries hard. At his spare time, he likes to write in his blog and debug production application using console.log. He is also the author of multiple known best practices guides like 'Node.js best practices'"
+  speaker_twitter_url: "https://twitter.com/nodepractices"
+  speaker_github_url: "https://github.com/goldbergyoni/nodebestpractices"
+speaker_6: &assaf
+  speaker_in_speaker_lists: true
+  speaker_name: Assaf Krintza
+  speaker_pic_filename: assaf-krintza.png
+  speaker_role: "VP Engineering and Co-Founder @ Livecycle"
+  speaker_bio: "Assaf is the co-founder and VP R&D at Livecycle, an early-stage startup that specializes in collaboration on top of live environments.
+    He is a seasoned engineer with more than a decade’s experience building some of the world’s most popular products at some of the biggest companies in the industry - from Microsoft, to Check Point, and Soluto, prior to Livecycle. His journey has afforded him experience in a diversity of engineering disciplines - from backend to frontend, security, as well as engineering management (an entire discipline unto itself).
+    Assaf throughout his career has been able to tinker with many nifty technologies & stacks, and loves to share from his experience and everything he’s learned over the years.
+    When he’s not building awesome dev tools you can find him speaking at or attending leading industry events & conferences, making bad games at game jams and trying to play the piano unsuccessfully."
+  speaker_twitter_url: "https://twitter.com/krinssaf"
+  speaker_github_url: "https://github.com/assafkr"
+speaker_7: &joel
   speaker_in_speaker_lists: true
   speaker_name: Joel Lord
   speaker_pic_filename: joel-lord.png
@@ -47,7 +66,7 @@ speaker_5: &joel
                 During his free time, he can be found stargazing on a campground somewhere or brewing a fresh batch of beer in his garage."
   speaker_twitter_url: "https://twitter.com/joel__lord"
   speaker_github_url: "https://github.com/joellord"
-speaker_6: &jayne
+speaker_8: &jayne
   speaker_in_speaker_lists: true
   speaker_name: Jayne Mast
   speaker_pic_filename: jayne-mast.png
@@ -55,7 +74,7 @@ speaker_6: &jayne
   speaker_bio: "Jayne is an Engineering Manager at Confrere, based in The Netherlands, and organiser of QueerJS, Global Diversity CFP Day, and CSSClasses. She’s passionate about welcoming everyone into tech and making the web work for everyone.
         Nowadays, she gives talks about topics like ethics, diversity, and inclusivity, to help make everyone feel as welcome as she was 10 years ago."
   speaker_twitter_url: "https://twitter.com/jayne_mast"
-speaker_7: &laura
+speaker_9: &laura
   speaker_in_speaker_lists: true
   speaker_name: Laura Morinigo
   speaker_pic_filename: laura-morinigo.png
@@ -63,7 +82,7 @@ speaker_7: &laura
   speaker_bio: "Laura is a software developer, advocate, and mentor. She is passionate about sharing her knowledge and connecting with different tech communities around the world. Thanks to her contribution she has been recognized as a Google Developer Expert and a Woman Techmakers Ambassador. As a mentor, she helped startups participating in accelerator programs like Google Launchpad and the World Food Programme by the United Nations.
         Currently, she is a web developer advocate for Samsung Internet where she spread the word out about advanced web features helping web developers to create great web apps."
   speaker_twitter_url: "https://twitter.com/thisislalaok"
-speaker_8: &debbie
+speaker_10: &debbie
   speaker_in_speaker_lists: true
   speaker_name: Debbie O'Brien
   speaker_pic_filename: debbie-obrien.png
@@ -71,7 +90,7 @@ speaker_8: &debbie
   speaker_bio: "Over 10 years experience in Frontend development. Microsoft Most Valuable Professional in developer technologies, Google Developer Expert in web technologies, GitHub Star and Cloudinary Media Developer Expert, an Auth0 Ambassador and Nuxt Ambassador, International Speaker. Teacher at Vue School and Jamstack Explorers. Writer for Ultimate Courses."
   speaker_twitter_url: "https://twitter.com/debs_obrien"
   speaker_github_url: "https://github.com/debs-obrien"
-speaker_9: &nicolo
+speaker_11: &nicolo
   speaker_in_speaker_lists: true
   speaker_name: Nicolò Ribaudo
   speaker_pic_filename: nicolo-ribaudo.png
@@ -79,7 +98,7 @@ speaker_9: &nicolo
   speaker_bio: "Nicolò is an Open Source Developer, a maintainer of Babel (the JavaScript compiler) and a TC39 Invited Expert."
   speaker_twitter_url: "https://twitter.com/NicoloRibaudo"
   speaker_github_url: "https://github.com/nicolo-ribaudo"
-speaker_10: &micheleriva
+speaker_12: &micheleriva
   speaker_in_speaker_lists: true
   speaker_name: Michele Riva
   speaker_pic_filename: michele-riva.png
@@ -87,7 +106,7 @@ speaker_10: &micheleriva
   speaker_bio: "I’m a passionate and experienced software engineer from Milan, Italy. I’ve been working as a software engineer for almost ten years years in both product and consultancy companies, taking the best from both worlds. I’m currently working as a Senior Software Architect at NearForm, while contributing to open-source projects in many languages (including TypeScript, Haskell, and Golang) and writing technical articles and books."
   speaker_twitter_url: "https://twitter.com/MicheleRivaCode"
   speaker_github_url: "https://github.com/MicheleRiva"
-speaker_11: &craig
+speaker_13: &craig
   speaker_in_speaker_lists: true
   speaker_name: Craig Spence
   speaker_pic_filename: craig-spence.png
@@ -95,7 +114,7 @@ speaker_11: &craig
   speaker_bio: "Craig is a Software Engineer from New Zealand, working at Spotify in Stockholm. He's an Angular GDE, and he loves using all kinds of technologies to build cool things that help teams build cool things! He also loves punk rock, Disney's Frozen, and his cat Cosy."
   speaker_twitter_url: "https://twitter.com/phenomnominal"
   speaker_github_url: "https://github.com/phenomnomnominal"
-speaker_12: &michelestieven
+speaker_14: &michelestieven
   speaker_in_speaker_lists: true
   speaker_name: Michele Stieven
   speaker_pic_filename: michele-stieven.png
@@ -103,7 +122,7 @@ speaker_12: &michelestieven
   speaker_bio: "Michele is a Web Developer and Consultant who’s always looking for technologies which allow people to create complex, dynamic and reactive applications. He helps teams of big and small companies with tools like Angular, RxJS, Redux and Web Components. He loves writing and making complex things easy, and he does so in his italian blog (https://accademia.dev) which also hosts his video courses. He’s taken part of many conferences, meetups and online events, and loves to help people in community groups. When he’s not working, he’s a musician."
   speaker_twitter_url: "https://twitter.com/MicheleStieven"
   speaker_github_url: "https://github.com/UserGalileo"
-speaker_13: &gil
+speaker_15: &gil
   speaker_in_speaker_lists: true
   speaker_name: Gil Tayar
   speaker_pic_filename: gil-tayar.png
@@ -127,15 +146,17 @@ speakers:
   speaker_2: *sam
   speaker_3: *adrian
   speaker_4: *estefania
-  speaker_5: *joel
-  speaker_6: *jayne
-  speaker_7: *laura
-  speaker_8: *debbie
-  speaker_9: *nicolo
-  speaker_10: *micheleriva
-  speaker_11: *craig
-  speaker_12: *michelestieven
-  speaker_13: *gil
+  speaker_5: *yoni
+  speaker_6: *assaf
+  speaker_7: *joel
+  speaker_8: *jayne
+  speaker_9: *laura
+  speaker_10: *debbie
+  speaker_11: *nicolo
+  speaker_12: *micheleriva
+  speaker_13: *craig
+  speaker_14: *michelestieven
+  speaker_15: *gil
 
 
 tracks:
@@ -159,68 +180,71 @@ tracks:
 
 days:
   day_1:
-    date: 2022-04-21T09:45+02:00
+    date: 2022-04-21T09:30+02:00
     title: "Day 1"
     talks:
     # service
+      check-in:
+        item_type: "service"
+        start_datetime: 2022-04-21T08:45+02:00
+        end_datetime: 2022-04-21T09:30+02:00
+        talk_title: "Check-in"
       opening:
         item_type: "service"
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-21T09:30+02:00
+        end_datetime: 2022-04-21T09:45+02:00
         talk_title: "Opening by GrUSP"
       closing:
         item_type: "service"
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-21T17:55+02:00
+        end_datetime: 2022-04-21T18:10+02:00
         talk_title: "See you tomorrow!"
       coffee-morning:
         item_type: "service"
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-21T11:05+02:00
+        end_datetime: 2022-04-21T11:35+02:00
         talk_title: "Coffee break"
         service_icon: "coffee"
       coffee-afternoon:
         item_type: "service"
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-21T15:50+02:00
+        end_datetime: 2022-04-21T16:20+02:00
         talk_title: "Coffee break"
         service_icon: "coffee"
       lunch:
         item_type: "service"
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-21T12:55+02:00
+        end_datetime: 2022-04-21T14:30+02:00
         talk_title: "Lunch break"
         service_icon: "cutlery"
 
       # talk
-      talk_1:
+      talk_nicolo:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
-        talk_title: "When You Think There Is No Time For Learning Or Coding"
-        talk_description: "Do you ever feel like you’re stuck in your career? Do you constantly feel like you don’t have time to work on your projects? Do you want to learn something new, expand your knowledge, develop yourself and be the best you can be?
-          In this session, I am going to share my story on how I started coding, how I make time to work on side projects and how you can grow and advance in your career. After this talk, I hope you 'll be inspired to work smarter, make new habits and continue pushing yourself even when things fall apart.
-          I will present some helpful tips about self-motivation, time-management, setting priorities and goals, staying organized, believing in yourself and keeping a balance between your career and personal life. To do so, I'm going to use as an example my personal story of how I got into the tech world, the struggles, the rejections, what I’ve learned and how you can succeed by being consistent and determined. Additionally, in this session, we are going to talk about building the habit of coding and the benefits of it. We are going to explore ways of finding mentors in your job and outside of it and also expanding your social network.
-          This talk is not only about getting better at your 9 to 5 job but also about developing yourself."
+        start_datetime: 2022-04-21T09:45+02:00
+        end_datetime: 2022-04-21T10:25+02:00
+        talk_title: "Records & Tuples are coming: the next exciting JavaScript feature"
+        talk_description: "Immutability and deep equality. Two keywords that were initially relegated to strict functional programming environments, but have been popularized across the JavaScript community thanks to libraries like Immutable.js, Immer and React.
+          'Records & Tuples' is a new ECMAScript proposal that brings two new immutable primitives to the language: what do they look like, what capabilities do they bring, and when will you finally be able to use them?"
         talk_video_url:
         speakers:
-          speaker_1: *eleftheria
-      talk_2:
+          speaker_1: *nicolo
+      talk_assaf:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
-        talk_title: "Passwords are so 1990!"
-        talk_description: "As long as we’ve been using the internet, and way before that, we have been authenticating through some sort of username and password combination. It has become the standard. With the ever-increasing number of web-apps, we’re seeing more and more data breaches as well. What if we could build our authentication processes in a way the user doesn’t need a password?"
+        start_datetime: 2022-04-21T10:25+02:00
+        end_datetime: 2022-04-21T11:05+02:00
+        talk_title: "React is Killing your Performance and it's Your Fault"
+        talk_description: ""
         talk_video_url:
         speakers:
-          speaker_1: *sam
-      talk_3:
+          speaker_1: *assaf
+      talk_adrian:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-21T11:35+02:00
+        end_datetime: 2022-04-21T12:15+02:00
         talk_title: "Testing Web Accessibility"
         talk_description: "When we develop a new web application, we often put a lot of work on the design, on making it beautiful and usable. In other words, we want our web app to be effective, efficient, and satisfying for the user. But a lot of times we don’t think about the user experience for people with disabilities, including people with age-related impairments.
           Web accessibility (a11y ) means that people with disabilities can perceive, understand, navigate, and interact with websites and tools, and that they can contribute equally without barriers.” (Source: W3C - Web Accessibility Initiative). Our role as frontend and web developers is to create clear interfaces to make people understand and care about data, independently of their disabilities or impairments, but what we, developers, often forget is to ensure that the code we write follows the Web Content Accessibility Guidelines (WCAG), and the only way to achieve that is testing, either manual or automated.
@@ -228,83 +252,111 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *adrian
-      talk_4:
+      talk_mstieven:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-21T12:15+02:00
+        end_datetime: 2022-04-21T12:55+02:00
+        talk_title: "Using Lit and Web Components to build Single-Page Applications"
+        talk_description: "'Web Components are coming', they said. And their time has come! More and more companies are choosing Web Components for their projects, but what exactly can be done with them? Are they intended to be used for UI kits or for entire applications? Let's find out! Let's see what the new version of Lit brings to the table: you might be surprised."
+        talk_video_url:
+        speakers:
+          speaker_1: *michelestieven
+      talk_estefania:
+        item_type: "talk"
+        track: *track_1
+        start_datetime: 2022-04-21T14:30+02:00
+        end_datetime: 2022-04-21T15:10+02:00
         talk_title: "Who will guard the guards? Mutation Testing in JavaScript"
         talk_description: "Developers have become used to blindly relying on tests and code coverage. However, if code coverage does not ensure the quality of the tests, and tests do not ensure the quality of the code, why do we rely on these results? In short, if don't trust our own code, why should we trust our tests?"
         talk_video_url:
         speakers:
           speaker_1: *estefania
-      talk_5:
+      talk_laura:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
-        talk_title: "IoT, JavaScript and Beer Brewing: Cheers to that!"
-        talk_description: "Beer brewing can be fun, but combining brewing with IoT device hacking is even more fun. It is possible to connect and collect data about almost anything, including the fermentation process inside a closed fermenter using open source technologies. In this presentation, the speaker will introduce basic concepts of IoT devices, how to collect the data efficiently and how to use various tools to store, extract and manipulate that data. And if you’re new to beer brewing, don’t worry; you will also learn a thing or two about that as well!"
-        talk_video_url:
-        speakers:
-          speaker_1: *joel
-      talk_6:
-        item_type: "talk"
-        track: *track_1
-        start_datetime:
-        end_datetime:
-        talk_title: "jQuery Is Not Dead and That’s Fine"
-        talk_description: "At conferences, we show the latest and greatest tech and often laugh about older technologies. But people still use these tools and frameworks, and shaming them is harmful to the community. In this talk, I want to share my own personal story of how I got confronted with gatekeeping and elitism, how it affected my confidence, and what we can all do to avoid this."
-        talk_video_url:
-        speakers:
-          speaker_1: *jayne
-      talk_7:
-        item_type: "talk"
-        track: *track_1
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-21T15:10+02:00
+        end_datetime: 2022-04-21T15:50+02:00
         talk_title: "Managing data and resources in your Progressive Web App like a pro"
         talk_description: "Creating a web app means that we will use different resources like assets, fonts, and some other interface elements. The challenge relies on managing those resources to load fast and be available offline.  PWAs use modern capabilities to target this problem and of course, make sure to deliver a good user experience. During this talk, we will learn about client-side storage solutions, cache strategies, and what it means to have an offline-ready web app so you can choose wisely from these strategies like a pro!"
         talk_video_url:
         speakers:
           speaker_1: *laura
-      talk_8:
+      talk_sam:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
-        talk_title: "It’s all about components"
-        talk_description: "The frontend is a great place to be in these days and as apps get bigger and bigger, components get more difficult to maintain. But are we really building component driven? Do we really know how to take a design and break it down into components? How small do we go? How do we name things? When is it a good time to make a new component or reuse one that is already created? Making these decisions early on is key to great software architecture. If we think before we build, we can build amazing apps that will easily scale."
+        start_datetime: 2022-04-21T16:20+02:00
+        end_datetime: 2022-04-21T17:00+02:00
+        talk_title: "Passwords are so 1990!"
+        talk_description: "As long as we’ve been using the internet, and way before that, we have been authenticating through some sort of username and password combination. It has become the standard. With the ever-increasing number of web-apps, we’re seeing more and more data breaches as well. What if we could build our authentication processes in a way the user doesn’t need a password?"
         talk_video_url:
         speakers:
-          speaker_1: *debbie
-      talk_9:
+          speaker_1: *sam
+      talk_joel:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
-        talk_title: "Records & Tuples are coming: the next exciting JavaScript feature"
-        talk_description:  "Immutability and deep equality. Two keywords that were initially relegated to strict functional programming environments, but have been popularized across the JavaScript community thanks to libraries like Immutable.js, Immer and React.
-          'Records & Tuples' is a new ECMAScript proposal that brings two new immutable primitives to the language: what do they look like, what capabilities do they bring, and when will you finally be able to use them?"
+        start_datetime: 2022-04-21T17:00+02:00
+        end_datetime: 2022-04-21T17:55+02:00
+        talk_title: "IoT, JavaScript and Beer Brewing: Cheers to that!"
+        talk_description: "Beer brewing can be fun, but combining brewing with IoT device hacking is even more fun. It is possible to connect and collect data about almost anything, including the fermentation process inside a closed fermenter using open source technologies. In this presentation, the speaker will introduce basic concepts of IoT devices, how to collect the data efficiently and how to use various tools to store, extract and manipulate that data. And if you’re new to beer brewing, don’t worry; you will also learn a thing or two about that as well!"
         talk_video_url:
         speakers:
-          speaker_1: *nicolo
-      talk_10:
+          speaker_1: *joel
+
+  day_2:
+    date: 2022-04-22T09:30+02:00
+    title: "Day 2"
+    talks:
+    # service
+      check-in:
+        item_type: "service"
+        start_datetime: 2022-04-22T08:45+02:00
+        end_datetime: 2022-04-22T09:30+02:00
+        talk_title: "Check-in"
+      opening:
+        item_type: "service"
+        start_datetime: 2022-04-22T09:30+02:00
+        end_datetime: 2022-04-22T09:45+02:00
+        talk_title: "Opening by GrUSP"
+      closing:
+        item_type: "service"
+        start_datetime: 2022-04-22T17:10+02:00
+        end_datetime: 2022-04-22T17:20+02:00
+        talk_title: "Closing by GrUSP"
+      coffee-morning:
+        item_type: "service"
+        start_datetime: 2022-04-22T11:05+02:00
+        end_datetime: 2022-04-22T11:35+02:00
+        talk_title: "Coffee break"
+        service_icon: "coffee"
+      coffee-afternoon:
+        item_type: "service"
+        start_datetime: 2022-04-22T16:00+02:00
+        end_datetime: 2022-04-22T16:30+02:00
+        talk_title: "Coffee break"
+        service_icon: "coffee"
+      lunch:
+        item_type: "service"
+        start_datetime: 2022-04-22T13:10+02:00
+        end_datetime: 2022-04-22T14:40+02:00
+        talk_title: "Lunch break"
+        service_icon: "cutlery"
+
+      talk_jayne:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
-        talk_title: "Refactoring large JavaScript codebases"
-        talk_description: "What happens if you're in a small team and need to refactor a huge JavaScript codebase? What if you have to upgrade your code following the latest ECMAScript specifications? Updating hundreds of thousands of files by hand seems not the best possible option, so here comes the concept of codemods.
-          In this talk, we will see how JavaScript gets interpreted, transformed, and eventually compiled so that refactoring a large codebase won't be a problem anymore."
+        start_datetime: 2022-04-22T09:45+02:00
+        end_datetime: 2022-04-22T10:25+02:00
+        talk_title: "jQuery Is Not Dead and That’s Fine"
+        talk_description: "At conferences, we show the latest and greatest tech and often laugh about older technologies. But people still use these tools and frameworks, and shaming them is harmful to the community. In this talk, I want to share my own personal story of how I got confronted with gatekeeping and elitism, how it affected my confidence, and what we can all do to avoid this."
         talk_video_url:
         speakers:
-          speaker_1: *micheleriva
-      talk_11:
+          speaker_1: *jayne
+      talk_craig:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-22T10:25+02:00
+        end_datetime: 2022-04-22T11:05+02:00
         talk_title: "Into The Unknown"
         talk_description: "Sven the reindeer and Olaf the snowman have a big problem! They're creating a new TypeScript library, and they want to give their users the best possible experience. They know that TypeScript has incredible powers (they're almost magical! 💫), but they don't know exactly how to use it to its full potential.
           What is 'unknown'? How is it different from 'any'? How do you use 'infer'? What are conditional types? Unions and Intersections?! It's all too much...
@@ -313,34 +365,58 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *craig
-      talk_12:
+      talk_mriva:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
-        talk_title: "Using Lit and Web Components to build Single-Page Applications"
-        talk_description: "'Web Components are coming', they said. And their time has come! More and more companies are choosing Web Components for their projects, but what exactly can be done with them? Are they intended to be used for UI kits or for entire applications? Let's find out! Let's see what the new version of Lit brings to the table: you might be surprised."
+        start_datetime: 2022-04-22T11:35+02:00
+        end_datetime: 2022-04-22T12:15+02:00
+        talk_title: "Refactoring large JavaScript codebases"
+        talk_description: "What happens if you're in a small team and need to refactor a huge JavaScript codebase? What if you have to upgrade your code following the latest ECMAScript specifications? Updating hundreds of thousands of files by hand seems not the best possible option, so here comes the concept of codemods.
+          In this talk, we will see how JavaScript gets interpreted, transformed, and eventually compiled so that refactoring a large codebase won't be a problem anymore."
         talk_video_url:
         speakers:
-          speaker_1: *michelestieven
-      talk_13:
+          speaker_1: *micheleriva
+      talk_yoni:
         item_type: "talk"
         track: *track_1
-        start_datetime:
-        end_datetime:
+        start_datetime: 2022-04-22T12:15+02:00
+        end_datetime: 2022-04-22T13:10+02:00
+        talk_title: "All of those tests you have and none of them cover Message Queues"
+        talk_description: "On your path to master backend testing, don’t miss the lesser discussed chapter in the book: how to test the common flows that start or end at a message queue. Although the focus is always on the features we deliver, message queues bring unusual testing challenges like testing for message rejection, acknowledgments, retries, idempotency, dead-letter queues, poisoned messages, and other scenarios that our backend is frequently facing. Another interesting dilemma is the developer's toolbox when testing queues - Should they use the real one or a stub? What other tools are needed? This is hands-on code talk that exemplifies these concepts using popular products like RabbitMQ, SQS, and Kafka"
+        talk_video_url:
+        speakers:
+          speaker_1: *yoni
+      talk_debbie:
+        item_type: "talk"
+        track: *track_1
+        start_datetime: 2022-04-22T14:40+02:00
+        end_datetime: 2022-04-22T15:20+02:00
+        talk_title: "It’s all about components"
+        talk_description: "The frontend is a great place to be in these days and as apps get bigger and bigger, components get more difficult to maintain. But are we really building component driven? Do we really know how to take a design and break it down into components? How small do we go? How do we name things? When is it a good time to make a new component or reuse one that is already created? Making these decisions early on is key to great software architecture. If we think before we build, we can build amazing apps that will easily scale."
+        talk_video_url:
+        speakers:
+          speaker_1: *debbie
+      talk_gil:
+        item_type: "talk"
+        track: *track_1
+        start_datetime: 2022-04-22T15:20+02:00
+        end_datetime: 2022-04-22T16:00+02:00
         talk_title: "The time to migrate to ESM in Node.js is now!"
         talk_description: "ESM Modules in Node.js have been a reality for the past two years. Many companies now use them in production, and many OSS libraries in NPM are migrating to them.
           Is it time for you to migrate? YES! Start planning and migrating your Node.js codebase now. This talk will explain why it is important to start migrating this year, how to do the migration, and what will be the benefits of migrating to ESM today."
         talk_video_url:
         speakers:
           speaker_1: *gil
-      # talk_12:
-      #   item_type: "talk"
-      #   track: *track_1
-      #   start_datetime:
-      #   end_datetime:
-      #   talk_title: ""
-      #   talk_description: ""
-      #   talk_video_url:
-      #   speakers:
-      #     speaker_1: *speaker
+      talk_eleftheria:
+        item_type: "talk"
+        track: *track_1
+        start_datetime: 2022-04-22T16:30+02:00
+        end_datetime: 2022-04-22T17:10+02:00
+        talk_title: "When You Think There Is No Time For Learning Or Coding"
+        talk_description: "Do you ever feel like you’re stuck in your career? Do you constantly feel like you don’t have time to work on your projects? Do you want to learn something new, expand your knowledge, develop yourself and be the best you can be?
+          In this session, I am going to share my story on how I started coding, how I make time to work on side projects and how you can grow and advance in your career. After this talk, I hope you 'll be inspired to work smarter, make new habits and continue pushing yourself even when things fall apart.
+          I will present some helpful tips about self-motivation, time-management, setting priorities and goals, staying organized, believing in yourself and keeping a balance between your career and personal life. To do so, I'm going to use as an example my personal story of how I got into the tech world, the struggles, the rejections, what I’ve learned and how you can succeed by being consistent and determined. Additionally, in this session, we are going to talk about building the habit of coding and the benefits of it. We are going to explore ways of finding mentors in your job and outside of it and also expanding your social network.
+          This talk is not only about getting better at your 9 to 5 job but also about developing yourself."
+        talk_video_url:
+        speakers:
+          speaker_1: *eleftheria
