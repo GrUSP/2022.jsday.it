@@ -236,7 +236,7 @@ days:
         start_datetime: 2022-04-21T10:25+02:00
         end_datetime: 2022-04-21T11:05+02:00
         talk_title: "React is Killing your Performance and it's Your Fault"
-        talk_description: ""
+        talk_description: "React is an awesome framework for building UI. But writing declarative code comes with a cost, and with the case of React - that cost comes at runtime. How do we write beautiful, responsive UI using React’s awesome DevX but without compromising on performance? Together we’ll get a glimpse behind the React scenes, demystify the reconciliation loop, Virtual DOM and learn how to avoid common performance pitfalls."
         talk_video_url:
         speakers:
           speaker_1: *assaf
