@@ -21,10 +21,14 @@ gold:
     site_url: "https://www.mia-platform.eu/it/"
 silver:
   sponsor1:
+    name: "Auth0"
+    logo_filename: "auth0.svg"
+    site_url: "https://auth0.com"
+  sponsor2:
     name: "Facile.it"
     logo_filename: "facile.svg"
     site_url: "https://www.facile.it/"
-  sponsor2:
+  sponsor3:
     name: "Madisoft"
     logo_filename: "madisoft.svg"
     site_url: "https://labs.madisoft.it"
