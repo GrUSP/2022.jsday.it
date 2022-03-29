@@ -1,40 +1,40 @@
-#sponsor h1 {
+#partners_page h1 {
   text-transform: none;
   color: #5e4e9b;
   font-size: 2em;
   line-height: 1.2; }
   @media screen and (min-width: 769px), print {
-    #sponsor h1 {
+    #partners_page h1 {
       font-size: 3em;
       line-height: 1.5; } }
 
-#sponsor h2 {
+#partners_page h2 {
   font-style: normal;
   text-align: center;
   color: #fff;
   font-size: 1.8em;
   line-height: 1.2; }
   @media screen and (min-width: 769px), print {
-    #sponsor h2 {
+    #partners_page h2 {
       font-size: 2em;
       line-height: 1.5; } }
   @media screen and (min-width: 1024px) {
-    #sponsor h2 {
+    #partners_page h2 {
       font-size: 2.5em; } }
 
-#sponsor h3 {
+#partners_page h3 {
   font-size: 1.5em; }
   @media screen and (min-width: 769px), print {
-    #sponsor h3 {
+    #partners_page h3 {
       font-size: 1.8em; } }
 
-#sponsor p {
+#partners_page p {
   margin: 1em 0; }
 
-#sponsor .column {
+#partners_page .column {
   margin: 0 2em; }
 
-#sponsor .is-centered p {
+#partners_page .is-centered p {
   margin: 0 0 1em 0; }
 
 .background-light {

@@ -5265,51 +5265,51 @@ header {
   .image-credits a {
     color: #fff; }
 
-.sponsors__container {
+.partners__container {
   background-color: #fff;
   color: #5e4e9b; }
-  .sponsors__container h2 {
+  .partners__container h2 {
     font-style: normal; }
 
-.sponsors__container .inner {
+.partners__container .inner {
   margin: 0 auto;
   align-items: center;
   text-align: center;
   padding: 1em 0; }
-  .sponsors__container .inner .row__underlined {
+  .partners__container .inner .row__underlined {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     text-align: left; }
-    .sponsors__container .inner .row__underlined h3 {
+    .partners__container .inner .row__underlined h3 {
       font-size: 1em; }
-  .sponsors__container .inner .columns {
+  .partners__container .inner .columns {
     padding: 2em 0;
     justify-content: center;
     flex-flow: wrap; }
-    .sponsors__container .inner .columns .column {
+    .partners__container .inner .columns .column {
       margin: 0 1em; }
-    .sponsors__container .inner .columns .column__main, .sponsors__container .inner .columns .column__main img {
+    .partners__container .inner .columns .column__main, .partners__container .inner .columns .column__main img {
       min-width: 320px;
       max-width: 320px; }
-    .sponsors__container .inner .columns .column__diamond, .sponsors__container .inner .columns .column__diamond img {
+    .partners__container .inner .columns .column__diamond, .partners__container .inner .columns .column__diamond img {
       min-width: 280px;
       max-width: 280px; }
-    .sponsors__container .inner .columns .column__platinum, .sponsors__container .inner .columns .column__platinum img {
+    .partners__container .inner .columns .column__platinum, .partners__container .inner .columns .column__platinum img {
       min-width: 240px;
       max-width: 240px; }
-    .sponsors__container .inner .columns .column__gold, .sponsors__container .inner .columns .column__gold img {
+    .partners__container .inner .columns .column__gold, .partners__container .inner .columns .column__gold img {
       min-width: 200px;
       max-width: 200px; }
-    .sponsors__container .inner .columns .column__silver, .sponsors__container .inner .columns .column__silver img {
+    .partners__container .inner .columns .column__silver, .partners__container .inner .columns .column__silver img {
       min-width: 160px;
       max-width: 160px; }
-    .sponsors__container .inner .columns .column__bronze, .sponsors__container .inner .columns .column__bronze img {
+    .partners__container .inner .columns .column__bronze, .partners__container .inner .columns .column__bronze img {
       min-width: 120px;
       max-width: 120px; }
-    .sponsors__container .inner .columns .column__diversity, .sponsors__container .inner .columns .column__diversity img {
+    .partners__container .inner .columns .column__diversity, .partners__container .inner .columns .column__diversity img {
       min-width: 120px;
       max-width: 120px; }
-    .sponsors__container .inner .columns .column__media, .sponsors__container .inner .columns .column__media img {
+    .partners__container .inner .columns .column__media, .partners__container .inner .columns .column__media img {
       min-width: 100px;
       max-width: 100px; }
 
@@ -5488,43 +5488,43 @@ header {
   right: 0;
   top: 0; }
 
-#sponsor h1 {
+#partners_page h1 {
   text-transform: none;
   color: #5e4e9b;
   font-size: 2em;
   line-height: 1.2; }
   @media screen and (min-width: 769px), print {
-    #sponsor h1 {
+    #partners_page h1 {
       font-size: 3em;
       line-height: 1.5; } }
 
-#sponsor h2 {
+#partners_page h2 {
   font-style: normal;
   text-align: center;
   color: #fff;
   font-size: 1.8em;
   line-height: 1.2; }
   @media screen and (min-width: 769px), print {
-    #sponsor h2 {
+    #partners_page h2 {
       font-size: 2em;
       line-height: 1.5; } }
   @media screen and (min-width: 1024px) {
-    #sponsor h2 {
+    #partners_page h2 {
       font-size: 2.5em; } }
 
-#sponsor h3 {
+#partners_page h3 {
   font-size: 1.5em; }
   @media screen and (min-width: 769px), print {
-    #sponsor h3 {
+    #partners_page h3 {
       font-size: 1.8em; } }
 
-#sponsor p {
+#partners_page p {
   margin: 1em 0; }
 
-#sponsor .column {
+#partners_page .column {
   margin: 0 2em; }
 
-#sponsor .is-centered p {
+#partners_page .is-centered p {
   margin: 0 0 1em 0; }
 
 .background-light {
@@ -6067,7 +6067,7 @@ header {
         font-size: 2em;
         line-height: 1.5; } }
 
-.container_diversity-sponsors img {
+.container_diversity-partners img {
   max-width: 300px; }
 
 .is-unselectable, .button, .breadcrumb {
