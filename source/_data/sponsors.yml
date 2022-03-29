@@ -32,6 +32,10 @@ silver:
     name: "Madisoft"
     logo_filename: "madisoft.svg"
     site_url: "https://labs.madisoft.it"
+  sponsor4:
+    name: "Spreaker from iHeart"
+    logo_filename: "spreaker.svg"
+    site_url: "https://www.spreaker.com/"
 bronze:
   sponsor1:
     name: "stickermule"
@@ -42,6 +46,10 @@ diversity:
     name: "balsamiq"
     logo_filename: "balsamiq.svg"
     site_url: "https://balsamiq.com/"
+  sponsor2:
+    name: "Samsung Internet"
+    logo_filename: "samsung.svg"
+    site_url: "https://developer.samsung.com/internet"
 
 # Partner configuration
 partner_tags:
