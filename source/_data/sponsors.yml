@@ -4,11 +4,11 @@ main:
   #   name: ""
   #   logo_filename: ""
   #   site_url: ""
-# diamond:
-#   sponsor1:
-#     name: ""
-#     logo_filename: ""
-#     site_url: ""
+diamond:
+  sponsor1:
+    name: "avascan"
+    logo_filename: "avascan.svg"
+    site_url: "https://avascan.info/"
 platinum:
   sponsor1:
     name: "workwave"
