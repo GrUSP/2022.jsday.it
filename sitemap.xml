@@ -2,35 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://2022.jsday.it/welcome/about.html</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://2022.jsday.it/workshop/workshop_2.html</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://2022.jsday.it/schedule/index.html</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://2022.jsday.it/sponsor/index.html</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://2022.jsday.it/talks_speakers/index.html</loc>
     
     <lastmod>2022-03-30</lastmod>
     
@@ -86,7 +58,28 @@
   </url>
   
   <url>
-    <loc>https://2022.jsday.it/2019/08/19/test/</loc>
+    <loc>https://2022.jsday.it/talks_speakers/index.html</loc>
+    
+    <lastmod>2022-03-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://2022.jsday.it/welcome/about.html</loc>
+    
+    <lastmod>2022-03-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://2022.jsday.it/schedule/index.html</loc>
+    
+    <lastmod>2022-03-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://2022.jsday.it/sponsor/index.html</loc>
     
     <lastmod>2022-03-30</lastmod>
     
@@ -94,6 +87,13 @@
   
   <url>
     <loc>https://2022.jsday.it/404.html</loc>
+    
+    <lastmod>2022-03-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://2022.jsday.it/2019/08/19/test/</loc>
     
     <lastmod>2022-03-30</lastmod>
     
