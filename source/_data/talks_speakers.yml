@@ -262,16 +262,16 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *michelestieven
-      talk_estefania:
+      talk_yoni:
         item_type: "talk"
         track: *track_1
         start_datetime: 2022-04-21T14:30+02:00
         end_datetime: 2022-04-21T15:10+02:00
-        talk_title: "Who will guard the guards? Mutation Testing in JavaScript"
-        talk_description: "Developers have become used to blindly relying on tests and code coverage. However, if code coverage does not ensure the quality of the tests, and tests do not ensure the quality of the code, why do we rely on these results? In short, if don't trust our own code, why should we trust our tests?"
+        talk_title: "All of those tests you have and none of them cover Message Queues"
+        talk_description: "On your path to master backend testing, don’t miss the lesser discussed chapter in the book: how to test the common flows that start or end at a message queue. Although the focus is always on the features we deliver, message queues bring unusual testing challenges like testing for message rejection, acknowledgments, retries, idempotency, dead-letter queues, poisoned messages, and other scenarios that our backend is frequently facing. Another interesting dilemma is the developer's toolbox when testing queues - Should they use the real one or a stub? What other tools are needed? This is hands-on code talk that exemplifies these concepts using popular products like RabbitMQ, SQS, and Kafka"
         talk_video_url:
         speakers:
-          speaker_1: *estefania
+          speaker_1: *yoni
       talk_laura:
         item_type: "talk"
         track: *track_1
@@ -376,21 +376,21 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *micheleriva
-      talk_yoni:
+      talk_estefania:
         item_type: "talk"
         track: *track_1
         start_datetime: 2022-04-22T12:15+02:00
-        end_datetime: 2022-04-22T13:10+02:00
-        talk_title: "All of those tests you have and none of them cover Message Queues"
-        talk_description: "On your path to master backend testing, don’t miss the lesser discussed chapter in the book: how to test the common flows that start or end at a message queue. Although the focus is always on the features we deliver, message queues bring unusual testing challenges like testing for message rejection, acknowledgments, retries, idempotency, dead-letter queues, poisoned messages, and other scenarios that our backend is frequently facing. Another interesting dilemma is the developer's toolbox when testing queues - Should they use the real one or a stub? What other tools are needed? This is hands-on code talk that exemplifies these concepts using popular products like RabbitMQ, SQS, and Kafka"
+        end_datetime: 2022-04-22T12:55+02:00
+        talk_title: "Who will guard the guards? Mutation Testing in JavaScript"
+        talk_description: "Developers have become used to blindly relying on tests and code coverage. However, if code coverage does not ensure the quality of the tests, and tests do not ensure the quality of the code, why do we rely on these results? In short, if don't trust our own code, why should we trust our tests?"
         talk_video_url:
         speakers:
-          speaker_1: *yoni
+          speaker_1: *estefania
       talk_debbie:
         item_type: "talk"
         track: *track_1
-        start_datetime: 2022-04-22T14:40+02:00
-        end_datetime: 2022-04-22T15:20+02:00
+        start_datetime: 2022-04-22T14:30+02:00
+        end_datetime: 2022-04-22T15:10+02:00
         talk_title: "It’s all about components"
         talk_description: "The frontend is a great place to be in these days and as apps get bigger and bigger, components get more difficult to maintain. But are we really building component driven? Do we really know how to take a design and break it down into components? How small do we go? How do we name things? When is it a good time to make a new component or reuse one that is already created? Making these decisions early on is key to great software architecture. If we think before we build, we can build amazing apps that will easily scale."
         talk_video_url:
@@ -399,8 +399,8 @@ days:
       talk_gil:
         item_type: "talk"
         track: *track_1
-        start_datetime: 2022-04-22T15:20+02:00
-        end_datetime: 2022-04-22T16:00+02:00
+        start_datetime: 2022-04-22T15:10+02:00
+        end_datetime: 2022-04-22T15:50+02:00
         talk_title: "The time to migrate to ESM in Node.js is now!"
         talk_description: "ESM Modules in Node.js have been a reality for the past two years. Many companies now use them in production, and many OSS libraries in NPM are migrating to them.
           Is it time for you to migrate? YES! Start planning and migrating your Node.js codebase now. This talk will explain why it is important to start migrating this year, how to do the migration, and what will be the benefits of migrating to ESM today."
@@ -410,8 +410,8 @@ days:
       talk_eleftheria:
         item_type: "talk"
         track: *track_1
-        start_datetime: 2022-04-22T16:30+02:00
-        end_datetime: 2022-04-22T17:10+02:00
+        start_datetime: 2022-04-22T16:20+02:00
+        end_datetime: 2022-04-22T17:00+02:00
         talk_title: "When You Think There Is No Time For Learning Or Coding"
         talk_description: "Do you ever feel like you’re stuck in your career? Do you constantly feel like you don’t have time to work on your projects? Do you want to learn something new, expand your knowledge, develop yourself and be the best you can be?
           In this session, I am going to share my story on how I started coding, how I make time to work on side projects and how you can grow and advance in your career. After this talk, I hope you 'll be inspired to work smarter, make new habits and continue pushing yourself even when things fall apart.
