@@ -35,7 +35,7 @@ silver:
   sponsor4:
     name: "Spreaker from iHeart"
     logo_filename: "spreaker.svg"
-    site_url: "https://www.spreaker.com/"
+    site_url: "https://www.spreaker.com?utm_source=logo&utm_medium=referral&utm_campaign=grusp"
 bronze:
   sponsor1:
     name: "stickermule"
