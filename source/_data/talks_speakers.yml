@@ -320,8 +320,8 @@ days:
         talk_title: "Opening by GrUSP"
       closing:
         item_type: "service"
-        start_datetime: 2022-04-22T17:10+02:00
-        end_datetime: 2022-04-22T17:20+02:00
+        start_datetime: 2022-04-22T17:00+02:00
+        end_datetime: 2022-04-22T17:15+02:00
         talk_title: "Closing by GrUSP"
       coffee-morning:
         item_type: "service"
@@ -331,14 +331,14 @@ days:
         service_icon: "coffee"
       coffee-afternoon:
         item_type: "service"
-        start_datetime: 2022-04-22T16:00+02:00
-        end_datetime: 2022-04-22T16:30+02:00
+        start_datetime: 2022-04-22T15:50+02:00
+        end_datetime: 2022-04-22T16:20+02:00
         talk_title: "Coffee break"
         service_icon: "coffee"
       lunch:
         item_type: "service"
-        start_datetime: 2022-04-22T13:10+02:00
-        end_datetime: 2022-04-22T14:40+02:00
+        start_datetime: 2022-04-22T12:55+02:00
+        end_datetime: 2022-04-22T14:30+02:00
         talk_title: "Lunch break"
         service_icon: "cutlery"
 
