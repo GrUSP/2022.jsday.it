@@ -33,6 +33,10 @@ silver:
     logo_filename: "madisoft.svg"
     site_url: "https://labs.madisoft.it"
   sponsor4:
+    name: "Nearform"
+    logo_filename: "nearform.svg"
+    site_url: "https://www.nearform.com/"
+  sponsor5:
     name: "Spreaker from iHeart"
     logo_filename: "spreaker.svg"
     site_url: "https://www.spreaker.com?utm_source=logo&utm_medium=referral&utm_campaign=grusp"
