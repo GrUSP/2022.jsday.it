@@ -9,6 +9,10 @@ diamond:
     name: "avascan"
     logo_filename: "avascan.svg"
     site_url: "https://avascan.info/"
+  sponsor2:
+    name: "Twilio"
+    logo_filename: "twilio.svg"
+    site_url: "https://www.twilio.com/"
 platinum:
   sponsor1:
     name: "workwave"
