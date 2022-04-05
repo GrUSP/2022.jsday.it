@@ -130,7 +130,7 @@ levels:
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
     description_6:
-      - "<strong>5</strong> free tickets for the online event"
+      - "<strong>4</strong> free tickets for the online event"
       - "<strong>1</strong> free tickets for the in-person event"
   level_6:
     name: Bronze
@@ -142,7 +142,7 @@ levels:
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
     description_6:
-      - "<strong>4</strong> free tickets for the online event"
+      - "<strong>2</strong> free tickets for the online event"
   level_7:
     name: Diversity
     amount: 500
@@ -152,3 +152,5 @@ levels:
       - "Your logo in pre-event communications"
       - "Your logo on conference website"
       - "Your company mentioned and the logo shown during the opening remarks"
+    description_6:
+      - "<strong>2</strong> free tickets for the online event"
