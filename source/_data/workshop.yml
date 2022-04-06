@@ -44,13 +44,16 @@ workshops:
         In their daily routine though, developers are challenged with covering all the layers of their components - Database, APIs, MQ, metrics, 3rd parties, and more - not just logic functions. For this good reason, the 'Testing Diamond' model is getting super popular as it advocates writing tests that mitigate all the risks.
         This workshop is all about writing these tests in the RIGHT way. Overall, it packs 30+ best practices and 20 hands-on exercises that will open your mind to modern testing techniques. This workshop is based on Yoni's GitHub testing best practices guides (<a href='https://github.com/goldbergyoni/nodebestpractices'>one</a>, <a href='https://github.com/goldbergyoni/javascript-testing-best-practices'>two</a>, <a href='https://github.com/testjavascript/nodejs-integration-tests-best-practices'>three</a>) (✨ 85,000 stars).
         <br> <br />
-        <strong>🎁 Bonus:</strong>
-        <br> Participants of this workshop will get access to Yoni's online 6 hours testing course.
+        <strong>🎁 Bonus 1:</strong>
+        <br> Participants of this workshop will get access to Yoni's online 6 hours testing course.        <br>
+        <strong>🎁 Bonus 2:</strong>
+        <br> Additional training Zoom gathering in June is included.
         <br> <br />
         <strong>What's in there for me:</strong>
         <ul>
-         <li>• The latest and greatest of backend testing - Double click into the most talk-about model of recent years, the testing diamond;</li>
-         <li>• Down to the minute details - This is not an overview rather a comprehensive code-level drill that covers 40+ best practices.</li>
+         <li>• The latest and greatest of backend testing in 2022</li>
+         <li>• Double click into the most talk-about model of recent years, the testing diamond</li>
+         <li>• Down to the minute details - This is not an overview rather a comprehensive code-level drill that covers 30+ best practices</li>
         </ul>
         <br> <br />"
     # video trailer?
@@ -78,8 +81,10 @@ workshops:
     - "Pyramid are ancient, diamonds are forever"
     - "Backend testing strategy in 2022"
     - "Component test hello-world"
+    - "A test anatomy of a good component test"
     - "<h3>The setup: Configure it for speed and great developer-experience</h3>"
-    - "How to configure a DB for testing"
+    - "Choosing the right infrastructure for testing"
+    - "How to optimize a DB for testing"
     - "When to run DB migrations"
     - "Configuring other pieces of infrasructure like message-queue"
     - "Initializing the web server and preventing port collissions"
@@ -102,10 +107,12 @@ workshops:
     - "The big decision: Using a real MQ or a fake one"
     - "Knowing when the flow has ended and the test can assert on the outcome"
     - "Testing message acknowledgement and 'nack-nowledgement'"
-    - "A brief touch on advanced MQ tests: Idempotency, poisoned messages and zombie process"
+    - "Other typical MQ flows: Idempotency, poisoned messages and zombie process"
+    - "MQ contract testing"
     - "<h3> Error handling & ops: Simulating real-world failures and verifying a great reaction</h3>"
     - "The common pieces of Node.js server error handler"
     - "Testing various failure locations like startup, promises, timers and more"
+    - "Testing for a variety of Error types"
     - "Testing monitoring metrics"
     - "Testing for process.exit"
     - "Testing authentication and expiration"
