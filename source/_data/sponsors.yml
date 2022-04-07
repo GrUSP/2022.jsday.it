@@ -6,10 +6,14 @@ main:
   #   site_url: ""
 diamond:
   sponsor1:
+    name: "Accenture"
+    logo_filename: "accenture.png"
+    site_url: "http://accenture.it/"
+  sponsor2:
     name: "avascan"
     logo_filename: "avascan.svg"
     site_url: "https://avascan.info/"
-  sponsor2:
+  sponsor3:
     name: "Twilio"
     logo_filename: "twilio.svg"
     site_url: "https://www.twilio.com/"

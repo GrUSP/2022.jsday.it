@@ -34,8 +34,8 @@ levels:
       - "Large Stand (in-person event)"
       - "Large Virtual booth"
     description_3:
-      - "Your logo on conference rollup banners (in-person event)"
       - "Your own rollup banner (80x200cm) in the conference room (in-person event)"
+      - "Your logo on conference rollup banners (in-person event)"
       - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
       - "Bring your gadgets to the in-person event"
@@ -53,15 +53,15 @@ levels:
     name: Diamond
     amount: 5000
     vat_label: "(+ VAT 22%)"
-    available_slots: 2
+    available_slots: 3
     description_1:
       - "Access to attendees list (attendees who agreed to share their contact with sponsors)"
     description_2:
       - "Large Stand (in-person event)"
       - "Medium Virtual booth"
     description_3:
-      - "Your logo on conference rollup banners (in-person event)"
       - "Your own rollup banner (80x200cm) in the conference room (in-person event)"
+      - "Your logo on conference rollup banners (in-person event)"
       - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
       - "Bring your gadgets to the in-person event"
@@ -83,8 +83,8 @@ levels:
       - "Small Stand (in-person event)"
       - "Small Virtual booth"
     description_3:
-      - "Your logo on conference rollup banners (in-person event)"
       - "Your own rollup banner (80x200cm) in the conference room (in-person event)"
+      - "Your logo on conference rollup banners (in-person event)"
       - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
       - "Bring your gadgets to the in-person event"
@@ -102,8 +102,8 @@ levels:
     vat_label: "(+ VAT 22%)"
     available_slots: 8
     description_3:
-      - "Your logo on conference rollup banners (in-person event)"
       - "Your own rollup banner (80x200cm) in the conference room (in-person event)"
+      - "Your logo on conference rollup banners (in-person event)"
       - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
       - "Bring your gadgets to the in-person event"
@@ -121,6 +121,7 @@ levels:
     vat_label: "(+ VAT 22%)"
     available_slots: 16
     description_3:
+      - "Your logo on conference rollup banners (in-person event)"
       - "Your logo displayed on rotation in the lower third throughout the event"
     description_4:
       - "Bring your gadgets to the in-person event"
