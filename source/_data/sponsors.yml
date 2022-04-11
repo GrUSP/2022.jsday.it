@@ -41,18 +41,22 @@ silver:
     logo_filename: "facile.svg"
     site_url: "https://www.facile.it/"
   sponsor4:
+    name: "Livecycle"
+    logo_filename: "livecycle.svg"
+    site_url: "https://livecycle.io/"
+  sponsor5:
     name: "Madisoft"
     logo_filename: "madisoft.svg"
     site_url: "https://labs.madisoft.it"
-  sponsor5:
+  sponsor6:
     name: "Nearform"
     logo_filename: "nearform.svg"
     site_url: "https://www.nearform.com/"
-  sponsor6:
+  sponsor7:
     name: "SiteGround"
     logo_filename: "siteground.png"
     site_url: "https://www.siteground.com/"
-  sponsor7:
+  sponsor8:
     name: "Spreaker from iHeart"
     logo_filename: "spreaker.svg"
     site_url: "https://www.spreaker.com?utm_source=logo&utm_medium=referral&utm_campaign=grusp"
