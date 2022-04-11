@@ -24,6 +24,10 @@ platinum:
     site_url: "https://www.workwave.com/"
 gold:
   sponsor1:
+    name: "Casavo"
+    logo_filename: "casavo.svg"
+    site_url: "https://careers.casavo.com/"
+  sponsor2:
     name: "Mia Platform"
     logo_filename: "miaplatform.svg"
     site_url: "https://www.mia-platform.eu/it/"
