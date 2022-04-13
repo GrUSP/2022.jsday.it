@@ -131,14 +131,13 @@ speaker_15: &gil
                 Unfortunately for him, he hasn’t answered the big question of his life—what’s better, static or dynamic languages? But he’s working on it."
   speaker_twitter_url: "https://twitter.com/giltayar"
   speaker_github_url: "https://github.com/giltayar"
-# speaker_1: &speaker
-#   speaker_in_speaker_lists: true
-#   speaker_name:
-#   speaker_pic_filename: .png
-#   speaker_role: ""
-#   speaker_bio: ""
-#   speaker_twitter_url: "https://twitter.com/"
-#   speaker_github_url: "https://github.com/"
+speaker_16: &matteo
+  speaker_in_speaker_lists: true
+  speaker_name: Matteo Guidotto
+  speaker_pic_filename: matteo-guidotto.png
+  speaker_role: "MASTER OF CEREMONY - Product delivery Manager @ Central Reach"
+  speaker_bio: ""
+  is_mc: true
 
 
 speakers:
@@ -157,7 +156,7 @@ speakers:
   speaker_13: *craig
   speaker_14: *michelestieven
   speaker_15: *gil
-
+  speaker_16: *matteo
 
 tracks:
   track_1: &track_1

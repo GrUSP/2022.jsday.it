@@ -31,6 +31,11 @@ gold:
     name: "Mia Platform"
     logo_filename: "miaplatform.svg"
     site_url: "https://www.mia-platform.eu/it/"
+  sponsor3:
+    name: "StoryBlok"
+    logo_filename: "storyblok.svg"
+    site_url: "https://www.storyblok.com/"
+
 silver:
   sponsor1:
     name: "Auth0"
@@ -78,6 +83,10 @@ diversity:
     name: "Samsung Internet"
     logo_filename: "samsung.svg"
     site_url: "https://developer.samsung.com/internet"
+  sponsor3:
+    name: "StoryBlok"
+    logo_filename: "storyblok.svg"
+    site_url: "https://www.storyblok.com/"
 
 # Partner configuration
 partner_tags:
