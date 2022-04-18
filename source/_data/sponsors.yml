@@ -10,7 +10,7 @@ diamond:
     logo_filename: "accenture.png"
     site_url: "http://accenture.it/"
   sponsor2:
-    name: "avascan"
+    name: "Avascan"
     logo_filename: "avascan.svg"
     site_url: "https://avascan.info/"
   sponsor3:
@@ -19,7 +19,7 @@ diamond:
     site_url: "https://www.twilio.com/"
 platinum:
   sponsor1:
-    name: "workwave"
+    name: "Workwave"
     logo_filename: "workwave.svg"
     site_url: "https://www.workwave.com/"
 gold:
@@ -35,7 +35,6 @@ gold:
     name: "StoryBlok"
     logo_filename: "storyblok.svg"
     site_url: "https://www.storyblok.com/"
-
 silver:
   sponsor1:
     name: "Auth0"

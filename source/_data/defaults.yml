@@ -133,7 +133,7 @@ conference:
   #   (embed Vimeo showcase: prendere l'ID dello showcase e metterla qui sotto)
   vimeo_showcase_id: "8639312"
   # Location section in home page. set the first parameter to true to make it appear in home page, false means hidden
-  location_visible: false
+  location_visible: true
   location_name: "Hotel San Marco"
   location_address: "Via Longhena 42, 37138 Verona (VE) Italy"
   location_maps_url: "https://www.google.com/maps/place/Hotel+San+Marco+Fitness+Pool+%26+SPA/@45.4399961,10.9697441,17z/data=!3m1!4b1!4m8!3m7!1s0x4781e1e30a8be6af:0x8091b108e1d130c6!5m2!4m1!1i2!8m2!3d45.4399961!4d10.9719328"
