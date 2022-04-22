@@ -375,16 +375,16 @@ days:
         talk_video_url:
         speakers:
           speaker_1: *micheleriva
-      talk_estefania:
+      talk_sam2:
         item_type: "talk"
         track: *track_1
         start_datetime: 2022-04-22T12:15+02:00
         end_datetime: 2022-04-22T12:55+02:00
-        talk_title: "Who will guard the guards? Mutation Testing in JavaScript"
-        talk_description: "Developers have become used to blindly relying on tests and code coverage. However, if code coverage does not ensure the quality of the tests, and tests do not ensure the quality of the code, why do we rely on these results? In short, if don't trust our own code, why should we trust our tests?"
+        talk_title: "No way, JOSE!"
+        talk_description: "Is your first thought when thinking about cryptography, “nope, that’s not for me!”? There’s no need to. When explained with simple examples, you can see the basics are not that complicated. The JavaScript Object Signing and Encryption, or JOSE for short is a framework that helps us deal with encryption. It describes ways to securely transfer data either signed (JWS) or encrypted (JWE). Let’s take a leap of faith and explore the wonderful world of cryptography together, shall we?"
         talk_video_url:
         speakers:
-          speaker_1: *estefania
+          speaker_1: *sam
       talk_debbie:
         item_type: "talk"
         track: *track_1
