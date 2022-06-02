@@ -57,7 +57,7 @@ conference:
   # "general information" ("what is it?") component
   geninfo_visible: true
   geninfo_title: "What is it?"
-  geninfo_description: "jsday 2021 is the 11th edition of the Italian JavaScript conference, organized by GrUSP, organizers of events like <a href='https://www.phpday.it/'>phpday</a>, <a href='https://www.reactjsday.it/'>reactjsday</a> and many others.
+  geninfo_description: "jsday 2022 is the 11th edition of the Italian JavaScript conference, organized by GrUSP, organizers of events like <a href='https://www.phpday.it/'>phpday</a>, <a href='https://www.reactjsday.it/'>reactjsday</a> and many others.
   <br> <br /> The event is international and all sessions will be in English. This 2022 edition is taking place in Verona, and will last 2 days (21st and 22nd April)
   <br> <br /> On the day before the conference, we are hosting a <a href='https://2022.jsday.it/workshop/nodejs_testing.html'>workshop on Node.js Testing</a> with Yoni Goldberg (tickets are sold separately)."
   geninfo_about_label: "About"
